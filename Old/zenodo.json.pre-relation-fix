@@ -1,0 +1,33 @@
+{
+  "title": "APF Paper 9 — The Geometric Substrate as Cost Structure of Comparison Continuations",
+  "description": "<p>Finite-continuability translation of Paper 6's GR closure.  Imports Paper 10 v1.11 primitives; recovers Schwarzschild redshift via cost-curvature response; reduces leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (γ_C = 1 ⇔ tr L_sc = 0).  Paper 6 stays source-of-record for represented-geometry GR closure under H1–H3 / A9 / Lovelock; Paper 9 is the finite-continuability translation layer.  Methodological parallel with Paper 2's gauge identification (both gauge-reduce a multi-parameter ambiguity to a structurally meaningful residual).</p><p>This repository is the executable mathematical appendix for Paper 9 of the Admissibility Physics Framework (APF). All theorems trace to named check functions in the bundled <code>apf/</code> package.</p>",
+  "creators": [
+    {
+      "name": "Brooke, Ethan",
+      "affiliation": "Independent Researcher, San Anselmo, California, USA",
+      "orcid": "0009-0001-2261-4682"
+    }
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": ["geometric substrate", "comparison continuation", "metric emergence", "Schwarzschild redshift", "finite continuability", "cost-curvature", "weak-field GR", "no-trace gate", "unimodular response", "\u03b3_PPN", "research-program draft"],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.18604548",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "version": "1.4"
+}
