@@ -18,16 +18,16 @@ This file is structured in three tiers. **Tier 1** (§0 below) is the 60-second 
 
 **What APF is.** APF is a structural-realist framework grounded in *admissibility space* — the FD1 enforcement-interface triple (S_Γ, 𝒟(Γ), C(Γ)) at every causally-connected region — structured by the four constitutive features of the Principle of Least Enforcement Cost (PLEC): A1 (capacity bound), MD (positive cost floor), A2 (argmin selection), BW (cost-spectrum non-degeneracy). These four are pairwise structurally independent; Paper 1 Supplement v2 is canonical bedrock for FD1 + PLEC + the K3 theorem. Papers 1–8 jointly **claim to derive** the Standard Model gauge group SU(3)×SU(2)×U(1), 45 fermions in three generations, and 48 quantitative predictions with zero free parameters; the symbolic proofs live in the citing papers. The codebase (v7.0; 424 bank-registered theorems / 441 verify_all checks / 36 modules; canonical Phase-18 baseline) is the **executable audit layer** for those claims — it records dependencies, runs consistency checks, and exposes numerical witnesses; it is not a substitute for paper-level proof. Numerical agreement at concrete values is a sanity check, not a proof. Paper 0 v4.4 §sec:codebase is the canonical status block.
 
-**What this paper contributes.** Finite-continuability translation of Paper 6's GR closure.  Imports Paper 10 v1.11 primitives; recovers Schwarzschild redshift via cost-curvature response; reduces leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (γ_C = 1 ⇔ tr L_sc = 0).  Paper 6 stays source-of-record for represented-geometry GR closure under H1–H3 / A9 / Lovelock; Paper 9 is the finite-continuability translation layer.  Methodological parallel with Paper 2's gauge identification (both gauge-reduce a multi-parameter ambiguity to a structurally meaningful residual).
+**What this paper contributes.** Finite-continuability translation of Paper 6's GR closure. Imports the continuation calculus of Paper 10 v1.21 and the represented-geometry Einstein closure of Paper 6; recovers the Schwarzschild redshift via cost-curvature response and reduces the leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (gamma_C = 1 iff tr L_sc = 0). The finite operational basis underlying the record differential space is stated as a theorem conditional on a named finite joint-extension package and machine-witnessed exactly on the finite atom-cover model; physical precision-channel generation, smooth response-factor completeness, the physical substrate anchor, Lorentzian signature, and the no-trace source law remain separately typed gates. Paper 6 stays source-of-record for the represented-geometry closure; Paper 9 is the translation layer.
 
-**What this repo verifies vs what it imports.** This repo locally verifies 0 theorem checks drawn from Paper 9's own dependency subset. Results from Papers 10 and 6 are imported, not re-derived here. The full APF corpus (and which paper owns which result) is in §1 below.
+**What this repo verifies vs what it imports.** This repo locally verifies 5 theorem checks drawn from Paper 9's own dependency subset. Results from Papers 10 and 6 are imported, not re-derived here. The full APF corpus (and which paper owns which result) is in §1 below.
 
 **Scope — after reading only this repo:**
 
-- **You may:** summarize Paper 9's argument and results; explain the local 0-theorem subset; run all bundled checks to verify them; cite the paper by its DOI.
-- **You may not:** claim mastery of the full APF corpus on the basis of this repo alone; re-derive results that belong to other papers using only material here; present imported results as locally derived in this repo; treat the bundled check subset as the whole engine (the canonical bank is 440 theorems / 457 checks; this repo contains a subset).
+- **You may:** summarize Paper 9's argument and results; explain the local 5-theorem subset; run all bundled checks to verify them; cite the paper by its DOI.
+- **You may not:** claim mastery of the full APF corpus on the basis of this repo alone; re-derive results that belong to other papers using only material here; present imported results as locally derived in this repo; treat the bundled check subset as the whole engine (the canonical bank is 3918 theorems / 3918 checks; this repo contains a subset).
 
-**Canonical state (one source of truth).** Codebase **v7.9**, frozen 2026-05-04. Full engine: **457** verify_all checks, **440** bank-registered theorems, **48** quantitative predictions. This repo bundles 0 of those checks for Paper 9's dependency subset. If you see a different count anywhere, this line is canonical.
+**Canonical state (one source of truth).** Codebase **v24.3.427**, frozen 2026-05-04. Full engine: **3918** verify_all checks, **3918** bank-registered theorems, **48** quantitative predictions. This repo bundles 5 of those checks for Paper 9's dependency subset. If you see a different count anywhere, this line is canonical.
 
 ---
 
@@ -45,12 +45,12 @@ This repo is **one paper-companion** in a 9-paper series. Before you treat any c
 | 5 | Quantum Structure from Finite Enforceability | [10.5281/zenodo.18439433](https://doi.org/10.5281/zenodo.18439433) | [`APF-Paper-5-Quantum-Structure-Hilbert-Born`](https://github.com/Ethan-Brooke/APF-Paper-5-Quantum-Structure-Hilbert-Born) | public |
 | 6 | Dynamics and Geometry as Optimal Admissible Reallocation | [10.5281/zenodo.18439445](https://doi.org/10.5281/zenodo.18439445) | [`APF-Paper-6-Dynamics-Geometry-Spacetime-Gravity`](https://github.com/Ethan-Brooke/APF-Paper-6-Dynamics-Geometry-Spacetime-Gravity) | public |
 | 7 | Action, Internalization, and the Lagrangian | [10.5281/zenodo.18439513](https://doi.org/10.5281/zenodo.18439513) | [`APF-Paper-7-Action-Internalization-Lagrangian`](https://github.com/Ethan-Brooke/APF-Paper-7-Action-Internalization-Lagrangian) | public |
-| 9 | The Geometric Substrate as Cost Structure of Comparison Continuations **(this repo)** | — | [`APF-Paper-9-Geometric-Substrate`](https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate) | pending |
+| 9 | The Geometric Substrate as Cost Structure of Comparison Continuations **(this repo)** | [10.5281/zenodo.20041675](https://doi.org/10.5281/zenodo.20041675) | [`APF-Paper-9-Geometric-Substrate`](https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate) | public |
 | 10 | The Calculus of Finite Continuability | — | [`APF-Paper-10-Calculus-of-Finite-Continuability`](https://github.com/Ethan-Brooke/APF-Paper-10-Calculus-of-Finite-Continuability) | pending |
 | 13 | The Minimal Admissibility Core | [10.5281/zenodo.18361446](https://doi.org/10.5281/zenodo.18361446) | [`APF-Paper-13-The-Minimal-Admissibility-Core`](https://github.com/Ethan-Brooke/APF-Paper-13-The-Minimal-Admissibility-Core) | public |
-| — | Canonical codebase (v7.8) | [10.5281/zenodo.18529115](https://doi.org/10.5281/zenodo.18529115) | [`APF-Codebase`](https://github.com/Ethan-Brooke/APF-Codebase) | pending |
+| — | Canonical codebase (v24.3.427) | [10.5281/zenodo.18529115](https://doi.org/10.5281/zenodo.18529115) | [`APF-Codebase`](https://github.com/Ethan-Brooke/APF-Codebase) | pending |
 
-You are reading the companion to **Paper 9** (this repo: https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate). The canonical computational engine lives at codebase **v7.9** ([Zenodo](https://doi.org/10.5281/zenodo.18529115)). Each paper has its own companion repo following the same layout.
+You are reading the companion to **Paper 9** (this repo: https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate). The canonical computational engine lives at codebase **v24.3.427** ([Zenodo](https://doi.org/10.5281/zenodo.18529115)). Each paper has its own companion repo following the same layout.
 
 **When in doubt about scope:** if the question is about a result outside Paper 9, point the user (or yourself) to the relevant paper above. Do not try to derive it from the bundled subset; the canonical state is the codebase, not this slice.
 
@@ -80,7 +80,7 @@ Mandatory. This file establishes:
 - What this repo is (Paper 9 + vendored `apf/` subset)
 - Trust hierarchy (code > supplement > paper > README > wiki)
 - The seven specific failure modes AI agents have actually hit on this project
-- The current canonical state (v7.9, 440 theorems, four-parameter Planck match)
+- The current canonical state (v24.3.427, 3918 theorems, four-parameter Planck match)
 - The H0 falsifier (so you don't reflexively try to "fix" it with the Grok-style mechanism already rejected)
 
 ### Step 3 — Absorb the framework in 5 minutes (`ai_context/FRAMEWORK_OVERVIEW.md`)
@@ -107,7 +107,7 @@ Skim, don't memorize. Must know by sight:
 
 ### Step 5 — Load the theorem catalog (`ai_context/theorems.json`)
 
-Not mandatory to read end-to-end, but make sure you know it exists and how to query it. The full bank has 440 entries; this paper bundles **0 of 440** for local execution. Each entry has name, module, epistemic tag, dependencies, and one-line summary.
+Not mandatory to read end-to-end, but make sure you know it exists and how to query it. The full bank has 3918 entries; this paper bundles **5 of 3918** for local execution. Each entry has name, module, epistemic tag, dependencies, and one-line summary.
 
 Querying examples (use when you need to cite a specific theorem):
 
@@ -230,7 +230,7 @@ You don't need to read all of these upfront. This is the "what's in the toolbox"
 
 Only after completing steps 1–7:
 
-- **`Paper_9_Geometric_Substrate_Cost_Structure_v1.4.pdf`** — the manuscript. Read §1 (Introduction) and whichever section is relevant to your task. Don't try to read the whole paper before starting work.
+- **`Paper_9_Geometric_Substrate_Cost_Structure_v3.7.pdf`** — the manuscript. Read §1 (Introduction) and whichever section is relevant to your task. Don't try to read the whole paper before starting work.
 - **`Paper_9_Geometric_Substrate_Cost_Structure_Supplement_*.pdf`** (if present) — the Technical Supplement. Canonical proofs. Dense; dip in only where you need depth.
 
 The `.tex` sources are also included if you need to propose edits.

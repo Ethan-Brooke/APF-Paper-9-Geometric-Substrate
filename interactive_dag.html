@@ -100,7 +100,7 @@
   <header>
     <div>
       <h1>Paper 9 — The Geometric Substrate as Cost Structure of Comparison Continuations</h1>
-      <div class="subtitle">Interactive derivation DAG · 0 checks · APF v6.8</div>
+      <div class="subtitle">Interactive derivation DAG · 5 checks · APF v6.8</div>
     </div>
     <div class="controls">
       <button id="run-checks-btn">▶ Run All Checks</button>
@@ -130,7 +130,43 @@
   </footer>
 
 <script>
-const NODES = [];
+const NODES = [
+  {
+    "id": "T_gammaC_carrier_fork",
+    "fullId": "check_T_gammaC_carrier_fork",
+    "type": "theorem",
+    "summary": "",
+    "deps": []
+  },
+  {
+    "id": "T_weight_one_reduction",
+    "fullId": "check_T_weight_one_reduction",
+    "type": "theorem",
+    "summary": "",
+    "deps": []
+  },
+  {
+    "id": "L_amount_graded_testedness_encoding_no_go",
+    "fullId": "check_L_amount_graded_testedness_encoding_no_go",
+    "type": "lemma",
+    "summary": "",
+    "deps": []
+  },
+  {
+    "id": "T_fagt2_encoding_argmin_pressure_and_read_channel",
+    "fullId": "check_T_fagt2_encoding_argmin_pressure_and_read_channel",
+    "type": "theorem",
+    "summary": "",
+    "deps": []
+  },
+  {
+    "id": "T_contention_law_granularity_occupancy_fork",
+    "fullId": "check_T_contention_law_granularity_occupancy_fork",
+    "type": "theorem",
+    "summary": "",
+    "deps": []
+  }
+];
 const LINKS = [];
 const COLOR = {
   axiom: getCss('--axiom'), theorem: getCss('--theorem'),

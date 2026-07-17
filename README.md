@@ -2,7 +2,7 @@
 
 ### Interactive Mathematical Appendix to Paper 9 of the Admissibility Physics Framework
 
-[![DOI](https://zenodo.org/badge/DOI/.svg)](https://doi.org/) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ethan-Brooke/APF-Paper-9-Geometric-Substrate/blob/main/APF_Reviewer_Walkthrough.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20041675.svg)](https://doi.org/10.5281/zenodo.20041675) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ethan-Brooke/APF-Paper-9-Geometric-Substrate/blob/main/APF_Reviewer_Walkthrough.ipynb)
 
 [Interactive Derivation DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Substrate/) · [Theorem Map](#theorem-mapping-table) · [Reviewers' Guide](REVIEWERS_GUIDE.md) · [The full APF corpus](#the-full-apf-corpus) · [Citation](#citation)
 
@@ -12,11 +12,11 @@
 
 ## Why this codebase exists
 
-Finite-continuability translation of Paper 6's GR closure.  Imports Paper 10 v1.11 primitives; recovers Schwarzschild redshift via cost-curvature response; reduces leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (γ_C = 1 ⇔ tr L_sc = 0).  Paper 6 stays source-of-record for represented-geometry GR closure under H1–H3 / A9 / Lovelock; Paper 9 is the finite-continuability translation layer.  Methodological parallel with Paper 2's gauge identification (both gauge-reduce a multi-parameter ambiguity to a structurally meaningful residual).
+Finite-continuability translation of Paper 6's GR closure. Imports the continuation calculus of Paper 10 v1.21 and the represented-geometry Einstein closure of Paper 6; recovers the Schwarzschild redshift via cost-curvature response and reduces the leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (gamma_C = 1 iff tr L_sc = 0). The finite operational basis underlying the record differential space is stated as a theorem conditional on a named finite joint-extension package and machine-witnessed exactly on the finite atom-cover model; physical precision-channel generation, smooth response-factor completeness, the physical substrate anchor, Lorentzian signature, and the no-trace source law remain separately typed gates. Paper 6 stays source-of-record for the represented-geometry closure; Paper 9 is the translation layer.
 
 This repository is the executable audit layer for the symbolic proofs in this paper.  Every theorem in the manuscript traces to a named `check_*` function that exercises the claim at concrete representative values; the symbolic proof itself lives in the manuscript and its Technical Supplement.  Numerical agreement at concrete values is a sanity check, not a proof — see Paper~0 v4.4 §`sec:codebase` for the canonical trust-control discipline.
 
-The codebase is a faithful subset of the canonical APF codebase v24.3.249 (3,745 bank-registered theorems across 422 modules). Each theorem in the manuscript traces to a named `check_*` function in `apf/core.py`, which can be called independently and returns a structured result.
+The codebase is a faithful subset of the canonical APF codebase v24.3.427 (frozen 2026-05-04; 3918 verify_all checks, 3918 bank-registered theorems across 25 modules + `apf/standalone/`; canonical Phase-18 baseline). Each theorem in the manuscript traces to a named `check_*` function in `apf/core.py`, which can be called independently and returns a structured result.
 
 The codebase requires Python 3.8+ and NumPy / SciPy (some numerical lemmas use them; see `pyproject.toml`).
 
@@ -40,14 +40,14 @@ python run_checks.py
 Expected output:
 
 ```
-      Paper 9 (The Geometric Substrate as Cost Structure of Comparison Continuations): 0 passed, 0 failed, 0 total — verified in <minutes>
+      Paper 9 (The Geometric Substrate as Cost Structure of Comparison Continuations): 5 passed, 0 failed, 5 total — verified in <minutes>
 ```
 
 **4. Individual inspection.**
 
 ```python
 from apf.bank import get_check
-r = get_check('T_Born')()
+r = get_check('check_T_gammaC_carrier_fork')()
 print(r['key_result'])
 ```
 
@@ -61,6 +61,11 @@ This table maps every result in the manuscript to its executable verification.
 
 | Check | Type | Summary |
 |-------|------|---------|
+| `check_T_gammaC_carrier_fork` | Theorem |  |
+| `check_T_weight_one_reduction` | Theorem |  |
+| `check_L_amount_graded_testedness_encoding_no_go` | Lemma |  |
+| `check_T_fagt2_encoding_argmin_pressure_and_read_channel` | Theorem |  |
+| `check_T_contention_law_granularity_occupancy_fork` | Theorem |  |
 
 All check functions reside in `apf/core.py`. Every function listed above can be called independently and returns a structured result including its logical dependencies and the mathematical content it verifies.
 
@@ -69,7 +74,7 @@ All check functions reside in `apf/core.py`. Every function listed above can be 
 ## The derivation chain
 
 ```
-(no theorems in this subset)
+  Level 0: T_gammaC_carrier_fork · T_weight_one_reduction · L_amount_graded_testedness_encoding_no_go · T_fagt2_encoding_argmin_pressure_and_read_channel · T_contention_law_granularity_occupancy_fork
 ```
 
 The [interactive DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Substrate/) shows the full graph with hover details and animated verification.
@@ -97,7 +102,7 @@ The [interactive DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Subst
 │   ├── derivation_graph.json              ← theorem DAG as JSON
 │   └── wiki/                              ← bundled APF wiki (concepts, papers, codebase)
 ├── apf/
-│   ├── core.py                            ← 0 theorem check functions
+│   ├── core.py                            ← 5 theorem check functions
 │   ├── apf_utils.py                       ← exact arithmetic + helpers
 │   └── bank.py                            ← registry and runner
 ├── docs/
@@ -106,7 +111,8 @@ The [interactive DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Subst
 ├── run_checks.py                          ← convenience entry point
 ├── pyproject.toml                         ← package metadata
 ├── zenodo.json                            ← archival metadata
-├── Paper_9_Geometric_Substrate_Cost_Structure_v1.4.tex                ← the paper
+├── Paper_9_Geometric_Substrate_Cost_Structure_v3.7.tex                ← the paper
+├── Paper_9_Geometric_Substrate_Cost_Structure_Technical_Supplement_v1.1.tex                ← Technical Supplement
 
 └── LICENSE                                ← MIT
 ```
@@ -117,7 +123,7 @@ The [interactive DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Subst
 
 **Derived:** (see Theorem mapping table above)
 
-**Not derived here:** Specific results outside this paper's scope live in companion papers — see the corpus table below for the full corpus (Papers 0-42).
+**Not derived here:** Specific results outside this paper's scope live in companion papers — see the corpus table below for the full 9-paper series.
 
 ---
 
@@ -128,7 +134,7 @@ The [interactive DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Subst
   title   = {The Geometric Substrate as Cost Structure of Comparison Continuations},
   author  = {Brooke, Ethan},
   year    = {2026},
-  doi     = {},
+  doi     = {10.5281/zenodo.20041675},
   url     = {https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate}
 }
 ```

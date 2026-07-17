@@ -30,7 +30,7 @@ Expected output: one line per check, then a summary `Paper 9 (The Geometric Subs
 Pick the check name from `ai_context/THEOREMS.md` (use `grep` to filter by module, or by epistemic tag, or by keyword). Then:
 
 ```bash
-python -c "from apf import core; r = core.check_T_CPTP(); print(r)"
+python -c "from apf import core; r = core.check_T_gammaC_carrier_fork(); print(r)"
 ```
 
 The returned dict has fields:
@@ -57,11 +57,11 @@ A check that passes means the witness survived every invariant. The witness is t
 
 ## Cross-check against the manuscript
 
-Every `\coderef{check_X}{module.py}` in the paper source (`Paper_9_Geometric_Substrate_Cost_Structure_v1.4.tex`) points to a specific check function. To verify the paper's claim at a particular point:
+Every `\coderef{check_X}{module.py}` in the paper source (`Paper_9_Geometric_Substrate_Cost_Structure_v3.7.tex`) points to a specific check function. To verify the paper's claim at a particular point:
 
 ```bash
 # find all coderefs in the paper
-grep -o '\\coderef{[^}]*}{[^}]*}' Paper_9_Geometric_Substrate_Cost_Structure_v1.4.tex
+grep -o '\\coderef{[^}]*}{[^}]*}' Paper_9_Geometric_Substrate_Cost_Structure_v3.7.tex
 
 # for each coderef, run it:
 python -c "from apf import core; print(core.check_T7B().get('key_result'))"
