@@ -23,7 +23,7 @@ The Admissibility Physics Framework is a **9-paper spine** plus a canonical comp
 | 9 | The Geometric Substrate as Cost Structure of Comparison Continuations **(this repo)** | [10.5281/zenodo.20041675](https://doi.org/10.5281/zenodo.20041675) | [`APF-Paper-9-Geometric-Substrate`](https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate) | public |
 | 10 | The Calculus of Finite Continuability | — | [`APF-Paper-10-Calculus-of-Finite-Continuability`](https://github.com/Ethan-Brooke/APF-Paper-10-Calculus-of-Finite-Continuability) | pending |
 | 13 | The Minimal Admissibility Core | [10.5281/zenodo.18361446](https://doi.org/10.5281/zenodo.18361446) | [`APF-Paper-13-The-Minimal-Admissibility-Core`](https://github.com/Ethan-Brooke/APF-Paper-13-The-Minimal-Admissibility-Core) | public |
-| — | Canonical codebase (v24.3.427) | [10.5281/zenodo.18529115](https://doi.org/10.5281/zenodo.18529115) | [`APF-Codebase`](https://github.com/Ethan-Brooke/APF-Codebase) | pending |
+| — | Canonical codebase (v24.3.427) | [10.5281/zenodo.18529115](https://doi.org/10.5281/zenodo.18529115) | [`APF-Engine`](https://github.com/Ethan-Brooke/APF-Engine) | pending |
 
 **You are reading the companion to Paper 9** (this repo: https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate).
 
@@ -46,7 +46,7 @@ The repo bundles:
 - A theorem-by-theorem Colab walkthrough (`APF_Reviewer_Walkthrough.ipynb`)
 - **This AI-onboarding pack** (`ai_context/`) — the authoritative context for agents
 
-The framework-wide canonical codebase (3918 bank-registered theorems, 25 modules, 3918 `verify_all` checks; canonical Phase-18 baseline) is **not** bundled here. Only the Paper 9 subset is runnable locally. See `ai_context/THEOREMS.md` for the full bank listing with bundled-in-this-repo flags.
+The framework-wide canonical engine (APF-Engine v24.3.427, commit 7ab898e, 3,918 bank-registered checks) is **not** bundled here. Only the nine Paper 9 witnesses are runnable locally. See `theorems.json` for the typed Paper 9 closure ledger with bundled-in-this-repo flags.
 
 ## 2. APF in 30 seconds
 
@@ -87,14 +87,17 @@ If you're loading this repo cold and want to understand Paper 9 well enough to r
 
 In order of decreasing trust, most-trusted first:
 
-1. **Vendored `apf/` Python code.** The checks execute; the math is machine-verified. If the code passes, the claim stands.
-2. **Technical Supplement (if included).** Canonical proofs. The supplement is the project's source of truth for formal content.
-3. **Manuscript main body.** Prose guide to the supplement and code. May compress proofs into sketches.
-4. **`ai_context/` files.** Framework-level context, authored for AI readers. Accurate at the time of this release.
-5. **`ai_context/wiki/` pages.** Concept pages and per-paper pages. Updated separately from releases; may drift.
-6. **`README.md` / `REVIEWERS_GUIDE.md`.** Authored for human reviewers; accurate but voiced for skeptical physicists, not for AI reasoning.
+1. **Technical Supplement.** Canonical proofs. The supplement is the project's source of truth for formal content.
+2. **Manuscript main body.** Argument-first prose guide to the supplement. May compress proofs into sketches.
+3. **Typed closure ledger** (`theorems.json`, `interactive_dag.html`). The exact dependency/status typing of every Paper 9 node — conditional, open, external, model-certificate, and witnessed.
+4. **Vendored `apf/` Python code + `run_checks.py`.** Finite witnesses and falsifier controls. A passing check is a consistency check on a finite construction; it does **not** by itself establish a theorem, and it does not close a conditional or open gate.
+5. **`ai_context/` files.** Framework-level context, authored for AI readers. Accurate at the time of this release.
+6. **`README.md` / `REVIEWERS_GUIDE.md`.** Authored for human reviewers.
 
-**When sources conflict, trust the code.** If a prose claim in the paper contradicts a passing check function in `apf/core.py`, the check is right and the prose needs correction. Flag this rather than explaining it away.
+**When sources conflict, the manuscript/supplement and the typed ledger govern.**
+A passing witness that appears to contradict a typed gate means the witness is a
+finite instance, not a general proof — read the ledger's typing, and flag the
+discrepancy rather than upgrading the witness to a theorem.
 
 ## 5. The H0 falsifier — read this before touching cosmology
 
@@ -115,7 +118,7 @@ The honest posture: $H_0$ is a real falsification candidate, not a bug to patch 
 ## 6. Current canonical state (at time of this release)
 
 - **Codebase:** v24.3.427 (2026-05-04)
-- **Bank-registered theorems:** 3918 across 25 modules
+- **Canonical engine:** APF-Engine v24.3.427 (commit 7ab898e); 3,918 bank-registered checks
 - **Total `verify_all` checks:** 3918 (includes `apf/standalone/` + session modules)
 - **Quantitative predictions:** 48 (39 tested; 32/39 within 3σ; mean error 3.83%; median 0.37%)
 - **Free parameters:** 0
@@ -160,9 +163,9 @@ If reviewer B raises the same concern as reviewer A, the convergent criticism is
 | `STARTING_PROMPTS.md` | High-value query templates known to work. |
 | `GLOSSARY.md` | APF-specific terminology and epistemic tag meanings. |
 | `HOW_TO_VERIFY.md` | Recipes for verifying any claim in this paper. |
-| `THEOREMS.md` | Full bank catalog (3918 theorems) with bundled-in-this-repo flags. |
+| `theorems.json` | Full bank catalog (3918 theorems) with bundled-in-this-repo flags. |
 | `theorems.json` | Same catalog in structured form — query/grep-friendly. |
-| `derivation_graph.json` | The DAG as structured data (nodes + edges). |
+| `paper9_typed_dependency_dag.json` | The DAG as structured data (nodes + edges). |
 | `OPEN_PROBLEMS.md` | Framework-level open questions (so you don't re-solve known-open ones naively). |
 | `CITING.md` | How to cite the paper, the codebase, and the framework. |
 | `PAPER_LINEAGE.md` | This paper's version history and what supersedes what on Zenodo. |

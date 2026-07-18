@@ -1,149 +1,88 @@
-# Reviewers' Guide — APF Paper 9: The Geometric Substrate as Cost Structure of Comparison Continuations
-
-This guide is the physics-first walkthrough for peer reviewers of The Geometric Substrate as Cost Structure of Comparison Continuations. It addresses the structural assumptions, anticipated objections, and falsification surfaces of the paper's argument. The intended audience is a peer reviewer with a background in physics or mathematics.
-
-The guide complements three other verification routes:
-- The [executable codebase](apf/) (run `python run_checks.py` for the full 5-theorem verification);
-- The [Colab notebook](APF_Reviewer_Walkthrough.ipynb) (zero-install, theorem-by-theorem cells with prose + code);
-- The [interactive derivation DAG](https://ethan-brooke.github.io/Geometric-Substrate/) (hover-for-details, click-for-dependencies, animated verification).
-
----
-
-## The derivation in 5 steps
-
-The full chain from the foundational commitments to this paper's results:
-
-**Step 1 — T_gammaC_carrier_fork** (`check_T_gammaC_carrier_fork`)
-
-  
-
-
-**Step 2 — T_weight_one_reduction** (`check_T_weight_one_reduction`)
-
-  
-
-
-**Step 3 — L_amount_graded_testedness_encoding_no_go** (`check_L_amount_graded_testedness_encoding_no_go`)
-
-  
-
-
-**Step 4 — T_fagt2_encoding_argmin_pressure_and_read_channel** (`check_T_fagt2_encoding_argmin_pressure_and_read_channel`)
-
-  
-
-
-**Step 5 — T_contention_law_granularity_occupancy_fork** (`check_T_contention_law_granularity_occupancy_fork`)
-
-  
-
-
-
-Each step is a single theorem. The dependencies form a directed acyclic graph (DAG) with no cycles; the [interactive DAG](https://ethan-brooke.github.io/Geometric-Substrate/) shows multiple derivation paths to the same result, which is structural redundancy: many results are over-determined and would survive even if individual derivation steps were weakened.
-
----
-
-## Pre-empting the operational-witness objection
-
-A common objection to executable mathematical appendices is that the test-case witnesses (specific small examples used to verify the theorem) "smuggle in" the very structure being derived. Each test-case witness in this paper is the smallest concrete instance of a structure already proved in the abstract argument. Witnesses are constructed *after* the abstract claim is established, never before. The reviewer can re-derive each witness from the abstract derivation chain, not the other way around. If a witness appears to smuggle structure in, the corresponding `check_*` function will fail when the witness is replaced with an explicit countermodel.
-
----
-
-## The structural assumptions
-
-Beyond Axiom A1, this paper relies on the four PLEC components and a small set of structural regularity conditions:
-
-- **A1 (Finite Enforcement Capacity)** — at any interface, the total enforcement cost across maintained distinctions is bounded.
-- **MD (Minimum Distinction)** — every physical distinction has strictly positive enforcement cost (positive floor μ\* > 0).
-- **A2 (Argmin selection)** — the realized configuration is the argmin of cost over the admissible set.
-- **BW (Boundary Weight / Non-degeneracy)** — the cost spectrum is rich enough that the argmin is generically informative.
-
-The four are pairwise logically independent (proved in Paper 1's Technical Supplement §1 with explicit countermodels). Together they define the variational structure named the **Principle of Least Enforcement Cost (PLEC)**: *reality is the minimum-cost expression of distinction compatible with finite capacity.*
-
-_No paper-specific assumptions beyond the PLEC framework._
-
----
-
-## The identifications
-
-Several mappings between enforcement concepts and standard mathematical structures are used in the paper. They are **motivated, not deduced**, and reviewers should pay particular attention to their justification:
-
-1. **Distinction ↔ binary partition of admissible configurations.** Spencer-Brown's distinction primitive (drawing the line between *this* and *not-this*) is identified with a binary measurement / partition at an enforcement interface. Motivated, not deduced.
-
-2. **Cost ↔ resource expenditure.** The framework's $\varepsilon(d)$ functional is identified with the operational resource (energy / mass / barrier height) that maintains a distinction in any specific laboratory instance. This is a multi-resource correspondence; specific identifications appear in domain-specific papers (Paper 7 for action / Lagrangian, Paper 6 for spacetime metric, etc.).
-
-3. **Capacity bound ↔ physical scarcity.** $C(\Gamma) < \infty$ at every interface is identified with the universally observed pattern that any specific physical system supports finitely many distinguishable states (Bekenstein--Hawking, Landauer, Ashby). Motivated by these traditions; not derived from them.
-
-4. **Argmin ↔ realization.** The realized configuration at an interface is identified with the $\arg\min$ of total enforcement cost over the admissible set. This is a *locator*, not a process: nothing is doing the optimization; the argmin is what realization *means* under the framework.
-
-5. **Hilbert space ↔ minimal representation of the noncommutative enforcement algebra.** Per the Paper 1 GNS argument, complex Hilbert space appears as the *unique* representational target for the algebraic structure that finite enforcement forces. Not assumed; selected via Frobenius.
-
-These identifications are conventional rather than discovered: they are the choice that makes the framework's vocabulary and standard mathematics align. None is internally derivable.
-
----
-
-## What is *not* proved in this paper
-
-To prevent scope inflation, the following are flagged explicitly as *outside* the scope of Geometric Substrate Cost Structure:
-
-- **Specific gauge-group derivations** belong to Paper 2; this paper assumes them as imports if cited.
-- **Specific particle content / generation count** belongs to Papers 2 and 4; not derived here.
-- **Quantitative cosmological observables** beyond what is explicitly cited belong to Papers 3 (entropy / horizon) and 6 (geometry / DESI).
-- **Quantum-gravity backreaction** is out of scope for any single paper in the current APF series; it is a future direction.
-- **Numerical mass values** (absolute scales for $m_t$, $m_b$, $m_\nu$) are open problems noted in Paper 4 and the Engine paper; not within this paper's scope.
-- **Spacetime dimension** (D = 4) is structurally derived in Paper 6 from Lovelock uniqueness; this paper assumes it where used.
-
-If a reviewer concludes that the paper claims any of the above without supplying a proof for it, the reviewer is correct that the paper does not deliver that claim — those claims belong to other papers in the series and are explicitly flagged as such.
-
----
-
-## How to falsify: attack surfaces
-
-Each falsifier below targets a specific theorem or structural assumption. The corresponding code change in `apf/core.py` is also identified; reviewers can modify the codebase and re-run `python run_checks.py` to test each surface directly.
-
-| # | Surface | Code-level test |
-|---|---------|------------------|
-| 1 | **Numerical disagreement.** A predicted observable disagrees with experiment beyond the framework's stated tolerance. | Modify the corresponding `check_*` to use the published experimental value; observe failure. |
-| 2 | **Structural redundancy collapse.** Removing one PLEC component (A1, MD, A2, BW) leaves the derivation chain intact. | Comment out the test for the removed component in `apf/core.py`; observe other downstream checks failing. |
-| 3 | **Reconstruction-program parity.** A standard quantum reconstruction (Hardy / CDP / Masanes--Müller) reaches the same conclusion with a strictly weaker assumption set. | Extract the GPT axioms used by the comparator; supply them as inputs to the relevant `apf/core.py` functions. |
-| 4 | **Composition / locality break.** A multi-interface test with one interface deliberately violating $L_{\rm loc}$ does not produce the expected falsification mode. | Modify `check_L_loc` countermodel; rerun and observe expected vs. actual behavior. |
-| 5 | **Cost-functional uniqueness fails.** An alternative cost functional satisfies all framework axioms equally well. | Replace the cost functional in `apf_utils.py`; observe whether downstream checks still pass. |
-| 6 | **Scope-creep test.** A claim attributed to this paper is shown to actually require an unstated assumption. | Trace the claim's `\coderef`s through the bank dependency chain; identify any check that exits the paper's named scope. |
-
-This is a structured threat model. If any of the surfaces fails empirically, the paper falsifies on that specific point.
-
----
-
-## Reading the code
-
-The codebase has three files in `apf/`:
-
-- **`apf/core.py`** — the 5 theorem check functions for this paper. Each function constructs a mathematical witness, verifies the theorem's claim, and returns a structured result with name, dependencies, status, and key result.
-- **`apf/apf_utils.py`** — exact arithmetic utilities (mostly `Fraction`-based; numpy/scipy where required by specific numerical lemmas).
-- **`apf/bank.py`** — registry of all check functions in this repo, plus the `run_all()` runner.
-
-Execution model: `run_checks.py` calls `bank.run_all()`, which iterates over every registered check and aggregates pass/fail/error counts. Individual checks can be invoked via `apf.bank.get_check('T_Born')()`.
-
----
-
-## Scalar-to-matrix boundary
-
-A characteristic feature of the APF program is that the early derivations use only finite sets and exact rational arithmetic (no matrices, no complex numbers, no linear algebra). Matrices first appear at the GNS construction (T2 in Paper 1), as the *minimal representation* of structure that the earlier scalar-only theorems prove must exist. This paper inherits the scalar-to-matrix transition from Paper 1's $T_2$. No new derivations of matrix structure occur in this paper; matrices appear where Paper 1 already established them.
-
-This stratification is a deliberate methodological commitment: matrices are derived as representations of an already-proved abstract structure, not assumed as the substrate of the framework.
-
----
-
-## The complex-field justification
-
-The complex numbers as the unique admissible amplitude field is not a postulate but a derived selection (Paper 1 T2c, with proved exclusions $P_{\rm tom}$ and $P_{\rm cls}$ ruling out $\mathbb{R}$ and $\mathbb{H}$ respectively). This paper does not re-derive the complex-field selection; it inherits from Paper 1 ($T_{2c}$, with proved exclusions $P_{\rm tom}$ and $P_{\rm cls}$). For the original derivation, see Paper 1's [REVIEWERS_GUIDE.md](https://github.com/Ethan-Brooke/The-Enforceability-of-Distinction/blob/main/REVIEWERS_GUIDE.md).
-
----
-
-## Citation and Zenodo
-
-This repository is the executable mathematical appendix to APF Paper 9. The canonical archival deposit is at [https://doi.org/10.5281/zenodo.20041675](https://doi.org/10.5281/zenodo.20041675) (DOI: 10.5281/zenodo.20041675).
-
----
-
-*Generated by the APF `create-repo` skill on 2026-07-17. Codebase snapshot: v24.3.427 (frozen 2026-05-04; 3918 verify_all checks, 3918 bank-registered theorems, 48 quantitative predictions).*
+# Reviewer's Guide — APF Paper 9 v3.7 companion
+
+This repository is an **executable appendix**, not a proof surface. The formal
+mathematics is in `Paper_9_..._v3.7.pdf` and `..._Technical_Supplement_v1.1.pdf`.
+Here you can (a) run nine finite witnesses, (b) read the typed closure ledger,
+and (c) check the release contract. Nothing here upgrades a conditional or open
+gate to a proved physical theorem.
+
+## 1. What to verify in five minutes
+
+```bash
+python -m venv .venv && . .venv/bin/activate
+pip install -e .
+python run_checks.py --verbose   # 9 passed, 0 failed, 9 total
+python release_gate.py           # RESULT: PASS
+```
+
+`run_checks.py` prints each check's **actual** grade. You should see
+`P_structural`, `P_structural_instrument`, and `P_structural_reading` — never a
+blanket `[P]`. If any check imported a canonical-only `apf.*` module the run
+would fail in this clean environment; it does not, because the canonical-bank
+introspection legs are frozen into `apf/_release_fixtures.py`.
+
+## 2. The conditional theorem spine (not a five-step derivation)
+
+Paper 9 is a **dependency-explicit route**, and most of it is conditional or
+open. The `G9.1–G9.20` tree in the manuscript is reproduced, typed, in
+`theorems.json` and drawn in `interactive_dag.html`. The spine, in order:
+
+1. **G9.1** finite complete operational basis — *conditional* on the named
+   joint-realizability package; the exact **atom-cover model** is Engine-certified
+   (checks 1–3).
+2. **G9.2** realization as finite separating precision channels — **open gate**.
+3. **G9.3** record topology Hausdorff + second countable — proved **under** a
+   countable-grammar / topology-generation gate.
+4. **G9.4–G9.6** finite smooth generation, subcartesian orbits, and the boxed
+   kernel identity `ker Dβ = N^ctx` — each **under** a named smooth-generation /
+   factorization gate; standard Sikorski / subcartesian / constant-rank imports
+   are typed as imports.
+5. **G9.7** intrinsic response-orbit quotient gauge and length — **proved**
+   (APF-native).
+6. **G9.8** physical substrate anchor `A = q ∘ Ds` — **open gate**.
+7. **G9.9–G9.12** calibration, residual-energy law, positive cost metric, and the
+   explicit result that **positive pullback geometry cannot supply Lorentzian
+   signature** — proved, several under named riders.
+8. **G9.13** signed Lorentz–Finsler causal structure — **open gate**.
+9. **G9.16–G9.19** trace–volume identity, loaded equilibrium, the **no-trace
+   gate** `Ptr K⁻¹J = 0`, and the conditional `γ_C = 1` weak-field exterior.
+10. **G9.20** nonlinear Einstein closure — **external Paper 6 endpoint**.
+
+## 3. Paper-specific gates (there ARE assumptions beyond PLEC)
+
+The result is **not** "no paper-specific assumptions beyond the PLEC framework."
+The load-bearing gates a referee should press are: the finite joint-extension
+package (G9.1), operational-to-precision-channel realization (G9.2), the
+countable specification grammar (G9.3), finite smooth generation (G9.4), smooth
+response-factor completeness (G9.6), the physical substrate anchor (G9.8), signed
+causal signature (G9.13), and the no-trace source law (G9.18). Each is a typed
+node in the ledger, not a hidden step.
+
+## 4. What the weak-field checks do and do not show
+
+`check_T_gammaC_carrier_fork` and `check_T_weight_one_reduction` establish, in
+exact rationals, that the four carrier closures solve to `γ_C ∈ {1, 1/3, 0, -1}`,
+that the plane carrier matches the Einstein family only at `n = 3`, and that the
+weight-one curve `γ(w) = w/((n-1)-w)` gives GR at `w = 1` in every dimension.
+**They do not derive `w = 1`.** The Cassini datum (`γ - 1 = (2.1 ± 2.3)×10⁻⁵`)
+sits `0.91σ` above the no-source bound `γ_C ≤ 1` — a live one-sided tension, not a
+saturation. A `≥ 3σ` confirmed `γ_obs > 1` falsifies the composite.
+
+The amount-graded-testedness trio (checks 7–9) is the discharge-hook lane for the
+`TCP-strong [C]` boundary: it shows the floor invariant grades representation
+rather than magnitude, and walks the distributed-encoding `(E)` door without
+adopting or refuting it.
+
+## 5. Finite witness ≠ proof-level falsification
+
+A failing witness would flag a broken finite instance; a passing witness is a
+consistency check on the manuscript's finite constructions and controls. Neither
+is a symbolic proof, and neither closes an open gate. The DAG shows exactly one
+executable witness per node that has one; the majority of nodes have none by
+design.
+
+## 6. Determinism
+
+`generate_paper9_dag.py` regenerates `theorems.json`, `interactive_dag.html`, and
+`paper9_typed_dependency_dag.json` deterministically from the ledger encoded in
+that script. CI re-runs it and checks the outputs are unchanged.

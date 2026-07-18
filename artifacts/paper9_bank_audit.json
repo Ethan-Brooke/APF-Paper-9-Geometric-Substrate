@@ -1,0 +1,90 @@
+{
+  "expected_theorem_count": 3918,
+  "actual_registry_size": 3918,
+  "gap": 0,
+  "total_static_check_defs": 3853,
+  "stale_expected_estimate": 65,
+  "module_paths_count": 477,
+  "module_paths_unique": 477,
+  "bucket_a_failed_imports": {
+    "count": 0,
+    "items": [],
+    "description": "Modules whose import failed (often scipy/optional-dep blocked in sandboxes). In a full environment these load."
+  },
+  "bucket_b_zero_check_loaded": {
+    "count": 20,
+    "items": [
+      "apf.interface_atlas_v02_inputs",
+      "apf.ie_atlas_verdict_pin",
+      "apf.interface_atlas_v03_claim_refresh",
+      "apf.w_trace_native_lepton_self_energy",
+      "apf.codomain_competition",
+      "apf.codomain_hysteresis",
+      "apf.codomain_transition_dynamics",
+      "apf.coherent_materials_casebook",
+      "apf.coherent_materials_discriminator",
+      "apf.coherent_materials_functional_codomain_registry",
+      "apf.coherent_materials_ingestion_contract",
+      "apf.coherent_materials_intervention_selector",
+      "apf.coherent_materials_obligation_packet_adapter",
+      "apf.coherent_materials_protocol_compiler",
+      "apf.coherent_materials_receipt_update_loop",
+      "apf.correlated_layer_competition",
+      "apf.engine_dag_priming",
+      "apf.sc_material_evidence",
+      "apf.sc_material_ledger",
+      "apf.superconductivity_ie"
+    ],
+    "description": "Modules that imported cleanly but registered 0 checks (after architecture-only whitelist filter)."
+  },
+  "bucket_c_helper_subcheck_delta": {
+    "count": 1,
+    "items": [
+      {
+        "module": "apf.w_os_route_terminal_closure",
+        "static_defs": 11,
+        "registered": 2,
+        "delta": 9
+      }
+    ],
+    "description": "Modules with more static check_* defs than registered checks; delta is helper sub-checks not directly added to REGISTRY."
+  },
+  "bucket_d_stale_expected": {
+    "value": 65,
+    "description": "EXPECTED - total_static_check_defs. Positive means EXPECTED is incremented beyond what _MODULE_PATHS actually contains; suggests narrative-incremented EXPECTED needs re-derivation."
+  },
+  "architecture_only_whitelist": [
+    "apf.coherent_materials_batch_triage_runner",
+    "apf.coherent_materials_candidate_triage_kernel",
+    "apf.coherent_materials_golden_receipt_benchmark",
+    "apf.coherent_materials_manual_dry_run_pilot",
+    "apf.coherent_materials_manual_external_dry_run",
+    "apf.coherent_materials_partner_pilot_lifecycle",
+    "apf.coherent_materials_pilot_telemetry_schema",
+    "apf.coherent_materials_portfolio_planner",
+    "apf.coherent_materials_rc_certification",
+    "apf.coherent_materials_receipt_contract_validator",
+    "apf.coherent_materials_receipt_trace_certificates",
+    "apf.coherent_materials_red_team",
+    "apf.continuability_preservation_resolution",
+    "apf.defect_composition_calculus",
+    "apf.defect_domain_applications",
+    "apf.defect_falsifier_gate_logic",
+    "apf.defect_functorial_transport",
+    "apf.defect_global_descent_kernel",
+    "apf.defect_master_integration",
+    "apf.defect_observable_signatures",
+    "apf.defect_obstruction_cohomology",
+    "apf.defect_scale_flow",
+    "apf.defect_transition_dynamics",
+    "apf.defect_variational_principle",
+    "apf.ew_sector_closure",
+    "apf.interaction_pattern_schema",
+    "apf.interface_solver_batch",
+    "apf.interface_solver_ci_policy",
+    "apf.interface_solver_contracts",
+    "apf.interface_solver_report",
+    "apf.interface_solver_route_adapters",
+    "apf.perturbative_refinability"
+  ]
+}

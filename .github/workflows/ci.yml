@@ -1,0 +1,53 @@
+name: paper9-release-ci
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  release-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install
+        run: |
+          python -m venv .venv
+          . .venv/bin/activate
+          pip install -e .
+      - name: local-checks
+        run: |
+          . .venv/bin/activate
+          python run_checks.py --verbose
+      - name: static-release-contract
+        run: |
+          . .venv/bin/activate
+          python release_gate.py
+      - name: ledger-and-dag-determinism
+        run: |
+          . .venv/bin/activate
+          cp theorems.json /tmp/theorems.before.json
+          cp interactive_dag.html /tmp/dag.before.html
+          python generate_paper9_dag.py
+          diff -q /tmp/theorems.before.json theorems.json
+          diff -q /tmp/dag.before.html interactive_dag.html
+      - name: metadata-consistency
+        run: |
+          . .venv/bin/activate
+          python - <<'PY'
+          import json
+          led=json.load(open('theorems.json'))
+          import apf.bank as b
+          assert led['bundled_in_this_repo']==len(b.REGISTRY)==9, "bundled count drift"
+          assert set(led['bundled_check_names'])==set(b.REGISTRY), "bundled set drift"
+          print("metadata consistent: 9 bundled, ledger==bank")
+          PY
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: latex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            Paper_9_Geometric_Substrate_Cost_Structure_v3.7.tex
+            Paper_9_Geometric_Substrate_Cost_Structure_Technical_Supplement_v1.1.tex
+        continue-on-error: true

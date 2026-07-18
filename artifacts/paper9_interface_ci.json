@@ -1,0 +1,2530 @@
+{
+  "created_utc": "2026-07-18T03:48:44.671931+00:00",
+  "module_results": [
+    {
+      "module_name": "apf.route_certification_starter_suite",
+      "top_check": "check_T_route_certification_starter_suite_P",
+      "expected_status": "P_route_suite",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_route_suite",
+      "consistent": true,
+      "error": null,
+      "summary": "All route-specific APF certification starters pass.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.route_certification_workbench",
+      "top_check": "check_T_route_workbench_payload_certification_P",
+      "expected_status": "P_workbench",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_workbench",
+      "consistent": true,
+      "error": null,
+      "summary": "Route workbench certifies JSON payloads for all six starter routes and rejects expected-label leakage.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_structure_transport_ledger",
+      "top_check": "check_T_interface_structure_transport_ledger_P",
+      "expected_status": "P_interface_ledger",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_interface_ledger",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Structure Transport Ledger is P: it inventories moving structures before obstruction/promotion certification and generalizes the trace transport ledger architecture.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_structure_discovery_engine",
+      "top_check": "check_T_interface_structure_discovery_engine_P",
+      "expected_status": "P_discovery_engine",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_discovery_engine",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Structure Discovery Engine is P: raw route payloads discover typed moving-structure ledgers, certify them, and witness every obstruction.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_structure_movement_graph",
+      "top_check": "check_T_interface_structure_movement_graph_P",
+      "expected_status": "P_movement_graph",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_movement_graph",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Structure Movement Graph is P: moving structures are explicit source-target edges and every obstruction has a witness path.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_movement_graph_repair_planner",
+      "top_check": "check_T_interface_movement_graph_repair_planner_P",
+      "expected_status": "P_repair_planner",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_repair_planner",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Movement Graph Repair Planner is P: failed movement edges become ordered repair actions with closure predicates.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_repair_closure_simulator",
+      "top_check": "check_T_interface_repair_closure_simulator_P",
+      "expected_status": "P_closure_sim",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_closure_sim",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Repair Closure Simulator is P: ordinary repairs can be counterfactually patched and rerun, while provenance/structural blockers refuse auto-patching.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_repair_frontier_explorer",
+      "top_check": "check_T_interface_repair_frontier_explorer_P",
+      "expected_status": "P_frontier_explorer",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_frontier_explorer",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Repair Frontier Explorer is P: it finds minimal ordinary repair bundles, critical fields, and refuses blocked/provenance frontiers.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_repair_obligation_compiler",
+      "top_check": "check_T_interface_repair_obligation_compiler_P",
+      "expected_status": "P_obligation_compiler",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_obligation_compiler",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Repair Obligation Compiler is P: minimal repair bundles become auditable evidence obligations and ready-to-rerun packets.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_evidence_rerun_controller",
+      "top_check": "check_T_interface_evidence_rerun_controller_P",
+      "expected_status": "P_evidence_rerun",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_evidence_rerun",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Evidence Rerun Controller is P: complete evidence patches one minimal bundle and reruns certification, while incomplete/blocked cases do not rerun.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.ew_trace_to_scheme_real_adapter",
+      "top_check": "check_T_EW_trace_to_scheme_real_adapter_P",
+      "expected_status": "P_real_adapter",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_real_adapter",
+      "consistent": true,
+      "error": null,
+      "summary": "EW Trace-to-Scheme Real Adapter is P: live/manual EW state converts into payloads, certifications, obligations, and safe rerun gating.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.dark_posterior_real_adapter",
+      "top_check": "check_T_dark_posterior_real_adapter_P",
+      "expected_status": "P_real_adapter",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_real_adapter",
+      "consistent": true,
+      "error": null,
+      "summary": "Dark Posterior Real Adapter is P: live/manual dark route state converts into payloads, certifications, obligations, and safe rerun gating.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.claim_to_interface_graph_compiler",
+      "top_check": "check_T_claim_to_interface_graph_compiler_P",
+      "expected_status": "P_claim_compiler",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_claim_compiler",
+      "consistent": true,
+      "error": null,
+      "summary": "Claim-to-Interface Graph Compiler is P: prose claims compile to conservative interface audits without treating text as evidence.",
+      "ci_status": "PASS"
+    },
+    {
+      "module_name": "apf.interface_atlas",
+      "top_check": "check_T_interface_atlas_P",
+      "expected_status": "P_interface_atlas",
+      "import_ok": true,
+      "check_ok": true,
+      "actual_status": "P_interface_atlas",
+      "consistent": true,
+      "error": null,
+      "summary": "Interface Atlas is P: many route/claim/codomain graphs aggregate into APF-wide bottleneck and repair-strategy reports across engine axes.",
+      "ci_status": "PASS"
+    }
+  ],
+  "atlas_report": {
+    "atlas_name": "APF_canonical_interface_atlas",
+    "inputs": [
+      {
+        "input_id": "claim:ew_global_export",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "EW APF_TRACE physical scheme masses are exported to global P.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:ew_local_trace",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "EW trace-sector local APF_TRACE closure is banked as P_local.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:dark_runtime",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "Dark sector Cobaya runtime completed but posterior convergence is still under review.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:gauge_fiber",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "Gauge group appears as a fiber automorphism with cocycle descent.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:horizon_cost",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "Horizon area is represented as fiber-cost with capacity bound.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:capacity_overspend",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "Capacity overspend is relieved by a coarse-grain repair.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:provenance_smuggling",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "The route has target value smuggling and posterior used as input.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:cstar_substrate",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "Flat substrate C* global action requires complex action, reversal, and operator norm.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:generic",
+        "kind": "CLAIM",
+        "route": null,
+        "claim_text": "A new APF route is claimed to close but route class is unspecified.",
+        "payload": null,
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "payload:ew_transport_open",
+        "kind": "ROUTE_PAYLOAD",
+        "route": "ew",
+        "claim_text": null,
+        "payload": {
+          "name": "atlas_EW_open",
+          "trace_sector_closed": true,
+          "source_to_scheme_registry_present": true,
+          "evaluator_map_found": false,
+          "codomain_transport_found": false,
+          "counterterm_finite_parts_declared": false,
+          "external_constants_ledger_clean": true,
+          "uncertainty_protocol_declared": false,
+          "target_value_consumed": false
+        },
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "payload:dark_runtime_open",
+        "kind": "ROUTE_PAYLOAD",
+        "route": "dark",
+        "claim_text": null,
+        "payload": {
+          "name": "atlas_dark_runtime_open",
+          "route_built": true,
+          "run_completed": true,
+          "chains_converged": false,
+          "posterior_closed": false,
+          "robustness_checks_passed": false,
+          "data_ledger_clean": true,
+          "evaluator_map_found": false,
+          "codomain_transport_found": true,
+          "target_value_consumed": false
+        },
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "payload:capacity_overspend",
+        "kind": "ROUTE_PAYLOAD",
+        "route": "capacity",
+        "claim_text": null,
+        "payload": {
+          "name": "atlas_capacity_overspend",
+          "raw_capacity_load": 100,
+          "capacity_budget": 25,
+          "coarse_grain_factor": 2
+        },
+        "axis": "ROUTE"
+      }
+    ],
+    "route_summaries": [
+      {
+        "input_id": "claim:ew_global_export",
+        "route": "ew",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING",
+          "CODOMAIN_MISMATCH"
+        ],
+        "failed_edges": [
+          "target-scheme contract",
+          "codomain transport",
+          "scheme evaluator map",
+          "external constants ledger",
+          "counterterm finite parts",
+          "uncertainty/comparison protocol"
+        ],
+        "failed_kinds": [
+          "CODOMAIN_TRANSPORT",
+          "COUNTERTERM",
+          "EVALUATOR_MAP",
+          "EXTERNAL_CONSTANT",
+          "SCHEME_CONTRACT",
+          "UNCERTAINTY_PROTOCOL"
+        ],
+        "critical_fields": [
+          "codomain_transport_found",
+          "counterterm_finite_parts_declared",
+          "evaluator_map_found",
+          "external_constants_ledger_clean",
+          "source_to_scheme_registry_present",
+          "uncertainty_protocol_declared"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:ew_local_trace",
+        "route": "ew",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING",
+          "CODOMAIN_MISMATCH"
+        ],
+        "failed_edges": [
+          "target-scheme contract",
+          "codomain transport",
+          "scheme evaluator map",
+          "external constants ledger",
+          "counterterm finite parts",
+          "uncertainty/comparison protocol"
+        ],
+        "failed_kinds": [
+          "CODOMAIN_TRANSPORT",
+          "COUNTERTERM",
+          "EVALUATOR_MAP",
+          "EXTERNAL_CONSTANT",
+          "SCHEME_CONTRACT",
+          "UNCERTAINTY_PROTOCOL"
+        ],
+        "critical_fields": [
+          "codomain_transport_found",
+          "counterterm_finite_parts_declared",
+          "evaluator_map_found",
+          "external_constants_ledger_clean",
+          "source_to_scheme_registry_present",
+          "uncertainty_protocol_declared"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:dark_runtime",
+        "route": "dark",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "failed_edges": [
+          "dark empirical evaluator",
+          "posterior/robustness closure"
+        ],
+        "failed_kinds": [
+          "EMPIRICAL_POSTERIOR",
+          "EVALUATOR_MAP"
+        ],
+        "critical_fields": [
+          "posterior_closed",
+          "robustness_checks_passed"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:gauge_fiber",
+        "route": "gauge",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING",
+          "CODOMAIN_MISMATCH",
+          "OVERLAP_INCOHERENCE"
+        ],
+        "failed_edges": [
+          "gauge codomain map",
+          "overlap cocycle",
+          "anomaly/evaluator check"
+        ],
+        "failed_kinds": [
+          "CODOMAIN_TRANSPORT",
+          "EVALUATOR_MAP",
+          "OVERLAP_GLUING"
+        ],
+        "critical_fields": [
+          "anomaly_check_passed",
+          "codomain_map_declared",
+          "overlap_cocycle_verified"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:horizon_cost",
+        "route": "horizon",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "CAPACITY_OVERSPEND",
+          "OVERLAP_INCOHERENCE"
+        ],
+        "failed_edges": [
+          "horizon area cost map",
+          "horizon overlap gluing"
+        ],
+        "failed_kinds": [
+          "CAPACITY_COST",
+          "OVERLAP_GLUING"
+        ],
+        "critical_fields": [
+          "capacity_bound_checked",
+          "overlap_gluing_verified"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:capacity_overspend",
+        "route": "capacity",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "CAPACITY_OVERSPEND"
+        ],
+        "failed_edges": [
+          "capacity load after coarse-graining"
+        ],
+        "failed_kinds": [
+          "CAPACITY_COST"
+        ],
+        "critical_fields": [
+          "coarse_grain_factor"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:provenance_smuggling",
+        "route": "provenance",
+        "solver_status": "FAIL_CLOSED_PROVENANCE",
+        "export_global_P": false,
+        "obstruction": [
+          "PROVENANCE_SMUGGLE"
+        ],
+        "failed_edges": [
+          "no target/posterior/fitted output consumed"
+        ],
+        "failed_kinds": [
+          "PROVENANCE"
+        ],
+        "critical_fields": [],
+        "packet_status": "BLOCKED_PROVENANCE_REBUILD_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:cstar_substrate",
+        "route": "cstar",
+        "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED",
+        "export_global_P": false,
+        "obstruction": [
+          "REVERSAL_MISSING",
+          "COMPLEX_ACTION_MISSING",
+          "NORM_MISSING",
+          "CODOMAIN_MISMATCH"
+        ],
+        "failed_edges": [
+          "complex scalar action at substrate",
+          "cost-preserving reversal at substrate",
+          "operator/C*-norm at substrate",
+          "C* codomain declaration"
+        ],
+        "failed_kinds": [
+          "CODOMAIN_TRANSPORT",
+          "SUBSTRATE_BOUNDARY"
+        ],
+        "critical_fields": [],
+        "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "claim:generic",
+        "route": "generic",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING",
+          "CAPACITY_OVERSPEND",
+          "CODOMAIN_MISMATCH",
+          "OVERLAP_INCOHERENCE"
+        ],
+        "failed_edges": [
+          "ACC base record",
+          "generic evaluator map",
+          "generic codomain transport",
+          "generic overlap gluing",
+          "generic capacity budget",
+          "generic empirical/posterior closure"
+        ],
+        "failed_kinds": [
+          "ACC_RECORD",
+          "CAPACITY_COST",
+          "CODOMAIN_TRANSPORT",
+          "EMPIRICAL_POSTERIOR",
+          "EVALUATOR_MAP",
+          "OVERLAP_GLUING"
+        ],
+        "critical_fields": [
+          "acc_base_present",
+          "capacity_budget_verified",
+          "codomain_transport_found",
+          "empirical_or_posterior_closed",
+          "evaluator_map_found",
+          "local_solution_found",
+          "overlap_gluing_verified"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "payload:ew_transport_open",
+        "route": "ew",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING",
+          "CODOMAIN_MISMATCH"
+        ],
+        "failed_edges": [
+          "codomain transport",
+          "scheme evaluator map",
+          "counterterm finite parts",
+          "uncertainty/comparison protocol"
+        ],
+        "failed_kinds": [
+          "CODOMAIN_TRANSPORT",
+          "COUNTERTERM",
+          "EVALUATOR_MAP",
+          "UNCERTAINTY_PROTOCOL"
+        ],
+        "critical_fields": [
+          "codomain_transport_found",
+          "counterterm_finite_parts_declared",
+          "evaluator_map_found",
+          "uncertainty_protocol_declared"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "payload:dark_runtime_open",
+        "route": "dark",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "failed_edges": [
+          "dark empirical evaluator",
+          "posterior/robustness closure"
+        ],
+        "failed_kinds": [
+          "EMPIRICAL_POSTERIOR",
+          "EVALUATOR_MAP"
+        ],
+        "critical_fields": [
+          "posterior_closed",
+          "robustness_checks_passed"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      },
+      {
+        "input_id": "payload:capacity_overspend",
+        "route": "capacity",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "export_global_P": false,
+        "obstruction": [
+          "CAPACITY_OVERSPEND"
+        ],
+        "failed_edges": [
+          "capacity load after coarse-graining"
+        ],
+        "failed_kinds": [
+          "CAPACITY_COST"
+        ],
+        "critical_fields": [
+          "coarse_grain_factor"
+        ],
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "axis": "ROUTE"
+      }
+    ],
+    "obstruction_counts": {
+      "EVALUATOR_MISSING": 7,
+      "CODOMAIN_MISMATCH": 6,
+      "OVERLAP_INCOHERENCE": 3,
+      "CAPACITY_OVERSPEND": 4,
+      "PROVENANCE_SMUGGLE": 1,
+      "REVERSAL_MISSING": 1,
+      "COMPLEX_ACTION_MISSING": 1,
+      "NORM_MISSING": 1
+    },
+    "failed_kind_counts": {
+      "CODOMAIN_TRANSPORT": 6,
+      "COUNTERTERM": 3,
+      "EVALUATOR_MAP": 7,
+      "EXTERNAL_CONSTANT": 2,
+      "SCHEME_CONTRACT": 2,
+      "UNCERTAINTY_PROTOCOL": 3,
+      "EMPIRICAL_POSTERIOR": 3,
+      "OVERLAP_GLUING": 3,
+      "CAPACITY_COST": 4,
+      "PROVENANCE": 1,
+      "SUBSTRATE_BOUNDARY": 1,
+      "ACC_RECORD": 1
+    },
+    "critical_field_counts": {
+      "codomain_transport_found": 4,
+      "counterterm_finite_parts_declared": 3,
+      "evaluator_map_found": 4,
+      "external_constants_ledger_clean": 2,
+      "source_to_scheme_registry_present": 2,
+      "uncertainty_protocol_declared": 3,
+      "posterior_closed": 2,
+      "robustness_checks_passed": 2,
+      "anomaly_check_passed": 1,
+      "codomain_map_declared": 1,
+      "overlap_cocycle_verified": 1,
+      "capacity_bound_checked": 1,
+      "overlap_gluing_verified": 2,
+      "coarse_grain_factor": 2,
+      "acc_base_present": 1,
+      "capacity_budget_verified": 1,
+      "empirical_or_posterior_closed": 1,
+      "local_solution_found": 1
+    },
+    "route_status_counts": {
+      "SOLVED_LOCAL_HELD_FOR_REPAIR": 10,
+      "FAIL_CLOSED_PROVENANCE": 1,
+      "BLOCKED_SUBSTRATE_REVISION_REQUIRED": 1
+    },
+    "global_bottlenecks": [
+      [
+        "EVALUATOR_MISSING",
+        7
+      ],
+      [
+        "KIND:EVALUATOR_MAP",
+        7
+      ],
+      [
+        "CODOMAIN_MISMATCH",
+        6
+      ],
+      [
+        "KIND:CODOMAIN_TRANSPORT",
+        6
+      ],
+      [
+        "CAPACITY_OVERSPEND",
+        4
+      ],
+      [
+        "KIND:CAPACITY_COST",
+        4
+      ],
+      [
+        "OVERLAP_INCOHERENCE",
+        3
+      ],
+      [
+        "KIND:COUNTERTERM",
+        3
+      ],
+      [
+        "KIND:UNCERTAINTY_PROTOCOL",
+        3
+      ],
+      [
+        "KIND:EMPIRICAL_POSTERIOR",
+        3
+      ],
+      [
+        "KIND:OVERLAP_GLUING",
+        3
+      ],
+      [
+        "KIND:EXTERNAL_CONSTANT",
+        2
+      ],
+      [
+        "KIND:SCHEME_CONTRACT",
+        2
+      ],
+      [
+        "PROVENANCE_SMUGGLE",
+        1
+      ],
+      [
+        "REVERSAL_MISSING",
+        1
+      ],
+      [
+        "COMPLEX_ACTION_MISSING",
+        1
+      ],
+      [
+        "NORM_MISSING",
+        1
+      ],
+      [
+        "KIND:PROVENANCE",
+        1
+      ],
+      [
+        "KIND:SUBSTRATE_BOUNDARY",
+        1
+      ],
+      [
+        "KIND:ACC_RECORD",
+        1
+      ]
+    ],
+    "shared_repair_fields": [
+      [
+        "codomain_transport_found",
+        4
+      ],
+      [
+        "evaluator_map_found",
+        4
+      ],
+      [
+        "counterterm_finite_parts_declared",
+        3
+      ],
+      [
+        "uncertainty_protocol_declared",
+        3
+      ],
+      [
+        "external_constants_ledger_clean",
+        2
+      ],
+      [
+        "source_to_scheme_registry_present",
+        2
+      ],
+      [
+        "posterior_closed",
+        2
+      ],
+      [
+        "robustness_checks_passed",
+        2
+      ],
+      [
+        "overlap_gluing_verified",
+        2
+      ],
+      [
+        "coarse_grain_factor",
+        2
+      ],
+      [
+        "anomaly_check_passed",
+        1
+      ],
+      [
+        "codomain_map_declared",
+        1
+      ],
+      [
+        "overlap_cocycle_verified",
+        1
+      ],
+      [
+        "capacity_bound_checked",
+        1
+      ],
+      [
+        "acc_base_present",
+        1
+      ],
+      [
+        "capacity_budget_verified",
+        1
+      ],
+      [
+        "empirical_or_posterior_closed",
+        1
+      ],
+      [
+        "local_solution_found",
+        1
+      ]
+    ],
+    "coverage": {
+      "input_count": 12,
+      "route_count": 8,
+      "routes": {
+        "ew": 3,
+        "dark": 2,
+        "gauge": 1,
+        "horizon": 1,
+        "capacity": 2,
+        "provenance": 1,
+        "cstar": 1,
+        "generic": 1
+      },
+      "global_P_count": 0,
+      "non_global_count": 12,
+      "obstructed_count": 12,
+      "axis_counts": {
+        "ROUTE": 12
+      }
+    },
+    "axis_summary": {
+      "ROUTE": {
+        "input_count": 12,
+        "global_P_count": 0,
+        "non_global_count": 12,
+        "obstruction_counts": {
+          "EVALUATOR_MISSING": 7,
+          "CODOMAIN_MISMATCH": 6,
+          "OVERLAP_INCOHERENCE": 3,
+          "CAPACITY_OVERSPEND": 4,
+          "PROVENANCE_SMUGGLE": 1,
+          "REVERSAL_MISSING": 1,
+          "COMPLEX_ACTION_MISSING": 1,
+          "NORM_MISSING": 1
+        },
+        "failed_kind_counts": {
+          "CODOMAIN_TRANSPORT": 6,
+          "COUNTERTERM": 3,
+          "EVALUATOR_MAP": 7,
+          "EXTERNAL_CONSTANT": 2,
+          "SCHEME_CONTRACT": 2,
+          "UNCERTAINTY_PROTOCOL": 3,
+          "EMPIRICAL_POSTERIOR": 3,
+          "OVERLAP_GLUING": 3,
+          "CAPACITY_COST": 4,
+          "PROVENANCE": 1,
+          "SUBSTRATE_BOUNDARY": 1,
+          "ACC_RECORD": 1
+        },
+        "critical_field_counts": {
+          "codomain_transport_found": 4,
+          "counterterm_finite_parts_declared": 3,
+          "evaluator_map_found": 4,
+          "external_constants_ledger_clean": 2,
+          "source_to_scheme_registry_present": 2,
+          "uncertainty_protocol_declared": 3,
+          "posterior_closed": 2,
+          "robustness_checks_passed": 2,
+          "anomaly_check_passed": 1,
+          "codomain_map_declared": 1,
+          "overlap_cocycle_verified": 1,
+          "capacity_bound_checked": 1,
+          "overlap_gluing_verified": 2,
+          "coarse_grain_factor": 2,
+          "acc_base_present": 1,
+          "capacity_budget_verified": 1,
+          "empirical_or_posterior_closed": 1,
+          "local_solution_found": 1
+        },
+        "status_counts": {
+          "SOLVED_LOCAL_HELD_FOR_REPAIR": 10,
+          "FAIL_CLOSED_PROVENANCE": 1,
+          "BLOCKED_SUBSTRATE_REVISION_REQUIRED": 1
+        },
+        "input_ids": [
+          "claim:ew_global_export",
+          "claim:ew_local_trace",
+          "claim:dark_runtime",
+          "claim:gauge_fiber",
+          "claim:horizon_cost",
+          "claim:capacity_overspend",
+          "claim:provenance_smuggling",
+          "claim:cstar_substrate",
+          "claim:generic",
+          "payload:ew_transport_open",
+          "payload:dark_runtime_open",
+          "payload:capacity_overspend"
+        ]
+      },
+      "_cross_axis_note": "Per-axis counts above are primary. The top-level flat counts on InterfaceAtlas aggregate across axes and should be read as advisory only (per Reference - APF Interface Engine Family Architecture, Q2: apples-and-oranges risk when an EVALUATOR_MISSING route-axis obstruction is summed with a MARGIN_NONPOSITIVE codomain-axis failure)."
+    }
+  },
+  "ew_adapter_report": {
+    "payload": {
+      "name": "ci_EW_live_adapter",
+      "trace_sector_closed": true,
+      "source_to_scheme_registry_present": true,
+      "evaluator_map_found": true,
+      "codomain_transport_found": true,
+      "counterterm_finite_parts_declared": true,
+      "external_constants_ledger_clean": true,
+      "uncertainty_protocol_declared": true,
+      "target_value_consumed": false,
+      "notes": "Conservative live-codebase EW trace-to-scheme snapshot."
+    },
+    "snapshot": {
+      "trace_sector_closed": true,
+      "source_to_scheme_registry_present": true,
+      "evaluator_map_found": true,
+      "codomain_transport_found": true,
+      "counterterm_finite_parts_declared": true,
+      "external_constants_ledger_clean": true,
+      "uncertainty_protocol_declared": true,
+      "target_value_consumed": false,
+      "probes": [
+        {
+          "module_name": "apf.trace_transport_ledger",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.trace_transport_routes",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.trace_transport_composition",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.trace_transport_completion",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.trace_scheme_transport",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.codomain_transport_schema",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.trace_sector_closure",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.ew_trace_sector_closure",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.ew_trace_sector_closure'\")"
+          ]
+        },
+        {
+          "module_name": "apf.ew_source_to_scheme_registry",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.ew_source_to_scheme_registry'\")"
+          ]
+        },
+        {
+          "module_name": "apf.source_to_scheme_registry",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.source_to_scheme_registry'\")"
+          ]
+        },
+        {
+          "module_name": "apf.external_constants_ledger",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.external_constants_ledger'\")"
+          ]
+        },
+        {
+          "module_name": "apf.w_trace_constants_source_ledger",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_counterterm_convention",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_denner_sirlin_counterterm_functional",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_denner_ward_identity_counterterm_import",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_dizet_row_admission_covariance",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.ew_counterterm_uncertainty_protocol",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.uncertainty_protocols",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.uncertainty_protocols'\")"
+          ]
+        },
+        {
+          "module_name": "apf.w_trace_uncertainty_propagation",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_correlated_uncertainty_model",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_delta_r_comparison_harness",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.w_trace_multisource_delta_r_comparison",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "import:IMPORT_PASS"
+          ],
+          "markers": [
+            "IMPORT_PASS"
+          ],
+          "errors": []
+        }
+      ],
+      "notes": "Conservative live-codebase EW trace-to-scheme snapshot."
+    },
+    "certification": {
+      "route": "ew",
+      "ledger_certificate": {
+        "ledger": {
+          "name": "ci_EW_live_adapter",
+          "sector": "EW",
+          "global_export_requested": true,
+          "local_solution_found": true,
+          "kind_status_summary": {
+            "ACC_RECORD": {
+              "MOVES_CLEANLY": 1
+            },
+            "TRACE_INPUT": {
+              "MOVES_CLEANLY": 1
+            },
+            "SCHEME_CONTRACT": {
+              "MOVES_CLEANLY": 1
+            },
+            "CODOMAIN_TRANSPORT": {
+              "MOVES_CLEANLY": 1
+            },
+            "EVALUATOR_MAP": {
+              "MOVES_CLEANLY": 1
+            },
+            "EXTERNAL_CONSTANT": {
+              "MOVES_CLEANLY": 1
+            },
+            "COUNTERTERM": {
+              "MOVES_CLEANLY": 1
+            },
+            "UNCERTAINTY_PROTOCOL": {
+              "MOVES_CLEANLY": 1
+            },
+            "PROVENANCE": {
+              "PRESENT_STABLE": 1
+            }
+          },
+          "missing_required": [],
+          "blocked_required": [],
+          "provenance_failures": [],
+          "items": [
+            {
+              "name": "ACC base record",
+              "kind": "ACC_RECORD",
+              "source": "APF interface",
+              "target": "APF interface",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [],
+              "notes": ""
+            },
+            {
+              "name": "immutable APF_TRACE input",
+              "kind": "TRACE_INPUT",
+              "source": "APF_TRACE",
+              "target": "transport ledger",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [],
+              "notes": ""
+            },
+            {
+              "name": "target-scheme contract",
+              "kind": "SCHEME_CONTRACT",
+              "source": "APF_TRACE",
+              "target": "physical scheme S(mu)",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "codomain transport",
+              "kind": "CODOMAIN_TRANSPORT",
+              "source": "APF_TRACE",
+              "target": "physical scheme S(mu)",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [
+                "CODOMAIN_MISMATCH"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "scheme evaluator map",
+              "kind": "EVALUATOR_MAP",
+              "source": "trace route",
+              "target": "physical export evaluator",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "external constants ledger",
+              "kind": "EXTERNAL_CONSTANT",
+              "source": "external constants",
+              "target": "transport evaluator",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "counterterm finite parts",
+              "kind": "COUNTERTERM",
+              "source": "counterterm slots",
+              "target": "scheme evaluator",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "uncertainty/comparison protocol",
+              "kind": "UNCERTAINTY_PROTOCOL",
+              "source": "transport output",
+              "target": "comparison claim",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "no target physical mass as inverse input",
+              "kind": "PROVENANCE",
+              "source": "physical target",
+              "target": "transport input",
+              "required": true,
+              "status": "PRESENT_STABLE",
+              "obstruction_hint": [
+                "PROVENANCE_SMUGGLE"
+              ],
+              "notes": "Fail closed if target physical mass is used as an inverse input."
+            }
+          ],
+          "notes": "EW trace-to-scheme structure transport ledger; generalizes trace_transport_ledger.py architecture."
+        },
+        "certificate": {
+          "problem_name": "ci_EW_live_adapter",
+          "sector": "EW",
+          "solver_status": "SOLVED_GLOBAL_P",
+          "promotion_status": "EXPORT_GLOBAL_P",
+          "repair_class": "EXACT",
+          "obstruction": [],
+          "export_global_P": true,
+          "export_local_P": true,
+          "repair_plan": {
+            "before": [],
+            "class": "EXACT",
+            "operations": [],
+            "after": [],
+            "succeeds": true,
+            "note": "Already in the exact kernel."
+          },
+          "safe_claim": "Global P: obstruction object is zero; sector claim lies in the exact descent kernel.",
+          "next_action": "Export as global P and cite zero-obstruction descent.",
+          "route_notes": "EW trace-to-scheme structure transport ledger; generalizes trace_transport_ledger.py architecture."
+        }
+      },
+      "obstruction_witness_map": {},
+      "all_obstructions_have_witnesses": true
+    },
+    "movement_graph": {
+      "name": "ci_EW_live_adapter",
+      "sector": "EW",
+      "nodes": [
+        {
+          "node_id": "apf_interface",
+          "label": "APF interface",
+          "role": "BOTH"
+        },
+        {
+          "node_id": "apf_trace",
+          "label": "APF_TRACE",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "comparison_claim",
+          "label": "comparison claim",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "counterterm_slots",
+          "label": "counterterm slots",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "external_constants",
+          "label": "external constants",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "physical_export_evaluator",
+          "label": "physical export evaluator",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "physical_scheme_smu",
+          "label": "physical scheme S(mu)",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "physical_target",
+          "label": "physical target",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "scheme_evaluator",
+          "label": "scheme evaluator",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "trace_route",
+          "label": "trace route",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "transport_evaluator",
+          "label": "transport evaluator",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "transport_input",
+          "label": "transport input",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "transport_ledger",
+          "label": "transport ledger",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "transport_output",
+          "label": "transport output",
+          "role": "SOURCE"
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "ci_EW_live_adapter:0:ACC_RECORD",
+          "structure_name": "ACC base record",
+          "kind": "ACC_RECORD",
+          "source": "APF interface",
+          "target": "APF interface",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:1:TRACE_INPUT",
+          "structure_name": "immutable APF_TRACE input",
+          "kind": "TRACE_INPUT",
+          "source": "APF_TRACE",
+          "target": "transport ledger",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:2:SCHEME_CONTRACT",
+          "structure_name": "target-scheme contract",
+          "kind": "SCHEME_CONTRACT",
+          "source": "APF_TRACE",
+          "target": "physical scheme S(mu)",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:3:CODOMAIN_TRANSPORT",
+          "structure_name": "codomain transport",
+          "kind": "CODOMAIN_TRANSPORT",
+          "source": "APF_TRACE",
+          "target": "physical scheme S(mu)",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [
+            "CODOMAIN_MISMATCH"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:4:EVALUATOR_MAP",
+          "structure_name": "scheme evaluator map",
+          "kind": "EVALUATOR_MAP",
+          "source": "trace route",
+          "target": "physical export evaluator",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:5:EXTERNAL_CONSTANT",
+          "structure_name": "external constants ledger",
+          "kind": "EXTERNAL_CONSTANT",
+          "source": "external constants",
+          "target": "transport evaluator",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:6:COUNTERTERM",
+          "structure_name": "counterterm finite parts",
+          "kind": "COUNTERTERM",
+          "source": "counterterm slots",
+          "target": "scheme evaluator",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:7:UNCERTAINTY_PROTOCOL",
+          "structure_name": "uncertainty/comparison protocol",
+          "kind": "UNCERTAINTY_PROTOCOL",
+          "source": "transport output",
+          "target": "comparison claim",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_EW_live_adapter:8:PROVENANCE",
+          "structure_name": "no target physical mass as inverse input",
+          "kind": "PROVENANCE",
+          "source": "physical target",
+          "target": "transport input",
+          "required": true,
+          "status": "PRESENT_STABLE",
+          "obstruction_hint": [
+            "PROVENANCE_SMUGGLE"
+          ],
+          "notes": "Fail closed if target physical mass is used as an inverse input."
+        }
+      ],
+      "kinds_present": [
+        "ACC_RECORD",
+        "CODOMAIN_TRANSPORT",
+        "COUNTERTERM",
+        "EVALUATOR_MAP",
+        "EXTERNAL_CONSTANT",
+        "PROVENANCE",
+        "SCHEME_CONTRACT",
+        "TRACE_INPUT",
+        "UNCERTAINTY_PROTOCOL"
+      ],
+      "missing_or_blocked_edges": [],
+      "obstruction_witness_paths": {},
+      "certificate": {
+        "problem_name": "ci_EW_live_adapter",
+        "sector": "EW",
+        "solver_status": "SOLVED_GLOBAL_P",
+        "promotion_status": "EXPORT_GLOBAL_P",
+        "repair_class": "EXACT",
+        "obstruction": [],
+        "export_global_P": true,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [],
+          "class": "EXACT",
+          "operations": [],
+          "after": [],
+          "succeeds": true,
+          "note": "Already in the exact kernel."
+        },
+        "safe_claim": "Global P: obstruction object is zero; sector claim lies in the exact descent kernel.",
+        "next_action": "Export as global P and cite zero-obstruction descent.",
+        "route_notes": "EW trace-to-scheme structure transport ledger; generalizes trace_transport_ledger.py architecture."
+      },
+      "all_obstructions_have_paths": true,
+      "all_edges_typed": true
+    },
+    "frontier": {
+      "route": "ew",
+      "original_repair_class": "EXACT",
+      "frontier_status": "ALREADY_CLOSED",
+      "candidate_patch_count": 0,
+      "minimal_bundles": [],
+      "critical_fields": [],
+      "optional_fields": [],
+      "blocked_reason": null,
+      "original_certificate": {
+        "problem_name": "ci_EW_live_adapter",
+        "sector": "EW",
+        "solver_status": "SOLVED_GLOBAL_P",
+        "promotion_status": "EXPORT_GLOBAL_P",
+        "repair_class": "EXACT",
+        "obstruction": [],
+        "export_global_P": true,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [],
+          "class": "EXACT",
+          "operations": [],
+          "after": [],
+          "succeeds": true,
+          "note": "Already in the exact kernel."
+        },
+        "safe_claim": "Global P: obstruction object is zero; sector claim lies in the exact descent kernel.",
+        "next_action": "Export as global P and cite zero-obstruction descent.",
+        "route_notes": "EW trace-to-scheme structure transport ledger; generalizes trace_transport_ledger.py architecture."
+      }
+    },
+    "obligation_packet": {
+      "route": "ew",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "frontier_status": "ALREADY_CLOSED",
+      "original_repair_class": "EXACT",
+      "bundles": [],
+      "critical_fields": [],
+      "optional_fields": [],
+      "blocked_reason": null,
+      "ready_to_rerun": true,
+      "rerun_command_hint": "After evidence is supplied, rerun the route certification for route=ew.",
+      "original_certificate": {
+        "problem_name": "ci_EW_live_adapter",
+        "sector": "EW",
+        "solver_status": "SOLVED_GLOBAL_P",
+        "promotion_status": "EXPORT_GLOBAL_P",
+        "repair_class": "EXACT",
+        "obstruction": [],
+        "export_global_P": true,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [],
+          "class": "EXACT",
+          "operations": [],
+          "after": [],
+          "succeeds": true,
+          "note": "Already in the exact kernel."
+        },
+        "safe_claim": "Global P: obstruction object is zero; sector claim lies in the exact descent kernel.",
+        "next_action": "Export as global P and cite zero-obstruction descent.",
+        "route_notes": "EW trace-to-scheme structure transport ledger; generalizes trace_transport_ledger.py architecture."
+      }
+    },
+    "evidence_template": {
+      "route": "ew",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "evidence": {}
+    },
+    "rerun_result_without_evidence": {
+      "route": "ew",
+      "status": "ALREADY_P_NO_RERUN",
+      "selected_bundle_id": null,
+      "original_payload": {
+        "name": "ci_EW_live_adapter",
+        "trace_sector_closed": true,
+        "source_to_scheme_registry_present": true,
+        "evaluator_map_found": true,
+        "codomain_transport_found": true,
+        "counterterm_finite_parts_declared": true,
+        "external_constants_ledger_clean": true,
+        "uncertainty_protocol_declared": true,
+        "target_value_consumed": false,
+        "notes": "Conservative live-codebase EW trace-to-scheme snapshot."
+      },
+      "patched_payload": null,
+      "patches": [],
+      "evidence_validation": {
+        "packet_status": "NOT_REQUIRED_ALREADY_P",
+        "ready_to_rerun": true,
+        "note": "Already P; no evidence or rerun required."
+      },
+      "original_certificate": {
+        "problem_name": "ci_EW_live_adapter",
+        "sector": "EW",
+        "solver_status": "SOLVED_GLOBAL_P",
+        "promotion_status": "EXPORT_GLOBAL_P",
+        "repair_class": "EXACT",
+        "obstruction": [],
+        "export_global_P": true,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [],
+          "class": "EXACT",
+          "operations": [],
+          "after": [],
+          "succeeds": true,
+          "note": "Already in the exact kernel."
+        },
+        "safe_claim": "Global P: obstruction object is zero; sector claim lies in the exact descent kernel.",
+        "next_action": "Export as global P and cite zero-obstruction descent.",
+        "route_notes": "EW trace-to-scheme structure transport ledger; generalizes trace_transport_ledger.py architecture."
+      },
+      "rerun_certificate": null,
+      "before_after_summary": {
+        "original_status": "SOLVED_GLOBAL_P",
+        "rerun_status": null,
+        "original_export_global_P": true,
+        "rerun_export_global_P": null,
+        "original_obstruction": [],
+        "rerun_obstruction": null,
+        "closed": false
+      },
+      "note": "Already global P; controller did not rerun."
+    }
+  },
+  "dark_adapter_report": {
+    "payload": {
+      "name": "ci_dark_live_adapter",
+      "route_built": true,
+      "run_completed": true,
+      "chains_converged": false,
+      "posterior_closed": false,
+      "robustness_checks_passed": false,
+      "data_ledger_clean": true,
+      "evaluator_map_found": true,
+      "codomain_transport_found": true,
+      "target_value_consumed": false,
+      "notes": "Conservative live-codebase dark posterior/run snapshot."
+    },
+    "snapshot": {
+      "route_built": true,
+      "run_completed": true,
+      "chains_converged": false,
+      "posterior_closed": false,
+      "robustness_checks_passed": false,
+      "data_ledger_clean": true,
+      "evaluator_map_found": true,
+      "codomain_transport_found": true,
+      "target_value_consumed": false,
+      "probes": [
+        {
+          "module_name": "apf.dark_sector",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector'\")"
+          ]
+        },
+        {
+          "module_name": "apf.dark_sector_evolution",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector_evolution'\")"
+          ]
+        },
+        {
+          "module_name": "apf.dark_sector_posterior",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector_posterior'\")"
+          ]
+        },
+        {
+          "module_name": "apf.dark_posterior_certifier",
+          "import_ok": true,
+          "check_count": 1,
+          "passing_count": 1,
+          "statuses": [
+            "check_T_dark_posterior_certifier_P:P_route_cert"
+          ],
+          "markers": [
+            "Dark-sector posterior certifier separates runtime success from posterior/global P closure."
+          ],
+          "errors": []
+        },
+        {
+          "module_name": "apf.dark_sector_cobaya_route_b",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector_cobaya_route_b'\")"
+          ]
+        },
+        {
+          "module_name": "apf.dark_sector_route_b",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector_route_b'\")"
+          ]
+        },
+        {
+          "module_name": "apf.dark_sector_route_c",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector_route_c'\")"
+          ]
+        },
+        {
+          "module_name": "apf.dark_sector_growth_predictions",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.dark_sector_growth_predictions'\")"
+          ]
+        },
+        {
+          "module_name": "apf.desi_dr2_adapter",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.desi_dr2_adapter'\")"
+          ]
+        },
+        {
+          "module_name": "apf.cobaya_adapter",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.cobaya_adapter'\")"
+          ]
+        },
+        {
+          "module_name": "apf.posterior_diagnostics",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.posterior_diagnostics'\")"
+          ]
+        },
+        {
+          "module_name": "apf.data_ledger",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.data_ledger'\")"
+          ]
+        },
+        {
+          "module_name": "apf.provenance_audit",
+          "import_ok": false,
+          "check_count": 0,
+          "passing_count": 0,
+          "statuses": [],
+          "markers": [],
+          "errors": [
+            "import failed: ModuleNotFoundError(\"No module named 'apf.provenance_audit'\")"
+          ]
+        }
+      ],
+      "notes": "Conservative live-codebase dark posterior/run snapshot."
+    },
+    "certification": {
+      "route": "dark",
+      "ledger_certificate": {
+        "ledger": {
+          "name": "ci_dark_live_adapter",
+          "sector": "DARK",
+          "global_export_requested": true,
+          "local_solution_found": true,
+          "kind_status_summary": {
+            "ACC_RECORD": {
+              "MOVES_CLEANLY": 1
+            },
+            "EVALUATOR_MAP": {
+              "MISSING": 1
+            },
+            "EMPIRICAL_POSTERIOR": {
+              "MISSING": 1
+            },
+            "CODOMAIN_TRANSPORT": {
+              "MOVES_CLEANLY": 1
+            },
+            "PROVENANCE": {
+              "PRESENT_STABLE": 1
+            }
+          },
+          "missing_required": [
+            {
+              "name": "dark empirical evaluator",
+              "kind": "EVALUATOR_MAP",
+              "source": "dark route",
+              "target": "posterior evaluator",
+              "required": true,
+              "status": "MISSING",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "posterior/robustness closure",
+              "kind": "EMPIRICAL_POSTERIOR",
+              "source": "run output",
+              "target": "empirical claim",
+              "required": true,
+              "status": "MISSING",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            }
+          ],
+          "blocked_required": [],
+          "provenance_failures": [],
+          "items": [
+            {
+              "name": "ACC base record",
+              "kind": "ACC_RECORD",
+              "source": "APF interface",
+              "target": "APF interface",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [],
+              "notes": ""
+            },
+            {
+              "name": "dark empirical evaluator",
+              "kind": "EVALUATOR_MAP",
+              "source": "dark route",
+              "target": "posterior evaluator",
+              "required": true,
+              "status": "MISSING",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "posterior/robustness closure",
+              "kind": "EMPIRICAL_POSTERIOR",
+              "source": "run output",
+              "target": "empirical claim",
+              "required": true,
+              "status": "MISSING",
+              "obstruction_hint": [
+                "EVALUATOR_MISSING"
+              ],
+              "notes": ""
+            },
+            {
+              "name": "codomain transport",
+              "kind": "CODOMAIN_TRANSPORT",
+              "source": "model output",
+              "target": "empirical claim",
+              "required": true,
+              "status": "MOVES_CLEANLY",
+              "obstruction_hint": [],
+              "notes": ""
+            },
+            {
+              "name": "no posterior output as input",
+              "kind": "PROVENANCE",
+              "source": "posterior",
+              "target": "route input",
+              "required": true,
+              "status": "PRESENT_STABLE",
+              "obstruction_hint": [
+                "PROVENANCE_SMUGGLE"
+              ],
+              "notes": ""
+            }
+          ],
+          "notes": "Dark-sector posterior structure ledger."
+        },
+        "certificate": {
+          "problem_name": "ci_dark_live_adapter",
+          "sector": "DARK",
+          "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+          "promotion_status": "HOLD_ORDINARY_REPAIR_REQUIRED",
+          "repair_class": "ORDINARY_REPAIRABLE",
+          "obstruction": [
+            "EVALUATOR_MISSING"
+          ],
+          "export_global_P": false,
+          "export_local_P": true,
+          "repair_plan": {
+            "before": [
+              "EVALUATOR_MISSING"
+            ],
+            "class": "ORDINARY_REPAIRABLE",
+            "operations": [
+              "EVALUATOR_TRANSPORT"
+            ],
+            "after": [],
+            "succeeds": true,
+            "note": "Obstruction is repairable by ordinary APF coarse/evaluator/codomain operations."
+          },
+          "safe_claim": "Runtime/research progress only: robust empirical P is held until posterior/empirical closure and route evaluator status close.",
+          "next_action": "Continue posterior/convergence/robustness work, then rerun harness from updated metadata.",
+          "route_notes": "Dark-sector posterior structure ledger."
+        }
+      },
+      "obstruction_witness_map": {
+        "EVALUATOR_MISSING": [
+          "dark empirical evaluator",
+          "posterior/robustness closure"
+        ]
+      },
+      "all_obstructions_have_witnesses": true
+    },
+    "movement_graph": {
+      "name": "ci_dark_live_adapter",
+      "sector": "DARK",
+      "nodes": [
+        {
+          "node_id": "apf_interface",
+          "label": "APF interface",
+          "role": "BOTH"
+        },
+        {
+          "node_id": "dark_route",
+          "label": "dark route",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "empirical_claim",
+          "label": "empirical claim",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "model_output",
+          "label": "model output",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "posterior",
+          "label": "posterior",
+          "role": "SOURCE"
+        },
+        {
+          "node_id": "posterior_evaluator",
+          "label": "posterior evaluator",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "route_input",
+          "label": "route input",
+          "role": "TARGET"
+        },
+        {
+          "node_id": "run_output",
+          "label": "run output",
+          "role": "SOURCE"
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "ci_dark_live_adapter:0:ACC_RECORD",
+          "structure_name": "ACC base record",
+          "kind": "ACC_RECORD",
+          "source": "APF interface",
+          "target": "APF interface",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_dark_live_adapter:1:EVALUATOR_MAP",
+          "structure_name": "dark empirical evaluator",
+          "kind": "EVALUATOR_MAP",
+          "source": "dark route",
+          "target": "posterior evaluator",
+          "required": true,
+          "status": "MISSING",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_dark_live_adapter:2:EMPIRICAL_POSTERIOR",
+          "structure_name": "posterior/robustness closure",
+          "kind": "EMPIRICAL_POSTERIOR",
+          "source": "run output",
+          "target": "empirical claim",
+          "required": true,
+          "status": "MISSING",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_dark_live_adapter:3:CODOMAIN_TRANSPORT",
+          "structure_name": "codomain transport",
+          "kind": "CODOMAIN_TRANSPORT",
+          "source": "model output",
+          "target": "empirical claim",
+          "required": true,
+          "status": "MOVES_CLEANLY",
+          "obstruction_hint": [],
+          "notes": ""
+        },
+        {
+          "edge_id": "ci_dark_live_adapter:4:PROVENANCE",
+          "structure_name": "no posterior output as input",
+          "kind": "PROVENANCE",
+          "source": "posterior",
+          "target": "route input",
+          "required": true,
+          "status": "PRESENT_STABLE",
+          "obstruction_hint": [
+            "PROVENANCE_SMUGGLE"
+          ],
+          "notes": ""
+        }
+      ],
+      "kinds_present": [
+        "ACC_RECORD",
+        "CODOMAIN_TRANSPORT",
+        "EMPIRICAL_POSTERIOR",
+        "EVALUATOR_MAP",
+        "PROVENANCE"
+      ],
+      "missing_or_blocked_edges": [
+        {
+          "edge_id": "ci_dark_live_adapter:1:EVALUATOR_MAP",
+          "structure_name": "dark empirical evaluator",
+          "kind": "EVALUATOR_MAP",
+          "source": "dark route",
+          "target": "posterior evaluator",
+          "status": "MISSING",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ]
+        },
+        {
+          "edge_id": "ci_dark_live_adapter:2:EMPIRICAL_POSTERIOR",
+          "structure_name": "posterior/robustness closure",
+          "kind": "EMPIRICAL_POSTERIOR",
+          "source": "run output",
+          "target": "empirical claim",
+          "status": "MISSING",
+          "obstruction_hint": [
+            "EVALUATOR_MISSING"
+          ]
+        }
+      ],
+      "obstruction_witness_paths": {
+        "EVALUATOR_MISSING": [
+          [
+            "dark route",
+            "dark empirical evaluator",
+            "posterior evaluator"
+          ],
+          [
+            "run output",
+            "posterior/robustness closure",
+            "empirical claim"
+          ]
+        ]
+      },
+      "certificate": {
+        "problem_name": "ci_dark_live_adapter",
+        "sector": "DARK",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "promotion_status": "HOLD_ORDINARY_REPAIR_REQUIRED",
+        "repair_class": "ORDINARY_REPAIRABLE",
+        "obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "export_global_P": false,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [
+            "EVALUATOR_MISSING"
+          ],
+          "class": "ORDINARY_REPAIRABLE",
+          "operations": [
+            "EVALUATOR_TRANSPORT"
+          ],
+          "after": [],
+          "succeeds": true,
+          "note": "Obstruction is repairable by ordinary APF coarse/evaluator/codomain operations."
+        },
+        "safe_claim": "Runtime/research progress only: robust empirical P is held until posterior/empirical closure and route evaluator status close.",
+        "next_action": "Continue posterior/convergence/robustness work, then rerun harness from updated metadata.",
+        "route_notes": "Dark-sector posterior structure ledger."
+      },
+      "all_obstructions_have_paths": true,
+      "all_edges_typed": true
+    },
+    "frontier": {
+      "route": "dark",
+      "original_repair_class": "ORDINARY_REPAIR_REQUIRED",
+      "frontier_status": "FRONTIER_FOUND",
+      "candidate_patch_count": 3,
+      "minimal_bundles": [
+        {
+          "bundle_id": "bundle_000",
+          "fields": [
+            "posterior_closed",
+            "robustness_checks_passed"
+          ],
+          "patch_count": 2,
+          "patches": [
+            {
+              "field": "posterior_closed",
+              "old_value": false,
+              "new_value": true,
+              "reason": "posterior must close"
+            },
+            {
+              "field": "robustness_checks_passed",
+              "old_value": false,
+              "new_value": true,
+              "reason": "robustness checks must pass"
+            }
+          ],
+          "patched_certificate": {
+            "problem_name": "ci_dark_live_adapter",
+            "sector": "DARK",
+            "solver_status": "SOLVED_GLOBAL_P",
+            "promotion_status": "EXPORT_GLOBAL_P",
+            "repair_class": "EXACT",
+            "obstruction": [],
+            "export_global_P": true,
+            "export_local_P": true,
+            "repair_plan": {
+              "before": [],
+              "class": "EXACT",
+              "operations": [],
+              "after": [],
+              "succeeds": true,
+              "note": "Already in the exact kernel."
+            },
+            "safe_claim": "Global P: obstruction object is zero; sector claim lies in the exact descent kernel.",
+            "next_action": "Export as global P and cite zero-obstruction descent.",
+            "route_notes": "Dark-sector posterior structure ledger."
+          }
+        }
+      ],
+      "critical_fields": [
+        "posterior_closed",
+        "robustness_checks_passed"
+      ],
+      "optional_fields": [],
+      "blocked_reason": null,
+      "original_certificate": {
+        "problem_name": "ci_dark_live_adapter",
+        "sector": "DARK",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "promotion_status": "HOLD_ORDINARY_REPAIR_REQUIRED",
+        "repair_class": "ORDINARY_REPAIRABLE",
+        "obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "export_global_P": false,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [
+            "EVALUATOR_MISSING"
+          ],
+          "class": "ORDINARY_REPAIRABLE",
+          "operations": [
+            "EVALUATOR_TRANSPORT"
+          ],
+          "after": [],
+          "succeeds": true,
+          "note": "Obstruction is repairable by ordinary APF coarse/evaluator/codomain operations."
+        },
+        "safe_claim": "Runtime/research progress only: robust empirical P is held until posterior/empirical closure and route evaluator status close.",
+        "next_action": "Continue posterior/convergence/robustness work, then rerun harness from updated metadata.",
+        "route_notes": "Dark-sector posterior structure ledger."
+      }
+    },
+    "obligation_packet": {
+      "route": "dark",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "frontier_status": "FRONTIER_FOUND",
+      "original_repair_class": "ORDINARY_REPAIR_REQUIRED",
+      "bundles": [
+        {
+          "bundle_id": "bundle_000",
+          "fields": [
+            "posterior_closed",
+            "robustness_checks_passed"
+          ],
+          "minimal": true,
+          "obligations": [
+            {
+              "obligation_id": "bundle_000:posterior_closed",
+              "bundle_id": "bundle_000",
+              "field": "posterior_closed",
+              "old_value": false,
+              "required_value": true,
+              "reason": "posterior must close",
+              "evidence_slots": [
+                {
+                  "slot_id": "bundle_000:posterior_closed:posterior_summary",
+                  "key": "posterior_summary",
+                  "description": "Posterior closure summary.",
+                  "required": true,
+                  "acceptance_criteria": "Must provide posterior artifacts and closure criterion.",
+                  "example_value": "TODO"
+                },
+                {
+                  "slot_id": "bundle_000:posterior_closed:posterior_repro_command",
+                  "key": "posterior_repro_command",
+                  "description": "Reproducible posterior command.",
+                  "required": true,
+                  "acceptance_criteria": "Must include command/config hash/path.",
+                  "example_value": "TODO"
+                }
+              ],
+              "rerun_hint": "After supplying evidence, update the route payload, rerun discovery/certification, and require zero obstruction."
+            },
+            {
+              "obligation_id": "bundle_000:robustness_checks_passed",
+              "bundle_id": "bundle_000",
+              "field": "robustness_checks_passed",
+              "old_value": false,
+              "required_value": true,
+              "reason": "robustness checks must pass",
+              "evidence_slots": [
+                {
+                  "slot_id": "bundle_000:robustness_checks_passed:robustness_matrix",
+                  "key": "robustness_matrix",
+                  "description": "Robustness checks.",
+                  "required": true,
+                  "acceptance_criteria": "Must list perturbations/knockouts and pass status.",
+                  "example_value": "TODO"
+                }
+              ],
+              "rerun_hint": "After supplying evidence, update the route payload, rerun discovery/certification, and require zero obstruction."
+            }
+          ]
+        }
+      ],
+      "critical_fields": [
+        "posterior_closed",
+        "robustness_checks_passed"
+      ],
+      "optional_fields": [],
+      "blocked_reason": null,
+      "ready_to_rerun": false,
+      "rerun_command_hint": "After evidence is supplied, rerun the route certification for route=dark.",
+      "original_certificate": {
+        "problem_name": "ci_dark_live_adapter",
+        "sector": "DARK",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "promotion_status": "HOLD_ORDINARY_REPAIR_REQUIRED",
+        "repair_class": "ORDINARY_REPAIRABLE",
+        "obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "export_global_P": false,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [
+            "EVALUATOR_MISSING"
+          ],
+          "class": "ORDINARY_REPAIRABLE",
+          "operations": [
+            "EVALUATOR_TRANSPORT"
+          ],
+          "after": [],
+          "succeeds": true,
+          "note": "Obstruction is repairable by ordinary APF coarse/evaluator/codomain operations."
+        },
+        "safe_claim": "Runtime/research progress only: robust empirical P is held until posterior/empirical closure and route evaluator status close.",
+        "next_action": "Continue posterior/convergence/robustness work, then rerun harness from updated metadata.",
+        "route_notes": "Dark-sector posterior structure ledger."
+      }
+    },
+    "evidence_template": {
+      "route": "dark",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "evidence": {
+        "bundle_000": {
+          "bundle_000:posterior_closed": {
+            "posterior_summary": "TODO",
+            "posterior_repro_command": "TODO"
+          },
+          "bundle_000:robustness_checks_passed": {
+            "robustness_matrix": "TODO"
+          }
+        }
+      }
+    },
+    "rerun_result_without_evidence": {
+      "route": "dark",
+      "status": "EVIDENCE_INCOMPLETE_NOT_RERUN",
+      "selected_bundle_id": null,
+      "original_payload": {
+        "name": "ci_dark_live_adapter",
+        "route_built": true,
+        "run_completed": true,
+        "chains_converged": false,
+        "posterior_closed": false,
+        "robustness_checks_passed": false,
+        "data_ledger_clean": true,
+        "evaluator_map_found": true,
+        "codomain_transport_found": true,
+        "target_value_consumed": false,
+        "notes": "Conservative live-codebase dark posterior/run snapshot."
+      },
+      "patched_payload": null,
+      "patches": [],
+      "evidence_validation": {
+        "packet_status": "OPEN_EVIDENCE_REQUIRED",
+        "ready_to_rerun": false,
+        "satisfied_bundle_ids": [],
+        "missing_slots": [
+          "bundle_000:bundle_000:posterior_closed:posterior_summary",
+          "bundle_000:bundle_000:posterior_closed:posterior_repro_command",
+          "bundle_000:bundle_000:robustness_checks_passed:robustness_matrix"
+        ],
+        "supplied_slots": [],
+        "rerun_command_hint": "After evidence is supplied, rerun the route certification for route=dark.",
+        "note": "No minimal bundle has complete evidence yet."
+      },
+      "original_certificate": {
+        "problem_name": "ci_dark_live_adapter",
+        "sector": "DARK",
+        "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "promotion_status": "HOLD_ORDINARY_REPAIR_REQUIRED",
+        "repair_class": "ORDINARY_REPAIRABLE",
+        "obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "export_global_P": false,
+        "export_local_P": true,
+        "repair_plan": {
+          "before": [
+            "EVALUATOR_MISSING"
+          ],
+          "class": "ORDINARY_REPAIRABLE",
+          "operations": [
+            "EVALUATOR_TRANSPORT"
+          ],
+          "after": [],
+          "succeeds": true,
+          "note": "Obstruction is repairable by ordinary APF coarse/evaluator/codomain operations."
+        },
+        "safe_claim": "Runtime/research progress only: robust empirical P is held until posterior/empirical closure and route evaluator status close.",
+        "next_action": "Continue posterior/convergence/robustness work, then rerun harness from updated metadata.",
+        "route_notes": "Dark-sector posterior structure ledger."
+      },
+      "rerun_certificate": null,
+      "before_after_summary": {
+        "original_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+        "rerun_status": null,
+        "original_export_global_P": false,
+        "rerun_export_global_P": null,
+        "original_obstruction": [
+          "EVALUATOR_MISSING"
+        ],
+        "rerun_obstruction": null,
+        "closed": false
+      },
+      "note": "Evidence incomplete; controller refused to patch/rerun."
+    }
+  },
+  "release_gate_pass": true,
+  "release_gate_reason": "All interface-intelligence top checks passed; optional reports generated.",
+  "summary_counts": {
+    "PASS": 14
+  }
+}

@@ -1,0 +1,3987 @@
+{
+  "adapter_results": [
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route01_charged_lepton_pole",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:charged_lepton_pole_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route02_charged_lepton_qed_running",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:charged_lepton_qed_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route03_charm_msbar_self_scale",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:charm_msbar_rundec_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "original_id": "mass:route04_charm_pole",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "ew",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "swapped_id": "payload:charm_pole_obstruction_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route05_bottom_msbar_self_scale",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:bottom_msbar_rundec_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "original_id": "mass:route06_bottom_pole",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "ew",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "swapped_id": "payload:bottom_pole_obstruction_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route07_top_external_msr",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:top_msr_R_star_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route08_top_msr_ew_transport",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:top_msr_r_evolution_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "original_id": "mass:route09_top_pole_mc",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "ew",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "swapped_id": "payload:top_pole_mc_obstruction_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route10_light_quark_flag_external_kernel",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:light_quark_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route11_mw_on_shell_dizet",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:ew_dizet_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route12_sin2_theta_w_source_identity",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:sin2theta_w_source_identity_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route13_sin2_theta_eff_bsy_four_channel",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P",
+      "swapped_id": "payload:sin2theta_eff_bsy_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "mass:route14_sin2_theta_w_mass_ratio_identity",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:sin2theta_w_mass_ratio_identity_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "dark:route_w2_a_background",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "dark",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:dark_w2_a_background_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "original_id": "dark:route_dark_particle_id",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "dark",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "swapped_id": "payload:dark_particle_id_obstruction_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "original_id": "dark:route_modified_gravity",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "horizon",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "swapped_id": "payload:dark_modified_gravity_obstruction_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "gravity:route_gr_limit_full_close",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:gravity_gr_limit_full_close_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "gravity:route_bianchi_rigidity",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:gravity_bianchi_rigidity_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "gravity:route_ringdown_capacity_schema",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:gravity_ringdown_capacity_schema_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "cosmogenesis:route_t1_t4_quartet",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:cosmogenesis_t1_t4_quartet_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "evaporation:route_e1_e4_quartet",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:evaporation_e1_e4_quartet_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "neutrino:route_mbb_reconciliation",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:neutrino_mbb_reconciliation_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "arch:route_rdfi_global_descent_kernel",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:arch_rdfi_kernel_internal_identity_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "arch:route_defect_calculus_architecture",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:arch_defect_calculus_internal_identity_real_adapter_live"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "original_id": "arch:route_interface_engine_operational",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "swapped_id": "payload:arch_interface_engine_operational_internal_identity_real_adapter_live"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:bec",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:bec"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:laser_coherence",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:laser_coherence"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:magnetism",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:magnetism"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:superconductivity",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:superconductivity"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:superfluidity",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:superfluidity"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:synchronization",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:synchronization"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "original_id": "(none; new codomain-axis input)",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:topological_order",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED",
+      "swapped_id": "coherent_phase:topological_order"
+    }
+  ],
+  "adapters_discovered": [
+    {
+      "axis": "ROUTE",
+      "input_id": "arch:route_defect_calculus_architecture",
+      "module": "arch_defect_calculus_internal_identity_real_adapter",
+      "payload_name": "arch_defect_calculus_internal_identity_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "arch:route_interface_engine_operational",
+      "module": "arch_interface_engine_operational_internal_identity_real_adapter",
+      "payload_name": "arch_interface_engine_operational_internal_identity_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "arch:route_rdfi_global_descent_kernel",
+      "module": "arch_rdfi_kernel_internal_identity_real_adapter",
+      "payload_name": "arch_rdfi_kernel_internal_identity_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:bec",
+      "module": "bec_codomain_adapter",
+      "payload_name": "bec_codomain_adapter_live",
+      "route": "coherent_phase:bec"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route05_bottom_msbar_self_scale",
+      "module": "bottom_msbar_rundec_real_adapter",
+      "payload_name": "bottom_msbar_rundec_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route06_bottom_pole",
+      "module": "bottom_pole_obstruction_real_adapter",
+      "payload_name": "bottom_pole_obstruction_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route01_charged_lepton_pole",
+      "module": "charged_lepton_pole_real_adapter",
+      "payload_name": "charged_lepton_pole_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route02_charged_lepton_qed_running",
+      "module": "charged_lepton_qed_real_adapter",
+      "payload_name": "charged_lepton_qed_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route03_charm_msbar_self_scale",
+      "module": "charm_msbar_rundec_real_adapter",
+      "payload_name": "charm_msbar_rundec_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route04_charm_pole",
+      "module": "charm_pole_obstruction_real_adapter",
+      "payload_name": "charm_pole_obstruction_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "cosmogenesis:route_t1_t4_quartet",
+      "module": "cosmogenesis_t1_t4_quartet_real_adapter",
+      "payload_name": "cosmogenesis_t1_t4_quartet_real_adapter_live",
+      "route": "horizon"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "dark:route_modified_gravity",
+      "module": "dark_modified_gravity_obstruction_real_adapter",
+      "payload_name": "dark_modified_gravity_obstruction_real_adapter_live",
+      "route": "horizon"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "dark:route_dark_particle_id",
+      "module": "dark_particle_id_obstruction_real_adapter",
+      "payload_name": "dark_particle_id_obstruction_real_adapter_live",
+      "route": "dark"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "dark:route_w2_a_background",
+      "module": "dark_w2_a_background_real_adapter",
+      "payload_name": "dark_w2_a_background_real_adapter_live",
+      "route": "dark"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "evaporation:route_e1_e4_quartet",
+      "module": "evaporation_e1_e4_quartet_real_adapter",
+      "payload_name": "evaporation_e1_e4_quartet_real_adapter_live",
+      "route": "horizon"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route11_mw_on_shell_dizet",
+      "module": "ew_dizet_real_adapter",
+      "payload_name": "ew_dizet_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "gravity:route_bianchi_rigidity",
+      "module": "gravity_bianchi_rigidity_real_adapter",
+      "payload_name": "gravity_bianchi_rigidity_real_adapter_live",
+      "route": "horizon"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "gravity:route_gr_limit_full_close",
+      "module": "gravity_gr_limit_full_close_real_adapter",
+      "payload_name": "gravity_gr_limit_full_close_real_adapter_live",
+      "route": "horizon"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "gravity:route_ringdown_capacity_schema",
+      "module": "gravity_ringdown_capacity_schema_real_adapter",
+      "payload_name": "gravity_ringdown_capacity_schema_real_adapter_live",
+      "route": "horizon"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:laser_coherence",
+      "module": "laser_coherence_codomain_adapter",
+      "payload_name": "laser_coherence_codomain_adapter_live",
+      "route": "coherent_phase:laser_coherence"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route10_light_quark_flag_external_kernel",
+      "module": "light_quark_real_adapter",
+      "payload_name": "light_quark_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:magnetism",
+      "module": "magnetism_codomain_adapter",
+      "payload_name": "magnetism_codomain_adapter_live",
+      "route": "coherent_phase:magnetism"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "neutrino:route_mbb_reconciliation",
+      "module": "neutrino_mbb_reconciliation_real_adapter",
+      "payload_name": "neutrino_mbb_reconciliation_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route13_sin2_theta_eff_bsy_four_channel",
+      "module": "sin2theta_eff_bsy_real_adapter",
+      "payload_name": "sin2theta_eff_bsy_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route14_sin2_theta_w_mass_ratio_identity",
+      "module": "sin2theta_w_mass_ratio_identity_real_adapter",
+      "payload_name": "sin2theta_w_mass_ratio_identity_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route12_sin2_theta_w_source_identity",
+      "module": "sin2theta_w_source_identity_real_adapter",
+      "payload_name": "sin2theta_w_source_identity_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:superconductivity",
+      "module": "superconductivity_codomain_adapter",
+      "payload_name": "superconductivity_codomain_adapter_live",
+      "route": "coherent_phase:superconductivity"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:superfluidity",
+      "module": "superfluidity_codomain_adapter",
+      "payload_name": "superfluidity_codomain_adapter_live",
+      "route": "coherent_phase:superfluidity"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:synchronization",
+      "module": "synchronization_codomain_adapter",
+      "payload_name": "synchronization_codomain_adapter_live",
+      "route": "coherent_phase:synchronization"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route07_top_external_msr",
+      "module": "top_msr_R_star_real_adapter",
+      "payload_name": "top_msr_R_star_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route08_top_msr_ew_transport",
+      "module": "top_msr_r_evolution_real_adapter",
+      "payload_name": "top_msr_r_evolution_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "ROUTE",
+      "input_id": "mass:route09_top_pole_mc",
+      "module": "top_pole_mc_obstruction_real_adapter",
+      "payload_name": "top_pole_mc_obstruction_real_adapter_live",
+      "route": "ew"
+    },
+    {
+      "axis": "CODOMAIN",
+      "input_id": "coherent_phase:topological_order",
+      "module": "topological_order_codomain_adapter",
+      "payload_name": "topological_order_codomain_adapter_live",
+      "route": "coherent_phase:topological_order"
+    }
+  ],
+  "adapters_skipped": {
+    "dark_apf2_real_adapter": {
+      "module_name": "apf.dark_apf2_real_adapter",
+      "reason": "missing atlas-contract attributes: ['build_live_atlas_payload']"
+    },
+    "dark_posterior_real_adapter": {
+      "module_name": "apf.dark_posterior_real_adapter",
+      "reason": "missing atlas-contract attributes: ['ATLAS_INPUT_ID', 'ATLAS_ROUTE', 'ATLAS_PAYLOAD_NAME', 'build_live_atlas_payload']"
+    },
+    "ew_trace_to_scheme_real_adapter": {
+      "module_name": "apf.ew_trace_to_scheme_real_adapter",
+      "reason": "missing atlas-contract attributes: ['ATLAS_INPUT_ID', 'ATLAS_ROUTE', 'ATLAS_PAYLOAD_NAME', 'build_live_atlas_payload']"
+    }
+  },
+  "all_summaries": [
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:ew_global_export",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:ew_local_trace",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:dark_runtime",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:gauge_fiber",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:horizon_cost",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:capacity_overspend",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:provenance_smuggling",
+      "packet_status": "BLOCKED_PROVENANCE_REBUILD_REQUIRED",
+      "route": "provenance",
+      "solver_status": "FAIL_CLOSED_PROVENANCE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:cstar_substrate",
+      "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+      "route": "cstar",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:generic",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:ew_transport_open",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:dark_runtime_open",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:capacity_overspend",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:charged_lepton_pole_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:charged_lepton_qed_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:charm_msbar_rundec_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:charm_pole_obstruction_real_adapter_live",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "ew",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:bottom_msbar_rundec_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:bottom_pole_obstruction_real_adapter_live",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "ew",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:top_msr_R_star_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:top_msr_r_evolution_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:top_pole_mc_obstruction_real_adapter_live",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "ew",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:light_quark_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:ew_dizet_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:sin2theta_w_source_identity_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:sin2theta_eff_bsy_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "SOLVED_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:sin2theta_w_mass_ratio_identity_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:dark_w2_a_background_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "dark",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:route_cross_sn_profile_probe",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:route_desi_full_shape_exact",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:route_full_growth_likelihood",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:dark_particle_id_obstruction_real_adapter_live",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "dark",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "payload:dark_modified_gravity_obstruction_real_adapter_live",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "horizon",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:gravity_gr_limit_full_close_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:gravity_bianchi_rigidity_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:gravity_ringdown_capacity_schema_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:cosmogenesis_t1_t4_quartet_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:evaporation_e1_e4_quartet_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "horizon",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:neutrino_mbb_reconciliation_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "neutrino:route_dune_juno_hierarchy",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:arch_rdfi_kernel_internal_identity_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:arch_defect_calculus_internal_identity_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "payload:arch_interface_engine_operational_internal_identity_real_adapter_live",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "ew",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:bec",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:bec",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:laser_coherence",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:laser_coherence",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:magnetism",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:magnetism",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:superconductivity",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:superconductivity",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:superfluidity",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:superfluidity",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:synchronization",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:synchronization",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "CODOMAIN",
+      "export_global_P": true,
+      "input_id": "coherent_phase:topological_order",
+      "packet_status": "COHERENT_CODOMAIN_SELECTED",
+      "route": "coherent_phase:topological_order",
+      "solver_status": "COHERENT_CODOMAIN_SELECTED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:a_mu_hvp_capacity_density",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:abelian_rank1_capacity_count",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:acc_reading_selection_map",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:acc_unification_all_p_categorical_closure",
+      "packet_status": "NO_CLOSING_FRONTIER",
+      "route": "categorical_unification",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:acc_unification_no_imports_provenance_gate",
+      "packet_status": "NO_CLOSING_FRONTIER",
+      "route": "categorical_unification",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:representation_descent_stack",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:agt_encoding_wall",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "amount_graded_testedness",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:anchor_electric_center_correspondence",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "foundation:anchor_support_formalization",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "anchor_support_algebra",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:base_fiber_allocation",
+      "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+      "route": "cstar",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:billed_vs_derived_register_criterion",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:bottom_msbar_export_candidate",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:bottom_msbar_transport_route",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:charged_fermion_trace_spectrum",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:class_transition_primitive",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "foundation:collapse_triad_free_spend_permanent",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "collapse_triad",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:closed_world_regime_gates",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:cmb_finite_mode_covariance_prototype",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:colour_solder_form_no_go",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "colour_solder_form",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:confinement_single_anchor",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "foundation:continuation_capacity_floor_bound",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "continuation_capacity_floor",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "foundation:finite_operational_basis_atom_cover_model",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "continuation_finite_basis_atom_cover",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:finite_operational_basis_general_bridge",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "continuation_finite_basis_general",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:finite_compatible_joint_realization_general_bridge",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "continuation_compatible_joint_realization_general",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:operational_basis_to_precision_channel_bridge",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "continuation_operational_to_precision_channel",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:one_loop_measure_from_d4",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "quantum:tsirelson_bound",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "tsirelson_bound",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "spine:inseparable_ijc_345_witness",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:saturation_no_go_guard",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:phase_space_persistence_kernel",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:singlet_gram_exchangeable_form",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "thermo:cost_energy_identity",
+      "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+      "route": "cstar",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:mean_field_slack_equation",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "instrument:enforcement_crystal_walker",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "instrument:crystal_attribution",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_adler_pqcd_m_z",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_capacity_density",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_leptonic",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_pqcd_m_z",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "foundation:delta_calculus_derived_identities",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "delta_calculus_identities",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:delta_rho_leading_distinction",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:down_lepton_trace_vector",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:drawn_content_readings_functional",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "claim:magic_square_4n_rigidity",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:evaporation_microtransport_gates",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:evaporation_quartet_page_derived",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:osw_source_transcription_families",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:planck_anchor_bekenstein_forced",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:pre_branch_joint_necessity",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:absolute_scale_frontier_terminated",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:sqrtNc_carrier_forced",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew_eigenscreen:coupled_channel_disposition",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew_eigenscreen:goldstone_boundary_disposition",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:import_internalization_extensions",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:fencea_hinge_trichotomy_ladder",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "contextuality:native_ladder_chsh_violation",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": true,
+      "input_id": "contextuality:native_ladder_bell_local",
+      "packet_status": "EXPORT",
+      "route": "CONTEXTUALITY_SEP_IJC",
+      "solver_status": "GLOBAL_SECTION_EXPORTED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:up_normalizer_local",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "thermo:fluctuation_response_equilibrium",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:formal_kernel_theorem11_and_slot_no_go",
+      "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+      "route": "structural_kernel",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:four_input_declaration",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:fre_and_lambda_absolute",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:gammaC_carrier_watch",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:spine_disposition",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:beta_capacity_tiling",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "strong:tetraquark_kcbs",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "strong:tetraquark_yuoh_state_independent",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "strong:pentaquark_magic_square",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "flavour:chiral_condensate_yuoh",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": true,
+      "input_id": "flavour:ckm_two_mass_bases",
+      "packet_status": "EXPORT",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "GLOBAL_SECTION_EXPORTED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:quotient_pinned_demand",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:orientation_ew_route_priced",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:three_generations_forced",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:observable_transport_gr_nonclaims",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:i1_bridge_at_joint_k42",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:bekenstein_quarter_structural",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "thermo:i4_operator_self_identification",
+      "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+      "route": "structural_kernel",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "quantum:ghz_mermin_state_independent",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": true,
+      "input_id": "quantum:qutrit_noncontextual_control",
+      "packet_status": "EXPORT",
+      "route": "CONTEXTUALITY_SEP_IJC_SCENARIO",
+      "solver_status": "GLOBAL_SECTION_EXPORTED"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": true,
+      "input_id": "contextuality:chsh_local",
+      "packet_status": "EXPORT",
+      "route": "CONTEXTUALITY_SEP_IJC",
+      "solver_status": "GLOBAL_SECTION_EXPORTED"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "contextuality:pr_box",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_SEP_IJC",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "contextuality:magic_square_parity",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_PARITY_KS",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": true,
+      "input_id": "contextuality:consistent_cycle",
+      "packet_status": "EXPORT",
+      "route": "CONTEXTUALITY_PARITY_KS",
+      "solver_status": "GLOBAL_SECTION_EXPORTED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:interface_factoriality_native",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": true,
+      "input_id": "readout:su3_meson",
+      "packet_status": "EXPORT",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "CANONICAL_RECORD_EXPORTED"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": true,
+      "input_id": "readout:su3_baryon",
+      "packet_status": "EXPORT",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "CANONICAL_RECORD_EXPORTED"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": true,
+      "input_id": "readout:su2_diquark",
+      "packet_status": "EXPORT",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "CANONICAL_RECORD_EXPORTED"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": false,
+      "input_id": "readout:su3_single_quark",
+      "packet_status": "OBSTRUCTED",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "READOUT_OBSTRUCTION"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": false,
+      "input_id": "readout:su3_quark_pair",
+      "packet_status": "OBSTRUCTED",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "READOUT_OBSTRUCTION"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": false,
+      "input_id": "readout:su2_fund4",
+      "packet_status": "OBSTRUCTED",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "READOUT_OBSTRUCTION"
+    },
+    {
+      "axis": "READOUT",
+      "export_global_P": false,
+      "input_id": "readout:su3_tetraquark",
+      "packet_status": "OBSTRUCTED",
+      "route": "READOUT_COMMUTANT_CLASSIFICATION",
+      "solver_status": "READOUT_OBSTRUCTION"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:spectral_action_internalization",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:geometric_symmetry_internalization",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:itpfi_tail_scalar_on_omega",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:kappa_int_two_sided_rigidity",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:l_irr_induced_polarity",
+      "packet_status": "BLOCKED_SUBSTRATE_THEOREM_REQUIRED",
+      "route": "cstar",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "dark:lambda_absolute_mixed_grades",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:lambda_operator_level_derivation",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:seesaw_from_a1",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:mcross_planck_ratio_reading",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:mw_distinction_decomposition",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "thermo:negative_temperature_ceiling",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:neutrino_mbb_transport",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:operational_completeness_sandwich",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "thermo:rent_exclusion_cost_kind_dichotomy",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "rent_exclusion",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:paper1_fd1_executable_witness",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "capacity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:phase_14d3_completions",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:photon_slot4_c4_keystone",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:photon_massless_reversibility",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:pi_gammagamma_2l_moment_native",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:single_dimensional_anchor",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:regime_r_exit_taxonomy",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": false,
+      "input_id": "quantum:magic_square_threshold_robust",
+      "packet_status": "OBSTRUCTED",
+      "route": "CONTEXTUALITY_PARITY_KS",
+      "solver_status": "IJC_OBSTRUCTION"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "quantum:born_trace_rule",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "born_trace_rule",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "quantum:i3_operator_self_identification",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:sixteen_case_unification",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:native_oblique_close",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:sigma_scale_formula_held",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:sigma_scale_yukawa_free_floor",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:sin2theta_eff_kappa_l_decomposition",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:sin2theta_w_os_capacity_counting_gh_codomain",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": true,
+      "input_id": "foundation:d4_unique",
+      "packet_status": "NOT_REQUIRED_ALREADY_P",
+      "route": "d4_unique",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:strong_cp_transport_content_blind",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "strong_cp_transport",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gauge:su2_string_cut_four_clause_verdict",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:subspace_functors_i1_i3_i4",
+      "packet_status": "NO_CLOSING_FRONTIER",
+      "route": "categorical_unification",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "quantum:symmetry_contextuality_orthogonal",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:tail_center_trivial_f1",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "thermo:thermal_absolute_scope",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "thermo:four_laws_composed",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:vacuum_realization_triptych",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:pi0_anomaly_width_row",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:quark_trace_anchors",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:trace_sector_closure",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:u1y_landau_pole_trans_planckian",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:acc_ledger_identities",
+      "packet_status": "NO_CLOSING_FRONTIER",
+      "route": "categorical_unification",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:acc_projection_essentiality",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:acc_three_level_identities",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "foundation:forced_universality_classes",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "dark",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:up_family_trace_bridge",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "quantum:vacuum_label_code_p1_witness",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "gravity:vacuum_o1_h0_fork",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "horizon",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "quantum:vacuum_scheme_covariance_split",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "wtrace:os_route_terminal_closure_open_export",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "wtrace:bsy_one_loop_kappa_l_assembly_consistency",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:mw_from_3_13_effective_angle",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "wtrace:native_one_loop_mw_close",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "wtrace:two_loop_phase2_router",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "wtrace:zll_r2_counterterm_pieces",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "wtrace:zll_kappa_l_oblique",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "ew:wg2_dictionary_typing_no_go",
+      "packet_status": "OBSTRUCTION_NAMED_NO_OBLIGATIONS",
+      "route": "wg2_dictionary",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:lattice_gap_candidate",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:ym_kappa3_negative",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "generic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "export_global_P": true,
+      "input_id": "strong:ladder_classical_correlation_control",
+      "packet_status": "EXPORT",
+      "route": "CONTEXTUALITY_SEP_IJC",
+      "solver_status": "GLOBAL_SECTION_EXPORTED"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "strong:ym_quotient_ledger",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    },
+    {
+      "axis": "ROUTE",
+      "export_global_P": false,
+      "input_id": "flavour:yt_normalization_no_go",
+      "packet_status": "OPEN_EVIDENCE_REQUIRED",
+      "route": "ew",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR"
+    }
+  ],
+  "atlas_name": "interface_atlas_live",
+  "axis_summary": {
+    "CODOMAIN": {
+      "critical_field_counts": {},
+      "failed_kind_counts": {},
+      "global_P_count": 7,
+      "input_count": 7,
+      "input_ids": [
+        "coherent_phase:bec",
+        "coherent_phase:laser_coherence",
+        "coherent_phase:magnetism",
+        "coherent_phase:superconductivity",
+        "coherent_phase:superfluidity",
+        "coherent_phase:synchronization",
+        "coherent_phase:topological_order"
+      ],
+      "non_global_count": 0,
+      "obstruction_counts": {},
+      "status_counts": {
+        "COHERENT_CODOMAIN_SELECTED": 7
+      }
+    },
+    "CONTEXTUALITY": {
+      "critical_field_counts": {
+        "global_section": 10
+      },
+      "failed_kind_counts": {},
+      "global_P_count": 6,
+      "input_count": 16,
+      "input_ids": [
+        "spine:inseparable_ijc_345_witness",
+        "contextuality:native_ladder_chsh_violation",
+        "contextuality:native_ladder_bell_local",
+        "strong:tetraquark_kcbs",
+        "strong:tetraquark_yuoh_state_independent",
+        "strong:pentaquark_magic_square",
+        "flavour:chiral_condensate_yuoh",
+        "flavour:ckm_two_mass_bases",
+        "quantum:ghz_mermin_state_independent",
+        "quantum:qutrit_noncontextual_control",
+        "contextuality:chsh_local",
+        "contextuality:pr_box",
+        "contextuality:magic_square_parity",
+        "contextuality:consistent_cycle",
+        "quantum:magic_square_threshold_robust",
+        "strong:ladder_classical_correlation_control"
+      ],
+      "non_global_count": 10,
+      "obstruction_counts": {
+        "IJC_boole_farkas_separator": 5,
+        "IJC_boole_fine_separator": 3,
+        "KS_gf2_parity_0eq1": 2
+      },
+      "status_counts": {
+        "GLOBAL_SECTION_EXPORTED": 6,
+        "IJC_OBSTRUCTION": 10
+      }
+    },
+    "READOUT": {
+      "critical_field_counts": {
+        "canonical_record": 4
+      },
+      "failed_kind_counts": {},
+      "global_P_count": 3,
+      "input_count": 7,
+      "input_ids": [
+        "readout:su3_meson",
+        "readout:su3_baryon",
+        "readout:su2_diquark",
+        "readout:su3_single_quark",
+        "readout:su3_quark_pair",
+        "readout:su2_fund4",
+        "readout:su3_tetraquark"
+      ],
+      "non_global_count": 4,
+      "obstruction_counts": {
+        "readout_multiplicity_frame_required_m2": 2,
+        "readout_no_sharp_record_m0": 2
+      },
+      "status_counts": {
+        "CANONICAL_RECORD_EXPORTED": 3,
+        "READOUT_OBSTRUCTION": 4
+      }
+    },
+    "ROUTE": {
+      "critical_field_counts": {
+        "ACROSS_REGION_FRAME_NOT_CONSTRUCTIBLE": 1,
+        "AGT_ENCODING_WALL_NO_GO": 1,
+        "COMPATIBLE_MINIMUM_JOINT_REALIZATION_REQUIRED": 1,
+        "COMPLETION_CONTENT_BLIND_ON_ANGLE": 1,
+        "DARK_PARTICLE_ID_NOT_DERIVED_BY_CURRENT_THEOREM_STACK": 1,
+        "FINITE_JOINT_EXTENSION_PACKAGE_REQUIRED": 1,
+        "MODIFIED_GRAVITY_NOT_EXPORTED_BIANCHI_NO_GO": 1,
+        "OPERATIONAL_TO_PRECISION_CHANNEL_REALIZATION_REQUIRED": 1,
+        "POLE_CODOMAIN_REJECTED_GT_10_SIGMA": 1,
+        "POLE_CODOMAIN_REJECTED_RENORMALON_4LOOP_KO": 1,
+        "POLE_CODOMAIN_REJECTED_RENORMALON_UNCONTROLLED": 1,
+        "WG2_DICTIONARY_INDEX_NO_RECORD": 1,
+        "acc_base_present": 26,
+        "anomaly_check_passed": 12,
+        "area_cost_map_defined": 4,
+        "capacity_bound_checked": 11,
+        "capacity_budget_verified": 26,
+        "coarse_grain_factor": 13,
+        "codomain_map_declared": 12,
+        "codomain_transport_found": 64,
+        "counterterm_finite_parts_declared": 38,
+        "empirical_or_posterior_closed": 26,
+        "evaluator_map_found": 64,
+        "external_constants_ledger_clean": 38,
+        "horizon_partition_defined": 6,
+        "local_fiber_action_defined": 4,
+        "local_solution_found": 26,
+        "overlap_cocycle_verified": 12,
+        "overlap_gluing_verified": 37,
+        "posterior_closed": 20,
+        "robustness_checks_passed": 20,
+        "run_completed": 15,
+        "source_to_scheme_registry_present": 38,
+        "trace_sector_closed": 22,
+        "uncertainty_protocol_declared": 39
+      },
+      "failed_kind_counts": {
+        "ACC_RECORD": 26,
+        "CAPACITY_COST": 50,
+        "CODOMAIN_TRANSPORT": 86,
+        "COUNTERTERM": 38,
+        "EMPIRICAL_POSTERIOR": 46,
+        "EVALUATOR_MAP": 104,
+        "EXTERNAL_CONSTANT": 38,
+        "FIBER_ACTION": 8,
+        "OVERLAP_GLUING": 53,
+        "PROVENANCE": 1,
+        "SCHEME_CONTRACT": 38,
+        "SUBSTRATE_BOUNDARY": 6,
+        "TRACE_INPUT": 22,
+        "UNCERTAINTY_PROTOCOL": 39
+      },
+      "global_P_count": 30,
+      "input_count": 174,
+      "input_ids": [
+        "claim:ew_global_export",
+        "claim:ew_local_trace",
+        "claim:dark_runtime",
+        "claim:gauge_fiber",
+        "claim:horizon_cost",
+        "claim:capacity_overspend",
+        "claim:provenance_smuggling",
+        "claim:cstar_substrate",
+        "claim:generic",
+        "payload:ew_transport_open",
+        "payload:dark_runtime_open",
+        "payload:capacity_overspend",
+        "payload:charged_lepton_pole_real_adapter_live",
+        "payload:charged_lepton_qed_real_adapter_live",
+        "payload:charm_msbar_rundec_real_adapter_live",
+        "payload:charm_pole_obstruction_real_adapter_live",
+        "payload:bottom_msbar_rundec_real_adapter_live",
+        "payload:bottom_pole_obstruction_real_adapter_live",
+        "payload:top_msr_R_star_real_adapter_live",
+        "payload:top_msr_r_evolution_real_adapter_live",
+        "payload:top_pole_mc_obstruction_real_adapter_live",
+        "payload:light_quark_real_adapter_live",
+        "payload:ew_dizet_real_adapter_live",
+        "payload:sin2theta_w_source_identity_real_adapter_live",
+        "payload:sin2theta_eff_bsy_real_adapter_live",
+        "payload:sin2theta_w_mass_ratio_identity_real_adapter_live",
+        "payload:dark_w2_a_background_real_adapter_live",
+        "dark:route_cross_sn_profile_probe",
+        "dark:route_desi_full_shape_exact",
+        "dark:route_full_growth_likelihood",
+        "payload:dark_particle_id_obstruction_real_adapter_live",
+        "payload:dark_modified_gravity_obstruction_real_adapter_live",
+        "payload:gravity_gr_limit_full_close_real_adapter_live",
+        "payload:gravity_bianchi_rigidity_real_adapter_live",
+        "payload:gravity_ringdown_capacity_schema_real_adapter_live",
+        "payload:cosmogenesis_t1_t4_quartet_real_adapter_live",
+        "payload:evaporation_e1_e4_quartet_real_adapter_live",
+        "payload:neutrino_mbb_reconciliation_real_adapter_live",
+        "neutrino:route_dune_juno_hierarchy",
+        "payload:arch_rdfi_kernel_internal_identity_real_adapter_live",
+        "payload:arch_defect_calculus_internal_identity_real_adapter_live",
+        "payload:arch_interface_engine_operational_internal_identity_real_adapter_live",
+        "ew:a_mu_hvp_capacity_density",
+        "gauge:abelian_rank1_capacity_count",
+        "gauge:acc_reading_selection_map",
+        "foundation:acc_unification_all_p_categorical_closure",
+        "foundation:acc_unification_no_imports_provenance_gate",
+        "foundation:representation_descent_stack",
+        "foundation:agt_encoding_wall",
+        "gauge:anchor_electric_center_correspondence",
+        "foundation:anchor_support_formalization",
+        "foundation:base_fiber_allocation",
+        "foundation:billed_vs_derived_register_criterion",
+        "flavour:bottom_msbar_export_candidate",
+        "flavour:bottom_msbar_transport_route",
+        "flavour:charged_fermion_trace_spectrum",
+        "foundation:class_transition_primitive",
+        "foundation:collapse_triad_free_spend_permanent",
+        "foundation:closed_world_regime_gates",
+        "dark:cmb_finite_mode_covariance_prototype",
+        "gauge:colour_solder_form_no_go",
+        "strong:confinement_single_anchor",
+        "foundation:continuation_capacity_floor_bound",
+        "foundation:finite_operational_basis_atom_cover_model",
+        "foundation:finite_operational_basis_general_bridge",
+        "foundation:finite_compatible_joint_realization_general_bridge",
+        "foundation:operational_basis_to_precision_channel_bridge",
+        "foundation:one_loop_measure_from_d4",
+        "quantum:tsirelson_bound",
+        "dark:saturation_no_go_guard",
+        "dark:phase_space_persistence_kernel",
+        "gravity:singlet_gram_exchangeable_form",
+        "thermo:cost_energy_identity",
+        "foundation:mean_field_slack_equation",
+        "instrument:enforcement_crystal_walker",
+        "instrument:crystal_attribution",
+        "ew:delta_alpha_adler_pqcd_m_z",
+        "ew:delta_alpha_capacity_density",
+        "ew:delta_alpha_leptonic",
+        "ew:delta_alpha_pqcd_m_z",
+        "foundation:delta_calculus_derived_identities",
+        "ew:delta_rho_leading_distinction",
+        "flavour:down_lepton_trace_vector",
+        "claim:drawn_content_readings_functional",
+        "claim:magic_square_4n_rigidity",
+        "gravity:evaporation_microtransport_gates",
+        "gravity:evaporation_quartet_page_derived",
+        "ew:osw_source_transcription_families",
+        "ew:planck_anchor_bekenstein_forced",
+        "ew:pre_branch_joint_necessity",
+        "ew:absolute_scale_frontier_terminated",
+        "ew:sqrtNc_carrier_forced",
+        "ew_eigenscreen:coupled_channel_disposition",
+        "ew_eigenscreen:goldstone_boundary_disposition",
+        "foundation:import_internalization_extensions",
+        "foundation:fencea_hinge_trichotomy_ladder",
+        "flavour:up_normalizer_local",
+        "thermo:fluctuation_response_equilibrium",
+        "foundation:formal_kernel_theorem11_and_slot_no_go",
+        "foundation:four_input_declaration",
+        "gravity:fre_and_lambda_absolute",
+        "gravity:gammaC_carrier_watch",
+        "gauge:spine_disposition",
+        "gauge:beta_capacity_tiling",
+        "gauge:quotient_pinned_demand",
+        "ew:orientation_ew_route_priced",
+        "flavour:three_generations_forced",
+        "gravity:observable_transport_gr_nonclaims",
+        "gravity:i1_bridge_at_joint_k42",
+        "gravity:bekenstein_quarter_structural",
+        "thermo:i4_operator_self_identification",
+        "foundation:interface_factoriality_native",
+        "foundation:spectral_action_internalization",
+        "foundation:geometric_symmetry_internalization",
+        "foundation:itpfi_tail_scalar_on_omega",
+        "foundation:kappa_int_two_sided_rigidity",
+        "foundation:l_irr_induced_polarity",
+        "dark:lambda_absolute_mixed_grades",
+        "gravity:lambda_operator_level_derivation",
+        "flavour:seesaw_from_a1",
+        "ew:mcross_planck_ratio_reading",
+        "ew:mw_distinction_decomposition",
+        "thermo:negative_temperature_ceiling",
+        "flavour:neutrino_mbb_transport",
+        "foundation:operational_completeness_sandwich",
+        "thermo:rent_exclusion_cost_kind_dichotomy",
+        "foundation:paper1_fd1_executable_witness",
+        "gravity:phase_14d3_completions",
+        "gauge:photon_slot4_c4_keystone",
+        "ew:photon_massless_reversibility",
+        "ew:pi_gammagamma_2l_moment_native",
+        "foundation:single_dimensional_anchor",
+        "foundation:regime_r_exit_taxonomy",
+        "quantum:born_trace_rule",
+        "quantum:i3_operator_self_identification",
+        "foundation:sixteen_case_unification",
+        "ew:native_oblique_close",
+        "ew:sigma_scale_formula_held",
+        "ew:sigma_scale_yukawa_free_floor",
+        "ew:sin2theta_eff_kappa_l_decomposition",
+        "ew:sin2theta_w_os_capacity_counting_gh_codomain",
+        "foundation:d4_unique",
+        "strong:strong_cp_transport_content_blind",
+        "gauge:su2_string_cut_four_clause_verdict",
+        "foundation:subspace_functors_i1_i3_i4",
+        "quantum:symmetry_contextuality_orthogonal",
+        "foundation:tail_center_trivial_f1",
+        "thermo:thermal_absolute_scope",
+        "thermo:four_laws_composed",
+        "strong:vacuum_realization_triptych",
+        "strong:pi0_anomaly_width_row",
+        "flavour:quark_trace_anchors",
+        "flavour:trace_sector_closure",
+        "ew:u1y_landau_pole_trans_planckian",
+        "foundation:acc_ledger_identities",
+        "foundation:acc_projection_essentiality",
+        "foundation:acc_three_level_identities",
+        "foundation:forced_universality_classes",
+        "flavour:up_family_trace_bridge",
+        "quantum:vacuum_label_code_p1_witness",
+        "gravity:vacuum_o1_h0_fork",
+        "quantum:vacuum_scheme_covariance_split",
+        "wtrace:os_route_terminal_closure_open_export",
+        "wtrace:bsy_one_loop_kappa_l_assembly_consistency",
+        "ew:mw_from_3_13_effective_angle",
+        "wtrace:native_one_loop_mw_close",
+        "wtrace:two_loop_phase2_router",
+        "wtrace:zll_r2_counterterm_pieces",
+        "wtrace:zll_kappa_l_oblique",
+        "ew:wg2_dictionary_typing_no_go",
+        "strong:lattice_gap_candidate",
+        "strong:ym_kappa3_negative",
+        "strong:ym_quotient_ledger",
+        "flavour:yt_normalization_no_go"
+      ],
+      "non_global_count": 144,
+      "obstruction_counts": {
+        "ACROSS_REGION_FRAME_NOT_CONSTRUCTIBLE": 1,
+        "AGT_ENCODING_WALL_NO_GO": 1,
+        "CAPACITY_OVERSPEND": 50,
+        "CODOMAIN_MISMATCH": 86,
+        "COMPATIBLE_MINIMUM_JOINT_REALIZATION_REQUIRED": 1,
+        "COMPLETION_CONTENT_BLIND_ON_ANGLE": 1,
+        "COMPLEX_ACTION_MISSING": 6,
+        "DARK_PARTICLE_ID_NOT_DERIVED_BY_CURRENT_THEOREM_STACK": 1,
+        "EVALUATOR_MISSING": 109,
+        "FINITE_JOINT_EXTENSION_PACKAGE_REQUIRED": 1,
+        "MODIFIED_GRAVITY_NOT_EXPORTED_BIANCHI_NO_GO": 1,
+        "NORM_MISSING": 6,
+        "OPERATIONAL_TO_PRECISION_CHANNEL_REALIZATION_REQUIRED": 1,
+        "OVERLAP_INCOHERENCE": 53,
+        "POLE_CODOMAIN_REJECTED_GT_10_SIGMA": 1,
+        "POLE_CODOMAIN_REJECTED_RENORMALON_4LOOP_KO": 1,
+        "POLE_CODOMAIN_REJECTED_RENORMALON_UNCONTROLLED": 1,
+        "PROVENANCE_SMUGGLE": 1,
+        "REVERSAL_MISSING": 6,
+        "WG2_DICTIONARY_INDEX_NO_RECORD": 1
+      },
+      "status_counts": {
+        "BLOCKED_SUBSTRATE_REVISION_REQUIRED": 6,
+        "FAIL_CLOSED_PROVENANCE": 1,
+        "INTERNAL_IDENTITY_GLOBAL_P": 21,
+        "OBSTRUCTION_NAMED_CLOSURE": 12,
+        "SOLVED_GLOBAL_P": 9,
+        "SOLVED_LOCAL_HELD_FOR_REPAIR": 125
+      }
+    },
+    "_cross_axis_note": "Per-axis counts above are primary. The top-level flat counts on InterfaceAtlas aggregate across axes and should be read as advisory only (per Reference - APF Interface Engine Family Architecture, Q2: apples-and-oranges risk when an EVALUATOR_MISSING route-axis obstruction is summed with a MARGIN_NONPOSITIVE codomain-axis failure)."
+  },
+  "claim_refreshes": [
+    {
+      "input_id": "claim:ew_global_export",
+      "provenance": [
+        "check_T_w_os_delta_r_rem_principled_terminal_boundary",
+        "check_L_W_mass",
+        "check_T_w_trace_native_mw_reproduces_denner",
+        "trace_to_scheme_transport_theorem"
+      ],
+      "superseded": "EW APF_TRACE physical scheme masses are exported to global P. (2026-05-18)"
+    },
+    {
+      "input_id": "claim:ew_local_trace",
+      "provenance": [
+        "w_os_route_terminal_closure",
+        "check_T_w_trace_native_mw_reproduces_denner"
+      ],
+      "superseded": "EW trace-sector local APF_TRACE closure is banked as P_local. (2026-05-18)"
+    },
+    {
+      "input_id": "claim:dark_runtime",
+      "provenance": [
+        "dark_mcmc_posterior_lane_admission",
+        "dark_posterior_certifier",
+        "dark_apf2_real_adapter"
+      ],
+      "superseded": "Dark sector Cobaya runtime completed but posterior convergence is still under review. (2026-05-18)"
+    },
+    {
+      "input_id": "claim:gauge_fiber",
+      "provenance": [
+        "check_T_ew_load_placement_P",
+        "check_T_gauge_connection_is_gauge_variant_convention_P",
+        "check_T_across_frame_fork_localized"
+      ],
+      "superseded": "Gauge group appears as a fiber automorphism with cocycle descent. (2026-05-18)"
+    },
+    {
+      "input_id": "claim:horizon_cost",
+      "provenance": [
+        "check_T_horizon_arealaw_microstate_consistency",
+        "horizon_fiber_cost_classifier"
+      ],
+      "superseded": "Horizon area is represented as fiber-cost with capacity bound. (2026-05-18)"
+    },
+    {
+      "input_id": "payload:ew_transport_open",
+      "provenance": [
+        "check_T_w_trace_native_mw_reproduces_denner",
+        "trace_to_scheme_transport_theorem",
+        "w_trace_native_delta_r_mw_assembly"
+      ],
+      "superseded": "evaluator_map_found=False, codomain_transport_found=False, counterterm_finite_parts_declared=False (2026-05-18)"
+    }
+  ],
+  "declaration_results": [
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:a_mu_hvp_capacity_density",
+      "owner_module": "apf.a_mu_hvp_capacity_density",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:abelian_rank1_capacity_count",
+      "owner_module": "apf.abelian_coupling_capacity_count",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:acc_reading_selection_map",
+      "owner_module": "apf.acc_reading_selection",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:acc_unification_all_p_categorical_closure",
+      "owner_module": "apf.acc_unification_all_p",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:acc_unification_no_imports_provenance_gate",
+      "owner_module": "apf.acc_unification_no_imports",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:representation_descent_stack",
+      "owner_module": "apf.admissible_representation_stack",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:agt_encoding_wall",
+      "owner_module": "apf.amount_graded_testedness",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:anchor_electric_center_correspondence",
+      "owner_module": "apf.anchor_center_correspondence",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "foundation:anchor_support_formalization",
+      "owner_module": "apf.anchor_support_algebra",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:base_fiber_allocation",
+      "owner_module": "apf.base_fiber_allocation",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:billed_vs_derived_register_criterion",
+      "owner_module": "apf.base_fiber_allocation",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:bottom_msbar_export_candidate",
+      "owner_module": "apf.bottom_msbar_export_candidate",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:bottom_msbar_transport_route",
+      "owner_module": "apf.bottom_msbar_transport",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:charged_fermion_trace_spectrum",
+      "owner_module": "apf.charged_trace_spectrum",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:class_transition_primitive",
+      "owner_module": "apf.class_transition",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "foundation:collapse_triad_free_spend_permanent",
+      "owner_module": "apf.class_transition",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:closed_world_regime_gates",
+      "owner_module": "apf.closed_world_completeness",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "dark:cmb_finite_mode_covariance_prototype",
+      "owner_module": "apf.cmb_finite_mode_covariance",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:colour_solder_form_no_go",
+      "owner_module": "apf.colour_solder_form_no_go",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:confinement_single_anchor",
+      "owner_module": "apf.confinement_scale_single_anchor",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "foundation:continuation_capacity_floor_bound",
+      "owner_module": "apf.continuation_calculus",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "foundation:finite_operational_basis_atom_cover_model",
+      "owner_module": "apf.continuation_calculus",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:finite_operational_basis_general_bridge",
+      "owner_module": "apf.continuation_calculus",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:finite_compatible_joint_realization_general_bridge",
+      "owner_module": "apf.continuation_calculus",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:operational_basis_to_precision_channel_bridge",
+      "owner_module": "apf.continuation_calculus",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:one_loop_measure_from_d4",
+      "owner_module": "apf.continuation_sum_measure",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "quantum:tsirelson_bound",
+      "owner_module": "apf.core",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "spine:inseparable_ijc_345_witness",
+      "owner_module": "apf.core",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "dark:saturation_no_go_guard",
+      "owner_module": "apf.cosmology",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "dark:phase_space_persistence_kernel",
+      "owner_module": "apf.cosmology",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:singlet_gram_exchangeable_form",
+      "owner_module": "apf.cosmology",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "thermo:cost_energy_identity",
+      "owner_module": "apf.cost_energy_identity",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:mean_field_slack_equation",
+      "owner_module": "apf.critical_slack",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "instrument:enforcement_crystal_walker",
+      "owner_module": "apf.crystal",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "instrument:crystal_attribution",
+      "owner_module": "apf.crystal_metrics",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_adler_pqcd_m_z",
+      "owner_module": "apf.delta_alpha_adler_m_z",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_capacity_density",
+      "owner_module": "apf.delta_alpha_capacity_density",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_leptonic",
+      "owner_module": "apf.delta_alpha_leptonic",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:delta_alpha_pqcd_m_z",
+      "owner_module": "apf.delta_alpha_pqcd_m_z",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "foundation:delta_calculus_derived_identities",
+      "owner_module": "apf.delta_calculus",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:delta_rho_leading_distinction",
+      "owner_module": "apf.delta_rho_leading_distinction",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:down_lepton_trace_vector",
+      "owner_module": "apf.down_lepton_trace",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "claim:drawn_content_readings_functional",
+      "owner_module": "apf.drawn_content_readings",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "claim:magic_square_4n_rigidity",
+      "owner_module": "apf.drawn_content_readings",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:evaporation_microtransport_gates",
+      "owner_module": "apf.evaporation_microtransport",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:evaporation_quartet_page_derived",
+      "owner_module": "apf.evaporation_quartet",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:osw_source_transcription_families",
+      "owner_module": "apf.ew_osw_source_transcription_families",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:planck_anchor_bekenstein_forced",
+      "owner_module": "apf.ew_planck_anchor_gravity_consistency",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:pre_branch_joint_necessity",
+      "owner_module": "apf.ew_pre_branch_necessity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:absolute_scale_frontier_terminated",
+      "owner_module": "apf.ew_scale_functional_independence",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:sqrtNc_carrier_forced",
+      "owner_module": "apf.ew_sqrtNc_carrier_color_triplet",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew_eigenscreen:coupled_channel_disposition",
+      "owner_module": "apf.ew_unitarity_eigenscreen",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew_eigenscreen:goldstone_boundary_disposition",
+      "owner_module": "apf.ew_unitarity_eigenscreen",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:import_internalization_extensions",
+      "owner_module": "apf.extensions",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:fencea_hinge_trichotomy_ladder",
+      "owner_module": "apf.fencea_hinge_trichotomy",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "contextuality:native_ladder_chsh_violation",
+      "owner_module": "apf.fencea_hinge_trichotomy",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "contextuality:native_ladder_bell_local",
+      "owner_module": "apf.fencea_hinge_trichotomy",
+      "solver_status": "GLOBAL_SECTION_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:up_normalizer_local",
+      "owner_module": "apf.fermion_normalizers",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "thermo:fluctuation_response_equilibrium",
+      "owner_module": "apf.fluctuation_response_two_faces",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:formal_kernel_theorem11_and_slot_no_go",
+      "owner_module": "apf.formal_kernel",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:four_input_declaration",
+      "owner_module": "apf.foundation_inputs",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:fre_and_lambda_absolute",
+      "owner_module": "apf.fractional_reading",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:gammaC_carrier_watch",
+      "owner_module": "apf.gamma_c_carrier_program",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:spine_disposition",
+      "owner_module": "apf.gauge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:beta_capacity_tiling",
+      "owner_module": "apf.gauge_beta_capacity_tiling",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:tetraquark_kcbs",
+      "owner_module": "apf.gauge_invariant_record",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:tetraquark_yuoh_state_independent",
+      "owner_module": "apf.gauge_invariant_record",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:pentaquark_magic_square",
+      "owner_module": "apf.gauge_invariant_record",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:chiral_condensate_yuoh",
+      "owner_module": "apf.gauge_invariant_record",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "flavour:ckm_two_mass_bases",
+      "owner_module": "apf.gauge_invariant_record",
+      "solver_status": "GLOBAL_SECTION_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:quotient_pinned_demand",
+      "owner_module": "apf.gauge_quotient_ledger",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:orientation_ew_route_priced",
+      "owner_module": "apf.gauge_quotient_ledger",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:three_generations_forced",
+      "owner_module": "apf.generations",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:observable_transport_gr_nonclaims",
+      "owner_module": "apf.gravity",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:i1_bridge_at_joint_k42",
+      "owner_module": "apf.horizon_joint_bridge",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:bekenstein_quarter_structural",
+      "owner_module": "apf.horizon_ledger_reindexing",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "thermo:i4_operator_self_identification",
+      "owner_module": "apf.i4_composition",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "quantum:ghz_mermin_state_independent",
+      "owner_module": "apf.ijc_feasbool_engine",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "quantum:qutrit_noncontextual_control",
+      "owner_module": "apf.ijc_feasbool_engine",
+      "solver_status": "GLOBAL_SECTION_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "contextuality:chsh_local",
+      "owner_module": "apf.interface_contextuality_adapter",
+      "solver_status": "GLOBAL_SECTION_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "contextuality:pr_box",
+      "owner_module": "apf.interface_contextuality_adapter",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "contextuality:magic_square_parity",
+      "owner_module": "apf.interface_contextuality_adapter",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "contextuality:consistent_cycle",
+      "owner_module": "apf.interface_contextuality_adapter",
+      "solver_status": "GLOBAL_SECTION_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:interface_factoriality_native",
+      "owner_module": "apf.interface_factor_native",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "readout:su3_meson",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "CANONICAL_RECORD_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "readout:su3_baryon",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "CANONICAL_RECORD_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "readout:su2_diquark",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "CANONICAL_RECORD_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "readout:su3_single_quark",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "READOUT_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "readout:su3_quark_pair",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "READOUT_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "readout:su2_fund4",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "READOUT_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "READOUT",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "readout:su3_tetraquark",
+      "owner_module": "apf.interface_readout_adapter",
+      "solver_status": "READOUT_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:spectral_action_internalization",
+      "owner_module": "apf.internalization",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:geometric_symmetry_internalization",
+      "owner_module": "apf.internalization_geo",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:itpfi_tail_scalar_on_omega",
+      "owner_module": "apf.itpfi_tail_scalar_native",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:kappa_int_two_sided_rigidity",
+      "owner_module": "apf.kappa_int_bounds",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:l_irr_induced_polarity",
+      "owner_module": "apf.l_irr_induced_polarity",
+      "solver_status": "BLOCKED_SUBSTRATE_REVISION_REQUIRED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "dark:lambda_absolute_mixed_grades",
+      "owner_module": "apf.lambda_absolute",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:lambda_operator_level_derivation",
+      "owner_module": "apf.lambda_operator_derivation",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:seesaw_from_a1",
+      "owner_module": "apf.majorana",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:mcross_planck_ratio_reading",
+      "owner_module": "apf.mcross_planck_ratio_composition",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:mw_distinction_decomposition",
+      "owner_module": "apf.mw_value_from_equilibrium_and_custodial",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "thermo:negative_temperature_ceiling",
+      "owner_module": "apf.negative_temperature_ceiling",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:neutrino_mbb_transport",
+      "owner_module": "apf.neutrino_mbb_reconciliation",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:operational_completeness_sandwich",
+      "owner_module": "apf.operational_completeness",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "thermo:rent_exclusion_cost_kind_dichotomy",
+      "owner_module": "apf.operational_completeness",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:paper1_fd1_executable_witness",
+      "owner_module": "apf.paper1_kernel",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:phase_14d3_completions",
+      "owner_module": "apf.phase_14d3_completions",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:photon_slot4_c4_keystone",
+      "owner_module": "apf.photon_commitment_profile",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:photon_massless_reversibility",
+      "owner_module": "apf.photon_masslessness",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:pi_gammagamma_2l_moment_native",
+      "owner_module": "apf.pi_gammagamma_2l_moment_native",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:single_dimensional_anchor",
+      "owner_module": "apf.planck_magnitude_single_anchor",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:regime_r_exit_taxonomy",
+      "owner_module": "apf.plec",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "quantum:magic_square_threshold_robust",
+      "owner_module": "apf.quantum_admissibility",
+      "solver_status": "IJC_OBSTRUCTION",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "quantum:born_trace_rule",
+      "owner_module": "apf.quantum_admissibility",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "quantum:i3_operator_self_identification",
+      "owner_module": "apf.quantum_operator_derivation",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:sixteen_case_unification",
+      "owner_module": "apf.recruitment",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:native_oblique_close",
+      "owner_module": "apf.s_parameter_native",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:sigma_scale_formula_held",
+      "owner_module": "apf.sigma_scale_capacity_formula_gate",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:sigma_scale_yukawa_free_floor",
+      "owner_module": "apf.sigma_scale_yukawa_free_geometric_floor",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:sin2theta_eff_kappa_l_decomposition",
+      "owner_module": "apf.sin2theta_eff_kappa_l_decomposition",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:sin2theta_w_os_capacity_counting_gh_codomain",
+      "owner_module": "apf.sin2theta_w_OS_capacity_counting",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "foundation:d4_unique",
+      "owner_module": "apf.spacetime",
+      "solver_status": "INTERNAL_IDENTITY_GLOBAL_P",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:strong_cp_transport_content_blind",
+      "owner_module": "apf.strong_cp_completion_no_go",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gauge:su2_string_cut_four_clause_verdict",
+      "owner_module": "apf.su2_string_cut_testbed",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:subspace_functors_i1_i3_i4",
+      "owner_module": "apf.subspace_functors",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "quantum:symmetry_contextuality_orthogonal",
+      "owner_module": "apf.symmetry_contextuality_independence",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:tail_center_trivial_f1",
+      "owner_module": "apf.tail_center_trivial_native",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "thermo:thermal_absolute_scope",
+      "owner_module": "apf.thermal_absolute",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "thermo:four_laws_composed",
+      "owner_module": "apf.thermo_four_laws_synthesis",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:vacuum_realization_triptych",
+      "owner_module": "apf.thooft_anomaly_matching_chiral",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:pi0_anomaly_width_row",
+      "owner_module": "apf.thooft_anomaly_matching_chiral",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:quark_trace_anchors",
+      "owner_module": "apf.trace_anchors",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:trace_sector_closure",
+      "owner_module": "apf.trace_sector_closure",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:u1y_landau_pole_trans_planckian",
+      "owner_module": "apf.u1y_landau_pole",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:acc_ledger_identities",
+      "owner_module": "apf.unification",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:acc_projection_essentiality",
+      "owner_module": "apf.unification_projection_essentiality",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:acc_three_level_identities",
+      "owner_module": "apf.unification_three_levels",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "foundation:forced_universality_classes",
+      "owner_module": "apf.universality_forcing",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:up_family_trace_bridge",
+      "owner_module": "apf.up_family_trace",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "quantum:vacuum_label_code_p1_witness",
+      "owner_module": "apf.vacuum_label_code",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "gravity:vacuum_o1_h0_fork",
+      "owner_module": "apf.vacuum_o1_fork",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "quantum:vacuum_scheme_covariance_split",
+      "owner_module": "apf.vacuum_scheme_covariance",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "wtrace:os_route_terminal_closure_open_export",
+      "owner_module": "apf.w_os_route_terminal_closure",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "wtrace:bsy_one_loop_kappa_l_assembly_consistency",
+      "owner_module": "apf.w_trace_BSY_one_loop_kappa_l_native_validator",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:mw_from_3_13_effective_angle",
+      "owner_module": "apf.w_trace_mw_from_effective_angle",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "wtrace:native_one_loop_mw_close",
+      "owner_module": "apf.w_trace_native_delta_r_mw_assembly",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "wtrace:two_loop_phase2_router",
+      "owner_module": "apf.w_trace_native_two_loop_phase2_master_interface_router",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "wtrace:zll_r2_counterterm_pieces",
+      "owner_module": "apf.w_trace_native_zll_R2_counterterm_pieces",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "wtrace:zll_kappa_l_oblique",
+      "owner_module": "apf.w_trace_native_zll_kappa_l_oblique",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "ew:wg2_dictionary_typing_no_go",
+      "owner_module": "apf.wg2_dictionary_typing_no_go",
+      "solver_status": "OBSTRUCTION_NAMED_CLOSURE",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:lattice_gap_candidate",
+      "owner_module": "apf.yang_mills_gap",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:ym_kappa3_negative",
+      "owner_module": "apf.yang_mills_kappa3",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "CONTEXTUALITY",
+      "expect_export": true,
+      "export_global_P": true,
+      "input_id": "strong:ladder_classical_correlation_control",
+      "owner_module": "apf.yang_mills_md_bridge",
+      "solver_status": "GLOBAL_SECTION_EXPORTED",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "strong:ym_quotient_ledger",
+      "owner_module": "apf.ym_quotient_ledger",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    },
+    {
+      "axis": "ROUTE",
+      "expect_export": false,
+      "export_global_P": false,
+      "input_id": "flavour:yt_normalization_no_go",
+      "owner_module": "apf.yt_absolute_scale_normalization_no_go",
+      "solver_status": "SOLVED_LOCAL_HELD_FOR_REPAIR",
+      "verdict_matches_expectation": true
+    }
+  ],
+  "global_P_count": 46,
+  "total_inputs": 204,
+  "wired_adapter_count": 33
+}

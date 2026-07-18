@@ -1,196 +1,109 @@
-# The Geometric Substrate as Cost Structure of Comparison Continuations
+# APF Paper 9 — The Geometric Substrate as Cost Structure of Comparison Continuations
 
-### Interactive Mathematical Appendix to Paper 9 of the Admissibility Physics Framework
+Companion repository for **Paper 9 v3.7** and its **Technical Supplement v1.1**
+(Admissibility Physics Framework).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20041675.svg)](https://doi.org/10.5281/zenodo.20041675) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ethan-Brooke/APF-Paper-9-Geometric-Substrate/blob/main/APF_Reviewer_Walkthrough.ipynb)
+- Manuscript: `Paper_9_Geometric_Substrate_Cost_Structure_v3.7.pdf`
+- Technical Supplement: `Paper_9_Geometric_Substrate_Cost_Structure_Technical_Supplement_v1.1.pdf`
+- Zenodo (Paper 9 concept DOI): https://doi.org/10.5281/zenodo.20041675
+- Canonical engine: APF-Engine **v24.3.427** (commit `7ab898e`, **3,918** bank-registered checks)
 
-[Interactive Derivation DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Substrate/) · [Theorem Map](#theorem-mapping-table) · [Reviewers' Guide](REVIEWERS_GUIDE.md) · [The full APF corpus](#the-full-apf-corpus) · [Citation](#citation)
+> **Reviewer-safe scope.** This repository accompanies Paper 9 v3.7 and Technical
+> Supplement v1.1. The formal mathematical claims live in those documents. The
+> local Python package executes a **declared subset of nine finite witnesses and
+> falsifier controls**; those checks do not substitute for the symbolic proofs and
+> do not convert conditional or open gates into proved physical theorems.
+>
+> The Paper 9 closure ledger distinguishes APF-native theorems, standard
+> mathematical imports, conditional theorems, exact model certificates, named open
+> gates, and the external Paper 6 nonlinear endpoint. The browser DAG
+> (`interactive_dag.html`) displays that typed ledger. A local check is attached
+> only where an executable witness exists.
+>
+> Current release status:
+> - dependency closure: **conditional package**;
+> - physical-realization closure: **explicitly open**;
+> - local executable witnesses: **9 passing checks** (`python run_checks.py`);
+> - canonical Engine receipt: commit `7ab898e`, full-bank `verify_all --bank-audit` **3,918/3,918 gap 0, Bucket A empty** (see `artifacts/`).
 
-> **AI agents:** start with [`START_HERE.md`](START_HERE.md) — operational checklist that loads the framework context in 5–10 minutes. The corpus inventory and full file map are in [`ai_context/repo_map.json`](ai_context/repo_map.json).
+## What Paper 9 does and does not claim
 
----
+Paper 9 establishes a **dependency-explicit route** from finite operational
+comparison content to record topology, Sikorski differential structure,
+subcartesian regular loci, smooth continuation orbits, and positive
+response-orbit geometry. The general finite-basis theorem is **conditional on a
+named joint-extension package** and is machine-witnessed exactly on the finite
+atom-cover model. Physical precision-channel generation, finite smooth
+generation, smooth response-factor completeness, the physical substrate anchor,
+Lorentzian signature, the physical no-trace source law, and the nonlinear
+Einstein endpoint remain **separately typed gates**. The weak-field trace
+reduction is therefore a **conditional bridge, not an unconditional rederivation
+of general relativity**.
 
-## Why this codebase exists
-
-Finite-continuability translation of Paper 6's GR closure. Imports the continuation calculus of Paper 10 v1.21 and the represented-geometry Einstein closure of Paper 6; recovers the Schwarzschild redshift via cost-curvature response and reduces the leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (gamma_C = 1 iff tr L_sc = 0). The finite operational basis underlying the record differential space is stated as a theorem conditional on a named finite joint-extension package and machine-witnessed exactly on the finite atom-cover model; physical precision-channel generation, smooth response-factor completeness, the physical substrate anchor, Lorentzian signature, and the no-trace source law remain separately typed gates. Paper 6 stays source-of-record for the represented-geometry closure; Paper 9 is the translation layer.
-
-This repository is the executable audit layer for the symbolic proofs in this paper.  Every theorem in the manuscript traces to a named `check_*` function that exercises the claim at concrete representative values; the symbolic proof itself lives in the manuscript and its Technical Supplement.  Numerical agreement at concrete values is a sanity check, not a proof — see Paper~0 v4.4 §`sec:codebase` for the canonical trust-control discipline.
-
-The codebase is a faithful subset of the canonical APF codebase v24.3.427 (frozen 2026-05-04; 3918 verify_all checks, 3918 bank-registered theorems across 25 modules + `apf/standalone/`; canonical Phase-18 baseline). Each theorem in the manuscript traces to a named `check_*` function in `apf/core.py`, which can be called independently and returns a structured result.
-
-The codebase requires Python 3.8+ and NumPy / SciPy (some numerical lemmas use them; see `pyproject.toml`).
-
-## How to verify
-
-Three paths, in order of increasing friction:
-
-**1. Colab notebook — zero install.** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ethan-Brooke/APF-Paper-9-Geometric-Substrate/blob/main/APF_Reviewer_Walkthrough.ipynb) Every key theorem is derived inline, with annotated cells you can inspect and modify. Run all cells — the full verification takes under a minute.
-
-**2. Browser — zero install.** Open the [Interactive Derivation DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Substrate/). Explore the dependency graph. Hover any node for its mathematical statement, key result, and shortest derivation chain to A1. Click **Run Checks** to watch all theorems verify in topological order.
-
-**3. Local execution.**
+## Quick start
 
 ```bash
-git clone https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate.git
-cd APF-Paper-9-Geometric-Substrate
+python -m venv .venv && . .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -e .
-python run_checks.py
+python run_checks.py            # runs the nine bundled checks
+python run_checks.py --verbose  # per-check grade + key result
+python release_gate.py          # static + runtime release contract
 ```
 
-Expected output:
+The only runtime dependency is `numpy`. The nine checks run in a fresh
+environment with no access to the canonical engine: all canonical-bank /
+cross-module introspection has been frozen into `apf/_release_fixtures.py`
+(a build-time snapshot of the canonical census at commit `7ab898e`).
+
+## The nine bundled checks (executable witnesses)
+
+Each carries its **actual** registry grade — `P_structural`,
+`P_structural_instrument`, or `P_structural_reading` — not plain `[P]`.
+
+| # | Check | Grade | Paper 9 role |
+|---|-------|-------|--------------|
+| 1 | `check_T_finite_operational_basis_scope_contract` | `P_structural_instrument` | Names the atom-cover hypotheses; exact boundary N=0; no-amalgamation countermodel keeps the general bridge open |
+| 2 | `check_T_finite_operational_basis` | `P_structural` | Exact finite atom-cover model witness; complete minimal basis with `|B_U| <= floor(C_U/eps*)` |
+| 3 | `check_T_finite_minimal_joint_realization_atom_cover` | `P_structural` | One compatible minimum joint carrier; independent-minima control |
+| 4 | `check_T_held_to_record_typing` | `P_structural_reading` | Held carrier / invariant record quotient / outcome instruments are three distinct typed objects on one record space |
+| 5 | `check_T_gammaC_carrier_fork` | `P_structural` | Four-point carrier fork `gamma_C ∈ {1, 1/3, 0, -1}`; Cassini kills; weight-one curve |
+| 6 | `check_T_weight_one_reduction` | `P_structural` | Deposit-fraction identity; exchange annihilation; scalar mode vanishes iff `w=1`. Does **not** derive `w=1` |
+| 7 | `check_L_amount_graded_testedness_encoding_no_go` | `P_structural_instrument` | The GCC floor invariant grades representation, not magnitude (encoding wall) |
+| 8 | `check_T_fagt2_encoding_argmin_pressure_and_read_channel` | `P_structural` | The (E) door: distributed encoding cost-maximal; strictly-superadditive flip gate pinned |
+| 9 | `check_T_contention_law_granularity_occupancy_fork` | `P_structural` | Granularity dichotomy + occupancy fork; (c1-occ) evidence-shaped, not adopted |
+
+The full Paper 9 closure ledger — including the conditional, open, external, and
+model-certificate nodes that carry **no** local check — is in `theorems.json`
+and rendered as a typed graph in `interactive_dag.html`.
+
+## Trust hierarchy
 
 ```
-      Paper 9 (The Geometric Substrate as Cost Structure of Comparison Continuations): 5 passed, 0 failed, 5 total — verified in <minutes>
+formal proof in the manuscript / supplement
+    + exact dependency/status ledger (theorems.json, interactive_dag.html)
+    + executable finite witnesses and falsifier controls (apf/, run_checks.py)
 ```
 
-**4. Individual inspection.**
+Passing witness code does **not** by itself establish a theorem: the witnesses
+are finite instances and falsifier controls. Where a node is conditional or open,
+the ledger says so, and no local check changes that.
 
-```python
-from apf.bank import get_check
-r = get_check('check_T_gammaC_carrier_fork')()
-print(r['key_result'])
-```
-
-For reviewers, a [dedicated guide](REVIEWERS_GUIDE.md) walks through the logical architecture, the structural assumptions, and the anticipated objections.
-
----
-
-## Theorem mapping table
-
-This table maps every result in the manuscript to its executable verification.
-
-| Check | Type | Summary |
-|-------|------|---------|
-| `check_T_gammaC_carrier_fork` | Theorem |  |
-| `check_T_weight_one_reduction` | Theorem |  |
-| `check_L_amount_graded_testedness_encoding_no_go` | Lemma |  |
-| `check_T_fagt2_encoding_argmin_pressure_and_read_channel` | Theorem |  |
-| `check_T_contention_law_granularity_occupancy_fork` | Theorem |  |
-
-All check functions reside in `apf/core.py`. Every function listed above can be called independently and returns a structured result including its logical dependencies and the mathematical content it verifies.
-
----
-
-## The derivation chain
+## Repository layout
 
 ```
-  Level 0: T_gammaC_carrier_fork · T_weight_one_reduction · L_amount_graded_testedness_encoding_no_go · T_fagt2_encoding_argmin_pressure_and_read_channel · T_contention_law_granularity_occupancy_fork
+Paper_9_..._v3.7.{tex,pdf}                 main manuscript
+Paper_9_..._Technical_Supplement_v1.1.{tex,pdf}
+apf/                                       nine self-contained checks + frozen fixtures
+run_checks.py                              verifier (9 passed / 0 failed / 9 total)
+release_gate.py                            static + runtime release contract (CI)
+generate_paper9_dag.py                     regenerates theorems.json + interactive_dag.html
+theorems.json                              typed Paper 9 closure ledger (9 bundled)
+paper9_typed_dependency_dag.json           typed nodes + edges
+interactive_dag.html                       browser view of the typed ledger
+artifacts/                                 canonical Engine freeze receipts
+ai_context/                                machine-readable context pack
 ```
 
-The [interactive DAG](https://ethan-brooke.github.io/APF-Paper-9-Geometric-Substrate/) shows the full graph with hover details and animated verification.
+## License
 
----
-
-## Repository structure
-
-```
-├── README.md                              ← you are here
-├── START_HERE.md                          ← AI operational checklist; read-first for AI agents
-├── REVIEWERS_GUIDE.md                     ← physics-first walkthrough for peer reviewers
-├── interactive_dag.html                   ← interactive D3.js derivation DAG (also served at docs/ via GitHub Pages)
-├── repo_map.json                          ← machine-readable map of this repo (root copy of ai_context/repo_map.json)
-├── theorems.json                          ← theorem catalog (root copy of ai_context/theorems.json)
-├── derivation_graph.json                  ← theorem DAG as JSON (root copy of ai_context/derivation_graph.json)
-├── ai_context/                            ← AI onboarding pack (corpus map, theorems, glossary, etc.)
-│   ├── AGENTS.md                          ← authoritative entry point for AI agents
-│   ├── FRAMEWORK_OVERVIEW.md              ← APF in 5 minutes
-│   ├── GLOSSARY.md                        ← axioms, PLEC primitives, epistemic tags
-│   ├── AUDIT_DISCIPLINE.md                ← engagement posture for critique/proposal
-│   ├── OPEN_PROBLEMS.md                   ← catalog of open problems + verdicts
-│   ├── repo_map.json                      ← machine-readable map of this repo
-│   ├── theorems.json                      ← machine-readable theorem catalog
-│   ├── derivation_graph.json              ← theorem DAG as JSON
-│   └── wiki/                              ← bundled APF wiki (concepts, papers, codebase)
-├── apf/
-│   ├── core.py                            ← 5 theorem check functions
-│   ├── apf_utils.py                       ← exact arithmetic + helpers
-│   └── bank.py                            ← registry and runner
-├── docs/
-│   └── index.html                         ← interactive derivation DAG (GitHub Pages)
-├── APF_Reviewer_Walkthrough.ipynb         ← Colab notebook
-├── run_checks.py                          ← convenience entry point
-├── pyproject.toml                         ← package metadata
-├── zenodo.json                            ← archival metadata
-├── Paper_9_Geometric_Substrate_Cost_Structure_v3.7.tex                ← the paper
-├── Paper_9_Geometric_Substrate_Cost_Structure_Technical_Supplement_v1.1.tex                ← Technical Supplement
-
-└── LICENSE                                ← MIT
-```
-
----
-
-## What this paper derives and what it does not
-
-**Derived:** (see Theorem mapping table above)
-
-**Not derived here:** Specific results outside this paper's scope live in companion papers — see the corpus table below for the full 9-paper series.
-
----
-
-## Citation
-
-```bibtex
-@software{apf-paper9,
-  title   = {The Geometric Substrate as Cost Structure of Comparison Continuations},
-  author  = {Brooke, Ethan},
-  year    = {2026},
-  doi     = {10.5281/zenodo.20041675},
-  url     = {https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate}
-}
-```
-
-For the full citation lineage (concept-DOI vs version-DOI, related identifiers, bibtex for all corpus papers), see [`ai_context/CITING.md`](ai_context/CITING.md).
-
----
-
-<!-- FOOTER:start -->
----
-
-## About the APF series
-
-The Admissibility Physics Framework is a constraint-first derivation of the Standard Model and cosmological structure from a single primitive — finite enforcement capacity. The corpus runs from the foundational papers through the gauge sector, the quantum formalism, Lorentzian spacetime and the Einstein field equations, the cosmological constant, the electroweak and dark sectors, and the lattice Yang-Mills program. Each paper's main text and Technical Supplement is deposited separately on Zenodo and collected in the **[admissibility_physics](https://zenodo.org/communities/admissibility_physics)** community. The engine repository is the machine-verifiable companion to all of it (v24.3.249 — 3,745 bank-registered theorems across 422 typed modules, 48 quantitative predictions).
-
-| # | Title | Concept DOI |
-|---|---|---|
-| Engine | Admissibility Physics — Unified Theorem Bank & Verification Engine | [10.5281/zenodo.18529115](https://doi.org/10.5281/zenodo.18529115) |
-| 0 | What Physics Permits: A Constraint-First Framework for Physics | [10.5281/zenodo.18439523](https://doi.org/10.5281/zenodo.18439523) |
-| 1 | The Enforceability of Distinction | [10.5281/zenodo.18439200](https://doi.org/10.5281/zenodo.18439200) |
-| 2 | Finite Admissibility and the Failure of Global Description | [10.5281/zenodo.18439274](https://doi.org/10.5281/zenodo.18439274) |
-| 3 | Entropy, Time, and Accumulated Cost | [10.5281/zenodo.18439363](https://doi.org/10.5281/zenodo.18439363) |
-| 4 | Admissibility Constraints and Structural Saturation | [10.5281/zenodo.18439397](https://doi.org/10.5281/zenodo.18439397) |
-| 5 | Quantum Structure from Finite Enforceability | [10.5281/zenodo.18439433](https://doi.org/10.5281/zenodo.18439433) |
-| 6 | Dynamics and Geometry as Optimal Admissible Reallocation | [10.5281/zenodo.18439445](https://doi.org/10.5281/zenodo.18439445) |
-| 7 | A Minimal Quantum of Action from Finite Admissibility | [10.5281/zenodo.18439513](https://doi.org/10.5281/zenodo.18439513) |
-| 8 | The Admissibility-Capacity Ledger | [10.5281/zenodo.19721384](https://doi.org/10.5281/zenodo.19721384) |
-| 9 | The Geometric Substrate as Cost Structure of Comparison Continuations | [10.5281/zenodo.20041675](https://doi.org/10.5281/zenodo.20041675) |
-| 10 | The Calculus of Finite Continuability | [10.5281/zenodo.20041680](https://doi.org/10.5281/zenodo.20041680) |
-| 11 | Forced Universality from Capacity-Bounded Admissibility | [10.5281/zenodo.20684198](https://doi.org/10.5281/zenodo.20684198) |
-| 13 | The Minimal Admissibility Core | [10.5281/zenodo.18361446](https://doi.org/10.5281/zenodo.18361446) |
-| 16 | Markov Breakdown and the Hard Problems | [10.5281/zenodo.20684207](https://doi.org/10.5281/zenodo.20684207) |
-| 18 | The Electroweak Sector as a Capacity Equilibrium | [10.5281/zenodo.20684209](https://doi.org/10.5281/zenodo.20684209) |
-| 20 | The Enforcement Crystal | [10.5281/zenodo.18531732](https://doi.org/10.5281/zenodo.18531732) |
-| 21 | APF Engine — Unified Theorem Bank and Verification Engine | [10.5281/zenodo.18529115](https://doi.org/10.5281/zenodo.18529115) |
-| 24 | The Recruitment-Radius Extension — Foundations | [10.5281/zenodo.20684211](https://doi.org/10.5281/zenodo.20684211) |
-| 28 | Absolute Mass Scales from Electroweak Capacity Saturation | [10.5281/zenodo.20684215](https://doi.org/10.5281/zenodo.20684215) |
-| 29 | Plaquette Representation Dominance and Confinement | [10.5281/zenodo.20684218](https://doi.org/10.5281/zenodo.20684218) |
-| 30 | A Tube Mechanism for the Lattice Mass Gap | [10.5281/zenodo.20684220](https://doi.org/10.5281/zenodo.20684220) |
-| 31 | Osterwalder-Schrader Structure of Lattice Yang-Mills | [10.5281/zenodo.20684222](https://doi.org/10.5281/zenodo.20684222) |
-| 33 | Trace-to-Scheme Export Architecture | [10.5281/zenodo.20684224](https://doi.org/10.5281/zenodo.20684224) |
-| 35 | The Dark Sector as a Two-Role Capacity Decomposition | [10.5281/zenodo.20684228](https://doi.org/10.5281/zenodo.20684228) |
-| 40 | Between Symmetry and the Void — The Thermodynamics of Finite Distinction | [10.5281/zenodo.20684235](https://doi.org/10.5281/zenodo.20684235) |
-| 41 | The Horizon as a Continuation Ledger | [10.5281/zenodo.20684241](https://doi.org/10.5281/zenodo.20684241) |
-| 42 | The Weak Mixing Angle Is Not Free | [10.5281/zenodo.20684245](https://doi.org/10.5281/zenodo.20684245) |
-
-Concept DOIs always resolve to the latest version. Technical Supplements are deposited as linked records — `isSupplementTo` the main paper, `isDocumentedBy` the companion repository.
-
-## Author
-
-Ethan Brooke — Independent Researcher, San Anselmo, California, USA.
-
-- ORCID: [0009-0001-2261-4682](https://orcid.org/0009-0001-2261-4682)
-- LinkedIn: [linkedin.com/in/ethanbrooke](https://www.linkedin.com/in/ethanbrooke/)
-- GitHub: [github.com/Ethan-Brooke](https://github.com/Ethan-Brooke)
-- Contact: brooke.ethan@gmail.com
-
-MIT — see [LICENSE](LICENSE).
-<!-- FOOTER:end -->
+MIT (see `LICENSE`).

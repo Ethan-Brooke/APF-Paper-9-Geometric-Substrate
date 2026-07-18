@@ -28,7 +28,7 @@ Grouped by intent:
 
 ## Audit / critique — "does this hold up?"
 
-> I'm going to propose a mechanism for resolving [topic]. Before I describe it, review `ai_context/AUDIT_DISCIPLINE.md` and the §5 worked example (Grok H0 proposal). Then when I paste my proposal, check specifically: (a) does it contradict any [P] theorem in `ai_context/THEOREMS.md`? (b) does it introduce free parameters presented as zero-parameter? (c) does it move in a direction consistent with adjacent data?
+> I'm going to propose a mechanism for resolving [topic]. Before I describe it, review `ai_context/AUDIT_DISCIPLINE.md` and the §5 worked example (Grok H0 proposal). Then when I paste my proposal, check specifically: (a) does it contradict any [P] theorem in `theorems.json`? (b) does it introduce free parameters presented as zero-parameter? (c) does it move in a direction consistent with adjacent data?
 
 > Here is an external review of Paper 9: [paste]. Read `ai_context/AUDIT_DISCIPLINE.md`. Verify each criticism against the current `.tex` source (use Grep / Read). Distinguish criticisms that are correct from those based on an older version. Propose full-scope remediation, not a targeted pass.
 

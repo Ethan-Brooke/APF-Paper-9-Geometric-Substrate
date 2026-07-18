@@ -70,7 +70,7 @@ Formalized as `check_Regime_exit_Type_I` through `check_Regime_exit_Type_V` in `
 
 ## Core lemmas / theorems referenced throughout
 
-**L_irr.** Irreversibility from cross-interface correlations. Cross-interface correlations commit capacity at both interfaces; no local observer can recover it. Monotonicity (L3) holds at each interface. **Note:** the v6.8/v6.9 framing is "locally unrecoverable" — NOT the older v4.x framing "reversal requires infinite cost" (which contradicts L3 and has been rejected). `check_L_irr` in `apf/core.py`.
+**L_irr.** Irreversibility from cross-interface correlations. Cross-interface correlations commit capacity at both interfaces; no local observer can recover it. Monotonicity (L3) holds at each interface. **Note:** the current framing is "locally unrecoverable" — NOT the older v4.x framing "reversal requires infinite cost" (which contradicts L3 and has been rejected). `check_L_irr` in `apf/core.py`.
 
 **L_nc (non-closure).** Composition of interfaces can fail — not every pair of systems is jointly enforceable. The root of superadditive cost.
 
@@ -158,7 +158,7 @@ These terms have specific meanings on APF that differ from general usage. Gettin
 
 **"Dark matter."** In APF: the $C_{\mathrm{ext}}$ geometric capacity sector. Gravitationally active, gauge-inert. Phenomenological identification tagged [P_structural + Pred]; not a particle species.
 
-**"Irreversibility."** In APF: locally unrecoverable cross-interface correlations (v6.8+ framing). NOT "infinite-cost reversal" (v4.x framing, rejected because it contradicts L3 monotonicity).
+**"Irreversibility."** In APF: locally unrecoverable cross-interface correlations (current framing). NOT "infinite-cost reversal" (v4.x framing, rejected because it contradicts L3 monotonicity).
 
 ---
 

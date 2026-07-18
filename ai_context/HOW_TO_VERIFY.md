@@ -27,7 +27,7 @@ Expected output: one line per check, then a summary `Paper 9 (The Geometric Subs
 
 ## Local — inspect a specific check
 
-Pick the check name from `ai_context/THEOREMS.md` (use `grep` to filter by module, or by epistemic tag, or by keyword). Then:
+Pick the check name from `theorems.json` (use `grep` to filter by module, or by epistemic tag, or by keyword). Then:
 
 ```bash
 python -c "from apf import core; r = core.check_T_gammaC_carrier_fork(); print(r)"
@@ -77,7 +77,7 @@ The supplement contains the canonical proofs. Each theorem in the supplement has
 
 The interactive DAG (`docs/index.html`, or browse it directly as a web page) shows the full dependency graph. Every edge corresponds to a `dependencies` entry in a `_result(...)` call. To verify a claim: find the node, inspect its dependencies, verify each recursively.
 
-For scriptable access, use `ai_context/derivation_graph.json`.
+For scriptable access, use `paper9_typed_dependency_dag.json`.
 
 ## Verify a specific paper claim step by step
 
@@ -85,7 +85,7 @@ For scriptable access, use `ai_context/derivation_graph.json`.
 2. Find the `\coderef{}{}` anchor. If absent, this is a potential coderef drift — flag it.
 3. Run the check: `python -c "from apf import <module>; print(<module>.<check_name>())"`.
 4. Read the check's docstring to confirm the witness matches the paper's claim.
-5. Walk dependencies (from the returned `dependencies` list or `derivation_graph.json`) until you hit an axiom or an already-verified claim.
+5. Walk dependencies (from the returned `dependencies` list or `paper9_typed_dependency_dag.json`) until you hit an axiom or an already-verified claim.
 
 ## Verify against external data (predictions)
 

@@ -1,6 +1,6 @@
 {
   "title": "APF Paper 9 — The Geometric Substrate as Cost Structure of Comparison Continuations",
-  "description": "<p>Finite-continuability translation of Paper 6's GR closure. Imports the continuation calculus of Paper 10 v1.21 and the represented-geometry Einstein closure of Paper 6; recovers the Schwarzschild redshift via cost-curvature response and reduces the leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (gamma_C = 1 iff tr L_sc = 0). The finite operational basis underlying the record differential space is stated as a theorem conditional on a named finite joint-extension package and machine-witnessed exactly on the finite atom-cover model; physical precision-channel generation, smooth response-factor completeness, the physical substrate anchor, Lorentzian signature, and the no-trace source law remain separately typed gates. Paper 6 stays source-of-record for the represented-geometry closure; Paper 9 is the translation layer.</p><p>This repository is the executable mathematical appendix for Paper 9 of the Admissibility Physics Framework (APF). All theorems trace to named check functions in the bundled <code>apf/</code> package.</p>",
+  "description": "<p>Finite-continuability translation of Paper 6's GR closure. Imports the continuation calculus of Paper 10 v1.21 and the represented-geometry Einstein closure of Paper 6; recovers the Schwarzschild redshift via cost-curvature response and reduces the leading weak-field GR recovery to the no-trace/unimodular scalar load-response gate (gamma_C = 1 iff tr L_sc = 0). The finite operational basis underlying the record differential space is stated as a theorem conditional on a named finite joint-extension package and machine-witnessed exactly on the finite atom-cover model; physical precision-channel generation, smooth response-factor completeness, the physical substrate anchor, Lorentzian signature, and the no-trace source law remain separately typed gates. Paper 6 stays source-of-record for the represented-geometry closure; Paper 9 is the translation layer.</p><p>This repository is the executable mathematical appendix for Paper 9 of the Admissibility Physics Framework (APF). The bundled <code>apf/</code> package executes nine finite witnesses and falsifier controls for Paper 9; the formal claims live in the manuscript and Technical Supplement, and the typed closure ledger (theorems.json) types every node. Repository hotfix v3.7.1.</p>",
   "creators": [
     {
       "name": "Brooke, Ethan",
@@ -29,5 +29,5 @@
       "scheme": "doi"
     }
   ],
-  "version": "3.7"
+  "version": "3.7.1"
 }

@@ -1,327 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>APF Paper 9 — Derivation DAG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <style>
-    :root {
-      --bg: #fafaf7;
-      --fg: #1a1a1a;
-      --muted: #666;
-      --axiom: #2c3e50;
-      --theorem: #27ae60;
-      --lemma: #3498db;
-      --red_team: #c0392b;
-      --other: #95a5a6;
-      --link: #999;
-      --hover: #f39c12;
-    }
-    * { box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-      margin: 0; padding: 0; background: var(--bg); color: var(--fg);
-    }
-    header {
-      padding: 1rem 1.5rem; border-bottom: 1px solid #ddd;
-      background: white; display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
-    }
-    header h1 { margin: 0; font-size: 1.2rem; font-weight: 600; }
-    header .subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
-    header .controls { display: flex; gap: 0.5rem; }
-    header button {
-      padding: 0.4rem 0.9rem; font-size: 0.85rem;
-      background: white; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;
-    }
-    header button:hover { background: #eee; }
-    #status {
-      padding: 0.5rem 1.5rem; background: #fff3cd;
-      border-bottom: 1px solid #ffc107; font-size: 0.85rem; color: #856404;
-      display: none;
-    }
-    #status.visible { display: block; }
-    #status.success { background: #d4edda; border-color: #28a745; color: #155724; }
-    main {
-      display: grid; grid-template-columns: 1fr 320px;
-      height: calc(100vh - 70px); overflow: hidden;
-    }
-    @media (max-width: 768px) {
-      main { grid-template-columns: 1fr; }
-      #sidebar { display: none; }
-    }
-    #graph { background: var(--bg); position: relative; overflow: hidden; }
-    #graph svg { width: 100%; height: 100%; cursor: grab; }
-    #graph svg:active { cursor: grabbing; }
-    #sidebar {
-      background: white; padding: 1rem 1.2rem; overflow-y: auto;
-      border-left: 1px solid #ddd; font-size: 0.88rem;
-    }
-    #sidebar h2 {
-      font-size: 1rem; margin: 0 0 0.5rem; padding-bottom: 0.4rem;
-      border-bottom: 1px solid #eee;
-    }
-    #sidebar .empty { color: var(--muted); font-style: italic; }
-    #sidebar .field { margin-bottom: 0.7rem; }
-    #sidebar .field-label {
-      font-size: 0.72rem; text-transform: uppercase;
-      letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.15rem;
-    }
-    #sidebar .deps { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-    #sidebar .dep {
-      background: #eef; padding: 0.15rem 0.5rem; border-radius: 3px;
-      font-family: ui-monospace, monospace; font-size: 0.8rem; cursor: pointer;
-    }
-    #sidebar .dep:hover { background: #dde; }
-    #legend {
-      position: absolute; bottom: 1rem; left: 1rem; background: white;
-      padding: 0.6rem 0.9rem; border: 1px solid #ddd; border-radius: 4px;
-      font-size: 0.78rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    #legend .item { display: flex; align-items: center; gap: 0.4rem; margin: 0.2rem 0; }
-    #legend .swatch { width: 12px; height: 12px; border-radius: 50%; }
-    .node circle { stroke: white; stroke-width: 1.5px; cursor: pointer; }
-    .node text { font-size: 11px; pointer-events: none; }
-    .node.faded circle, .node.faded text { opacity: 0.2; }
-    .node.passed circle { stroke: #27ae60; stroke-width: 3px; }
-    .node.failed circle { stroke: #c0392b; stroke-width: 3px; }
-    .link { stroke: var(--link); stroke-width: 1.2px; fill: none; }
-    .link.faded { opacity: 0.1; }
-    .link.highlight { stroke: var(--hover); stroke-width: 2.5px; }
-    footer {
-      position: fixed; bottom: 0; right: 0; padding: 0.4rem 0.8rem;
-      font-size: 0.72rem; color: var(--muted); background: rgba(255,255,255,0.85);
-    }
-    footer a { color: var(--muted); }
-  </style>
-</head>
-<body>
-  <header>
-    <div>
-      <h1>Paper 9 — The Geometric Substrate as Cost Structure of Comparison Continuations</h1>
-      <div class="subtitle">Interactive derivation DAG · 5 checks · APF v6.8</div>
-    </div>
-    <div class="controls">
-      <button id="run-checks-btn">▶ Run All Checks</button>
-      <button id="reset-btn">⟳ Reset View</button>
-    </div>
-  </header>
-  <div id="status"></div>
-  <main>
-    <div id="graph">
-      <svg></svg>
-      <div id="legend">
-        <div class="item"><div class="swatch" style="background:var(--axiom)"></div>Axiom / primitive</div>
-        <div class="item"><div class="swatch" style="background:var(--theorem)"></div>Theorem (T_·)</div>
-        <div class="item"><div class="swatch" style="background:var(--lemma)"></div>Lemma (L_·)</div>
-        <div class="item"><div class="swatch" style="background:var(--red_team)"></div>Red-team (RT_·)</div>
-        <div class="item"><div class="swatch" style="background:var(--other)"></div>Other</div>
-      </div>
-    </div>
-    <aside id="sidebar">
-      <h2>Theorem details</h2>
-      <p class="empty">Hover any node to see its summary; click to highlight its dependency subgraph.</p>
-    </aside>
-  </main>
-  <footer>
-    Generated by APF <a href="https://github.com/Ethan-Brooke">create-repo</a> skill ·
-    <a href="https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate">repo</a>
-  </footer>
-
+<!doctype html><html><head><meta charset="utf-8">
+<title>Paper 9 v3.7.1 — Typed Closure DAG</title>
+<style>
+ body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:0;background:#0f1115;color:#e8e8e8}
+ header{padding:14px 20px;background:#171a21;border-bottom:1px solid #2a2f3a}
+ h1{font-size:16px;margin:0 0 4px} .sub{font-size:12px;color:#9aa4b2}
+ .legend{padding:8px 20px;font-size:11px;background:#12151b;border-bottom:1px solid #2a2f3a}
+ .lg{margin-right:14px;white-space:nowrap} .lg i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:5px;vertical-align:middle}
+ #wrap{display:flex;height:calc(100vh - 96px)}
+ svg{flex:1} #side{width:360px;padding:14px 16px;overflow:auto;background:#12151b;border-left:1px solid #2a2f3a;font-size:12.5px;line-height:1.5}
+ .node circle{stroke:#0f1115;stroke-width:1.5px;cursor:pointer} .node text{fill:#cfd6e0;font-size:10px;pointer-events:none}
+ line.edge{stroke:#3a4150;stroke-width:1.2px} .badge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;color:#fff}
+ code{color:#7fd1c0}
+</style></head><body>
+<header><h1>Paper 9 — Typed Closure Dependency DAG</h1>
+<div class="sub">v3.7 / Technical Supplement v1.1 · engine v24.3.427 (7ab898e, bank 3918) · 38 nodes · 45 typed links · 9 executable witnesses · 5 named open gates. This is the Paper 9 closure ledger, not the full engine graph.</div></header>
+<div class="legend"><span class="lg"><i style="background:#4C9A2A"></i>APF_NATIVE</span><span class="lg"><i style="background:#6c757d"></i>STANDARD_IMPORT</span><span class="lg"><i style="background:#e08e0b"></i>CONDITIONAL_THEOREM</span><span class="lg"><i style="background:#3b7dd8"></i>MODEL_CERTIFICATE</span><span class="lg"><i style="background:#c0392b"></i>NAMED_OPEN_GATE</span><span class="lg"><i style="background:#7d3cb5"></i>EXTERNAL_ENDPOINT</span><span class="lg"><i style="background:#128a6f"></i>EXECUTABLE_WITNESS</span></div>
+<div id="wrap"><svg id="svg"></svg><div id="side"><b>Click a node</b><br>Its type, status, summary, and typed edges appear here.</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script>
-const NODES = [
-  {
-    "id": "T_gammaC_carrier_fork",
-    "fullId": "check_T_gammaC_carrier_fork",
-    "type": "theorem",
-    "summary": "",
-    "deps": []
-  },
-  {
-    "id": "T_weight_one_reduction",
-    "fullId": "check_T_weight_one_reduction",
-    "type": "theorem",
-    "summary": "",
-    "deps": []
-  },
-  {
-    "id": "L_amount_graded_testedness_encoding_no_go",
-    "fullId": "check_L_amount_graded_testedness_encoding_no_go",
-    "type": "lemma",
-    "summary": "",
-    "deps": []
-  },
-  {
-    "id": "T_fagt2_encoding_argmin_pressure_and_read_channel",
-    "fullId": "check_T_fagt2_encoding_argmin_pressure_and_read_channel",
-    "type": "theorem",
-    "summary": "",
-    "deps": []
-  },
-  {
-    "id": "T_contention_law_granularity_occupancy_fork",
-    "fullId": "check_T_contention_law_granularity_occupancy_fork",
-    "type": "theorem",
-    "summary": "",
-    "deps": []
-  }
-];
-const LINKS = [];
-const COLOR = {
-  axiom: getCss('--axiom'), theorem: getCss('--theorem'),
-  lemma: getCss('--lemma'), red_team: getCss('--red_team'),
-  other: getCss('--other'),
-};
-function getCss(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
-
-const svg = d3.select('#graph svg');
-const W = () => document.getElementById('graph').clientWidth;
-const H = () => document.getElementById('graph').clientHeight;
-
-// Zoom + pan
-const g = svg.append('g');
-svg.call(d3.zoom().scaleExtent([0.3, 3]).on('zoom', (e) => g.attr('transform', e.transform)));
-
-// Force simulation
-const sim = d3.forceSimulation(NODES)
-  .force('link', d3.forceLink(LINKS).id(d => d.id).distance(70).strength(0.7))
-  .force('charge', d3.forceManyBody().strength(-220))
-  .force('center', d3.forceCenter(W()/2, H()/2))
-  .force('collide', d3.forceCollide().radius(28));
-
-// Links (arrowheads)
-svg.append('defs').append('marker')
-  .attr('id', 'arrow').attr('viewBox', '0 -5 10 10').attr('refX', 18)
-  .attr('refY', 0).attr('markerWidth', 5).attr('markerHeight', 5)
-  .attr('orient', 'auto').attr('fill', '#999')
-  .append('path').attr('d', 'M0,-5L10,0L0,5');
-
-const link = g.append('g').attr('class', 'links').selectAll('line')
-  .data(LINKS).join('line').attr('class', 'link').attr('marker-end', 'url(#arrow)');
-
-const node = g.append('g').attr('class', 'nodes').selectAll('g')
-  .data(NODES).join('g').attr('class', 'node')
-  .call(d3.drag()
-    .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-    .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
-    .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
-
-node.append('circle').attr('r', 14).attr('fill', d => COLOR[d.type] || COLOR.other);
-node.append('text').attr('dy', '0.32em').attr('text-anchor', 'middle')
-  .attr('fill', 'white').attr('font-weight', 'bold').text(d => d.id.slice(0, 4));
-node.append('title').text(d => `${d.fullId}\n${d.summary}`);
-
-// Hover → sidebar
-node.on('mouseover', (e, d) => showSidebar(d))
-    .on('click', (e, d) => highlightSubgraph(d));
-
-const sidebarEmpty = '<p class="empty">Hover any node to see its summary; click to highlight its dependency subgraph.</p>';
-
-function showSidebar(d) {
-  const sb = document.getElementById('sidebar');
-  const depsHtml = d.deps.length
-    ? d.deps.map(x => `<span class="dep" data-id="${x}">${x}</span>`).join('')
-    : '<span class="empty">none in this paper\'s subset</span>';
-  sb.innerHTML = `
-    <h2>${d.fullId}</h2>
-    <div class="field">
-      <div class="field-label">Type</div>
-      <div>${d.type}</div>
-    </div>
-    <div class="field">
-      <div class="field-label">Summary</div>
-      <div>${d.summary || '<span class="empty">no summary available</span>'}</div>
-    </div>
-    <div class="field">
-      <div class="field-label">Direct dependencies</div>
-      <div class="deps">${depsHtml}</div>
-    </div>
-    <div class="field">
-      <div class="field-label">Run this check (CLI)</div>
-      <pre style="background:#f6f6f0; padding:0.5rem; border-radius:4px; font-size:0.78rem;"><code>python -c "from apf.bank import get_check; print(get_check('${d.fullId}')())"</code></pre>
-    </div>
-  `;
-  sb.querySelectorAll('.dep').forEach(el => {
-    el.onclick = () => {
-      const id = el.dataset.id;
-      const target = NODES.find(n => n.id === id);
-      if (target) showSidebar(target);
-    };
-  });
-}
-
-function highlightSubgraph(d) {
-  // Find all upstream nodes (transitive dependencies)
-  const upstream = new Set();
-  function walk(id) {
-    const n = NODES.find(x => x.id === id);
-    if (!n) return;
-    for (const dep of n.deps) {
-      if (!upstream.has(dep)) {
-        upstream.add(dep);
-        walk(dep);
-      }
-    }
-  }
-  walk(d.id);
-  upstream.add(d.id);
-  node.classed('faded', n => !upstream.has(n.id));
-  link.classed('faded', l => !(upstream.has(l.source.id) && upstream.has(l.target.id)))
-      .classed('highlight', l => upstream.has(l.source.id) && upstream.has(l.target.id));
-}
-
-document.getElementById('reset-btn').onclick = () => {
-  node.classed('faded', false).classed('passed', false).classed('failed', false);
-  link.classed('faded', false).classed('highlight', false);
-  document.getElementById('sidebar').innerHTML = `<h2>Theorem details</h2>${sidebarEmpty}`;
-  const status = document.getElementById('status');
-  status.classList.remove('visible', 'success');
-  status.textContent = '';
-};
-
-document.getElementById('run-checks-btn').onclick = async () => {
-  const status = document.getElementById('status');
-  status.classList.add('visible');
-  status.classList.remove('success');
-  status.textContent = 'Animating verification in topological order...';
-
-  // Topological sort
-  const inDeg = new Map(NODES.map(n => [n.id, 0]));
-  for (const l of LINKS) inDeg.set(l.target.id || l.target, (inDeg.get(l.target.id || l.target) || 0) + 1);
-  const queue = NODES.filter(n => inDeg.get(n.id) === 0).map(n => n.id);
-  const topo = [];
-  while (queue.length) {
-    const id = queue.shift();
-    topo.push(id);
-    for (const l of LINKS) {
-      const src = l.source.id || l.source;
-      const tgt = l.target.id || l.target;
-      if (src === id) {
-        inDeg.set(tgt, inDeg.get(tgt) - 1);
-        if (inDeg.get(tgt) === 0) queue.push(tgt);
-      }
-    }
-  }
-  // Animate
-  for (const id of topo) {
-    await new Promise(r => setTimeout(r, 80));
-    node.filter(n => n.id === id).classed('passed', true);
-  }
-  status.classList.add('success');
-  status.textContent = `✓ All ${topo.length} checks marked passed (visual; run python run_checks.py for actual verification).`;
-};
-
-sim.on('tick', () => {
-  link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-  node.attr('transform', d => `translate(${d.x},${d.y})`);
-});
-
-window.addEventListener('resize', () => {
-  sim.force('center', d3.forceCenter(W()/2, H()/2));
-  sim.alpha(0.3).restart();
-});
-</script>
-</body>
-</html>
+const DAG = {"schema": "apf.paper9.typed_dependency_dag.v1", "paper": "Paper 9 v3.7 / Technical Supplement v1.1", "engine": {"version": "24.3.427", "commit": "7ab898e", "bank_size": 3918}, "node_classes": ["APF_NATIVE", "STANDARD_IMPORT", "CONDITIONAL_THEOREM", "MODEL_CERTIFICATE", "NAMED_OPEN_GATE", "EXTERNAL_ENDPOINT", "EXECUTABLE_WITNESS"], "edge_classes": ["DEPENDS_ON", "IMPORTS", "REQUIRES_GATE", "CERTIFIED_BY_MODEL", "WITNESSED_BY_CHECK", "EXTERNALIZES_TO", "CROSS_REFERENCE"], "counts": {"nodes": 38, "edges": 45, "witnesses": 9, "open_gates": 5}, "nodes": [{"id": "P10_grammar", "label": "Continuation grammar (Paper 10)", "node_class": "CONDITIONAL_THEOREM", "status": "I", "summary": "The judgment G |-_C D->E and geometry-as-continuation-cost are imported from Paper 10 as primitive grammar."}, {"id": "P2_linear", "label": "Linear Paper 2 specialization", "node_class": "APF_NATIVE", "status": "P", "summary": "The flat quotient branch with optimal response gains, proved as a specialization."}, {"id": "P14_record", "label": "Record-transition typing (Paper 14 / TS def:ts-record-transition)", "node_class": "APF_NATIVE", "status": "P_structural_reading", "summary": "The held-carrier / invariant-record-quotient / outcome-instrument split on a common record space; a declared structural reading, not a primitive theorem."}, {"id": "joint_pkg", "label": "Joint-realizability package", "node_class": "NAMED_OPEN_GATE", "status": "O/G", "summary": "Finite joint extension + minimum attainment + closure invariance + positive marginal extension floor: the named package the general finite-basis theorem is conditional on."}, {"id": "atom_model", "label": "Exact atom-cover model certificate", "node_class": "MODEL_CERTIFICATE", "status": "model", "summary": "The Engine-certified finite atom-cover instantiation of the finite-basis mechanism and one compatible minimum joint carrier: an exact model witness, not the general theorem."}, {"id": "G9_1", "label": "G9.1 A finite complete operational basis exists", "node_class": "CONDITIONAL_THEOREM", "status": "R|G/C", "summary": "General basis existence is conditional on the joint-realizability package; the exact atom-cover model is Engine-certified."}, {"id": "G9_2", "label": "G9.2 Basis realized as finite separating precision channels", "node_class": "NAMED_OPEN_GATE", "status": "O/G", "summary": "Faithful operational-to-precision-channel realization: a named open gate; operational content is not yet a physical precision-channel family."}, {"id": "G9_3", "label": "G9.3 Record topology is Hausdorff and second countable", "node_class": "CONDITIONAL_THEOREM", "status": "P|G", "summary": "State separation gives Hausdorff; second countability needs a countable specification grammar and a topology-generating subfamily (gate)."}, {"id": "G9_4", "label": "G9.4 Finite smooth generation -> subcartesian differential space", "node_class": "CONDITIONAL_THEOREM", "status": "P|G", "summary": "Proved under the finite smooth-generation gate."}, {"id": "G9_5", "label": "G9.5 Complete local continuation flows generate smooth orbits", "node_class": "CONDITIONAL_THEOREM", "status": "I/P", "summary": "On the finite-differential-presentation locus, the imported subcartesian orbit theorem gives immersed smooth continuation orbits."}, {"id": "G9_6", "label": "G9.6 Smooth response-factor completeness gives ker D-beta = N^ctx", "node_class": "CONDITIONAL_THEOREM", "status": "P|G", "summary": "The boxed kernel identity holds under the two-way smooth factorization gate; equal response fibres are insufficient for equal derivative kernels."}, {"id": "G9_7", "label": "G9.7 Intrinsic response-orbit quotient gauge and length", "node_class": "APF_NATIVE", "status": "P", "summary": "Proved intrinsically on the regular quotient (thm:canonical-operational-anchor, thm:response-orbit-length)."}, {"id": "G9_8", "label": "G9.8 Physical anchor pulls length back to site geometry", "node_class": "NAMED_OPEN_GATE", "status": "O/C", "summary": "Construct s and A = q . Ds, type the null kernel and provenance, prove direct-germ calibration (gate:physical-substrate-anchor)."}, {"id": "G9_9", "label": "G9.9 Calibrated physical path cost bi-Lipschitz to response distance", "node_class": "CONDITIONAL_THEOREM", "status": "P|H", "summary": "Comparison theorem proved; ledger-rate bounds and response-class completeness remain physical inputs (thm:ledger-calibration)."}, {"id": "G9_10", "label": "G9.10 Smooth residual energy is half squared local distance", "node_class": "CONDITIONAL_THEOREM", "status": "P|SRR", "summary": "Proved locally when the residual Hessian is positive definite (thm:residual-energy-distance)."}, {"id": "G9_11", "label": "G9.11 Parallelogram quadraticity gives a positive cost metric", "node_class": "APF_NATIVE", "status": "P|Q", "summary": "Proved from the parallelogram certificate; whether the substrate passes it is open (prop:positive-cost-metric)."}, {"id": "G9_12", "label": "G9.12 Positive pullback geometry cannot supply Lorentzian signature", "node_class": "APF_NATIVE", "status": "P", "summary": "Positive cost is explicitly separated from Lorentzian comparison geometry (prop:positive-pullback-no-lorentz)."}, {"id": "G9_13", "label": "G9.13 Signed Lorentz-Finsler comparison structure for the causal cone", "node_class": "NAMED_OPEN_GATE", "status": "O/C", "summary": "Derive the causal cone, orientation, signed two-homogeneous function, and Lorentzian Hessian (gate:signed-comparison)."}, {"id": "G9_14", "label": "G9.14 Isotropic quadratic exterior recruitment gives chi ~ 1/r", "node_class": "CONDITIONAL_THEOREM", "status": "C/P", "summary": "Proved from an assumed isotropic quadratic exterior kernel (prop:point-source-profile)."}, {"id": "G9_15", "label": "G9.15 Calibrated clock response conditionally recovers redshift", "node_class": "CONDITIONAL_THEOREM", "status": "R", "summary": "Conditional recovery under load law, calibration, and the proper-time dictionary."}, {"id": "G9_16", "label": "G9.16 Generator trace equals comparison-volume variation", "node_class": "APF_NATIVE", "status": "P/C", "summary": "Proved in the represented clock-ruler comparison plane (thm:trace-volume)."}, {"id": "G9_17", "label": "G9.17 Linear loaded equilibrium h_chi = chi K^-1 J + O(chi^2)", "node_class": "CONDITIONAL_THEOREM", "status": "P|H", "summary": "Proved under the gauge-fixed response-Hessian hypothesis (thm:no-trace-operator)."}, {"id": "G9_18", "label": "G9.18 The no-trace gate is Ptr K^-1 J = 0", "node_class": "NAMED_OPEN_GATE", "status": "O/C", "summary": "The decisive local theorem; source-selection or a constrained-volume theorem are the principal routes."}, {"id": "G9_19", "label": "G9.19 No trace gives gamma_C = 1 and the first-PN exterior", "node_class": "CONDITIONAL_THEOREM", "status": "C/R", "summary": "Follows conditionally from the no-trace gate through the trace-volume theorem (cor:ppn-volume-mode, thm:conditional-weak-field)."}, {"id": "G9_20", "label": "G9.20 The represented nonlinear closure is Einstein gravity", "node_class": "EXTERNAL_ENDPOINT", "status": "I/C", "summary": "External Paper 6 H1-H3/A9/Lovelock endpoint; the finite-continuability translation remains open."}, {"id": "imp_sikorski", "label": "Sikorski differential-space structure", "node_class": "STANDARD_IMPORT", "status": "import", "summary": "Standard Sikorski differential-space machinery (thm:ts-sikorski)."}, {"id": "imp_subcart", "label": "Subcartesian / orbit theorem", "node_class": "STANDARD_IMPORT", "status": "import", "summary": "Standard subcartesian differential-space and immersed-orbit theorems (thm:ts-subcartesian, thm:ts-orbit-import)."}, {"id": "imp_constrank", "label": "Constant-rank theorem", "node_class": "STANDARD_IMPORT", "status": "import", "summary": "Standard constant-rank / initial-topology results (thm:ts-constant-rank, thm:ts-initial-topology)."}, {"id": "imp_lovelock", "label": "Lovelock endpoint import", "node_class": "STANDARD_IMPORT", "status": "import", "summary": "Standard Lovelock uniqueness feeding the Paper 6 external endpoint."}, {"id": "W_scope_contract", "label": "check_T_finite_operational_basis_scope_contract", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural_instrument", "summary": "Names the atom-cover hypotheses; exact boundary C=1999999999/2000000000 gives N=0; a finite no-amalgamation countermodel keeps the general bridge open.", "check": "check_T_finite_operational_basis_scope_contract"}, {"id": "W_finite_basis", "label": "check_T_finite_operational_basis", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural", "summary": "Exact-Fraction finite atom-cover model: a complete minimal operational-distinction basis exists with |B_U| <= floor(C_U/eps*); every control arm fires; no float tolerance enlarges the admitted set.", "check": "check_T_finite_operational_basis"}, {"id": "W_min_joint", "label": "check_T_finite_minimal_joint_realization_atom_cover", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural", "summary": "One compatible minimum no-excess joint carrier realizes the complete basis; independent minima with distinct joint ids are rejected.", "check": "check_T_finite_minimal_joint_realization_atom_cover"}, {"id": "W_held_record", "label": "check_T_held_to_record_typing", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural_reading", "summary": "Held carrier H, invariant record quotient R(H), and outcome instruments {C_i} are three distinct typed objects on one common ==-decided record space; distinctness follows from nonzero radical + SSB degeneracy, each shown load-bearing by a collapse control on the degenerated model.", "check": "check_T_held_to_record_typing"}, {"id": "W_gammaC_fork", "label": "check_T_gammaC_carrier_fork", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural", "summary": "The four carrier closures solve to gamma_C in {1, 1/3, 0, -1}; gamma_GR(n)=1/(n-2) matches the plane carrier only at n=3; pooled/per-channel Cassini-dead; the weight-one curve gamma(w)=w/((n-1)-w).", "check": "check_T_gammaC_carrier_fork"}, {"id": "W_weight_one", "label": "check_T_weight_one_reduction", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural", "summary": "Exact-rational weight-one walk: w=D(deposit)/D(commitment); exchange annihilation; the scalar mode vanishes iff w=1. Nothing here derives w=1; the citable no-source bound is gamma_C<=1 at n=3 with TCP-min/TCP-strong named [C].", "check": "check_T_weight_one_reduction"}, {"id": "W_agt_nogo", "label": "check_L_amount_graded_testedness_encoding_no_go", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural_instrument", "summary": "The GCC floor invariant grades representation, not magnitude: three floor-coherent signatures hold the same N-valued record at eps*{1,log2 N,N} \u2014 no amount-graded-testedness principle is a theorem of the floor invariant (magnitude-to-count transport is signature data).", "check": "check_L_amount_graded_testedness_encoding_no_go"}, {"id": "W_fagt2", "label": "check_T_fagt2_encoding_argmin_pressure_and_read_channel", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural", "summary": "The (E) door walked: distributed encoding is cost-maximal on both banked axes; linear contention saves nothing; the strictly-superadditive flip gate f(M)-N f(M/N)>N-1 is pinned. (E) neither adopted nor refuted.", "check": "check_T_fagt2_encoding_argmin_pressure_and_read_channel"}, {"id": "W_contention", "label": "check_T_contention_law_granularity_occupancy_fork", "node_class": "EXECUTABLE_WITNESS", "status": "P_structural", "summary": "The contention-law walk: sharing-price consolidation (Delta discount, gate-run adverse), the granularity dichotomy (flip iff g<N under named clauses), and the occupancy fork ((c1-occ) evidence-shaped, not adopted).", "check": "check_T_contention_law_granularity_occupancy_fork"}], "edges": [{"source": "G9_1", "target": "joint_pkg", "edge_class": "REQUIRES_GATE"}, {"source": "G9_1", "target": "atom_model", "edge_class": "CERTIFIED_BY_MODEL"}, {"source": "atom_model", "target": "W_finite_basis", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "atom_model", "target": "W_scope_contract", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "atom_model", "target": "W_min_joint", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "W_finite_basis", "target": "W_scope_contract", "edge_class": "DEPENDS_ON"}, {"source": "W_min_joint", "target": "W_finite_basis", "edge_class": "DEPENDS_ON"}, {"source": "G9_1", "target": "P10_grammar", "edge_class": "CROSS_REFERENCE"}, {"source": "G9_2", "target": "G9_1", "edge_class": "DEPENDS_ON"}, {"source": "G9_3", "target": "G9_2", "edge_class": "DEPENDS_ON"}, {"source": "G9_4", "target": "G9_3", "edge_class": "DEPENDS_ON"}, {"source": "G9_5", "target": "G9_4", "edge_class": "DEPENDS_ON"}, {"source": "G9_6", "target": "G9_5", "edge_class": "DEPENDS_ON"}, {"source": "G9_7", "target": "G9_6", "edge_class": "DEPENDS_ON"}, {"source": "G9_8", "target": "G9_7", "edge_class": "DEPENDS_ON"}, {"source": "G9_9", "target": "G9_8", "edge_class": "DEPENDS_ON"}, {"source": "G9_10", "target": "G9_9", "edge_class": "DEPENDS_ON"}, {"source": "G9_11", "target": "G9_10", "edge_class": "DEPENDS_ON"}, {"source": "G9_12", "target": "G9_11", "edge_class": "DEPENDS_ON"}, {"source": "G9_13", "target": "G9_12", "edge_class": "DEPENDS_ON"}, {"source": "G9_16", "target": "G9_7", "edge_class": "DEPENDS_ON"}, {"source": "G9_17", "target": "G9_16", "edge_class": "DEPENDS_ON"}, {"source": "G9_18", "target": "G9_17", "edge_class": "DEPENDS_ON"}, {"source": "G9_19", "target": "G9_18", "edge_class": "DEPENDS_ON"}, {"source": "G9_20", "target": "G9_19", "edge_class": "DEPENDS_ON"}, {"source": "G9_3", "target": "G9_2", "edge_class": "REQUIRES_GATE"}, {"source": "G9_7", "target": "G9_8", "edge_class": "REQUIRES_GATE"}, {"source": "G9_14", "target": "G9_13", "edge_class": "REQUIRES_GATE"}, {"source": "G9_19", "target": "G9_18", "edge_class": "REQUIRES_GATE"}, {"source": "G9_4", "target": "imp_sikorski", "edge_class": "IMPORTS"}, {"source": "G9_5", "target": "imp_subcart", "edge_class": "IMPORTS"}, {"source": "G9_6", "target": "imp_constrank", "edge_class": "IMPORTS"}, {"source": "G9_20", "target": "imp_lovelock", "edge_class": "IMPORTS"}, {"source": "G9_3", "target": "P14_record", "edge_class": "DEPENDS_ON"}, {"source": "P14_record", "target": "W_held_record", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "W_held_record", "target": "P14_record", "edge_class": "CROSS_REFERENCE"}, {"source": "G9_19", "target": "W_gammaC_fork", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "G9_19", "target": "W_weight_one", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "W_weight_one", "target": "W_gammaC_fork", "edge_class": "DEPENDS_ON"}, {"source": "W_weight_one", "target": "W_agt_nogo", "edge_class": "DEPENDS_ON"}, {"source": "W_fagt2", "target": "W_agt_nogo", "edge_class": "DEPENDS_ON"}, {"source": "W_contention", "target": "W_fagt2", "edge_class": "DEPENDS_ON"}, {"source": "G9_19", "target": "W_agt_nogo", "edge_class": "WITNESSED_BY_CHECK"}, {"source": "G9_7", "target": "P2_linear", "edge_class": "CROSS_REFERENCE"}, {"source": "G9_19", "target": "G9_20", "edge_class": "EXTERNALIZES_TO"}]};
+const CC = {"APF_NATIVE": "#4C9A2A", "STANDARD_IMPORT": "#6c757d", "CONDITIONAL_THEOREM": "#e08e0b", "MODEL_CERTIFICATE": "#3b7dd8", "NAMED_OPEN_GATE": "#c0392b", "EXTERNAL_ENDPOINT": "#7d3cb5", "EXECUTABLE_WITNESS": "#128a6f"};
+const svg = d3.select("#svg"), W = svg.node().clientWidth, H = svg.node().clientHeight;
+const g = svg.append("g");
+svg.call(d3.zoom().on("zoom", e => g.attr("transform", e.transform)));
+const link = g.selectAll("line").data(DAG.edges).enter().append("line").attr("class","edge");
+const node = g.selectAll(".node").data(DAG.nodes).enter().append("g").attr("class","node")
+  .call(d3.drag().on("start",ds).on("drag",dg).on("end",de)).on("click",(e,d)=>show(d));
+node.append("circle").attr("r", d=>d.node_class==="EXECUTABLE_WITNESS"?9:7).attr("fill",d=>CC[d.node_class]);
+node.append("text").attr("dx",11).attr("dy",3).text(d=>d.id);
+const sim = d3.forceSimulation(DAG.nodes)
+  .force("link", d3.forceLink(DAG.edges).id(d=>d.id).distance(70).strength(.5))
+  .force("charge", d3.forceManyBody().strength(-260))
+  .force("center", d3.forceCenter(W/2,H/2)).force("collide",d3.forceCollide(22));
+sim.on("tick",()=>{link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  node.attr("transform",d=>`translate(${d.x},${d.y})`);});
+function show(d){const ins=DAG.edges.filter(e=>e.target===d.id||e.target.id===d.id), outs=DAG.edges.filter(e=>e.source===d.id||e.source.id===d.id);
+ const eline=e=>`<div>&middot; <span class="badge" style="background:#333">${e.edge_class}</span> ${(e.source.id||e.source)===d.id?"&rarr; "+(e.target.id||e.target):"&larr; "+(e.source.id||e.source)}</div>`;
+ document.getElementById("side").innerHTML =
+  `<div><span class="badge" style="background:${CC[d.node_class]}">${d.node_class}</span> <b>${d.id}</b></div>
+   <p><b>${d.label}</b></p><p><i>status:</i> <code>${d.status}</code>${d.check?` &nbsp; <i>check:</i> <code>${d.check}</code>`:""}</p>
+   <p>${d.summary}</p><hr style="border-color:#2a2f3a"><b>Edges</b>${[...outs,...ins].map(eline).join("")||"<div>(none)</div>"}`;}
+function ds(e,d){if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;}
+function dg(e,d){d.fx=e.x;d.fy=e.y;}
+function de(e,d){if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}
+</script></body></html>

@@ -6,10 +6,12 @@ Usage:
     python run_checks.py --verbose  # show detailed per-theorem output
     python run_checks.py --check T_Born  # run a single theorem by name
 
-This is the standalone-repo verifier for Geometric Substrate Cost Structure (APF Paper 9).
-The full APF codebase v6.8 (frozen 2026-04-18) verifies 348 checks across
-335 bank-registered theorems plus apf/standalone/ — this paper's repo
-verifies the 5-theorem subset directly cited by the manuscript.
+Standalone verifier for the APF Paper 9 v3.7 companion. The canonical
+APF-Engine v24.3.427 (commit 7ab898e) registers 3,918 checks; this repository
+bundles the nine self-contained Paper 9 closure-spine witnesses (finite atom-cover
+basis triad, held-to-record typing, and the weak-field / encoding witnesses).
+The formal claims live in the manuscript and Technical Supplement; these checks
+are finite witnesses and falsifier controls, not symbolic proofs.
 """
 
 import sys

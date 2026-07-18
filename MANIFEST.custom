@@ -35,3 +35,14 @@ docs/index.html                    # GitHub Pages landing with custom layout
 #
 # Add an entry here in the form 'path:CUSTOM:section_id' to declare a
 # section as preserved.  No entry needed if the file is fully regenerable.
+
+# --- v3.7.1 hotfix: self-contained witness layer + typed ledger (DO NOT overwrite) ---
+apf/                               # hand-vendored self-contained 9-check package (NOT template extraction)
+apf/_release_fixtures.py           # frozen canonical-bank census snapshot @ 7ab898e
+generate_paper9_dag.py             # deterministic ledger -> theorems.json + interactive_dag.html
+theorems.json                      # typed Paper 9 closure ledger (generated; 9 bundled)
+paper9_typed_dependency_dag.json   # typed nodes + edges (generated)
+release_gate.py                    # static + runtime release contract (CI)
+.github/workflows/ci.yml           # clean-environment CI
+artifacts/                         # canonical Engine freeze receipts
+README.md REVIEWERS_GUIDE.md START_HERE.md   # reviewer-safe rewrites (not template defaults)

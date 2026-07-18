@@ -1,0 +1,18 @@
+{
+ "engine_version": "24.3.427",
+ "engine_commit": "7ab898e",
+ "bank_audit": {
+  "expected": 3918,
+  "actual_registry": 3918,
+  "gap": 0,
+  "bucket_a_failed_imports": 0
+ },
+ "interface_ci_release_gate_pass": true,
+ "full_bank_execution": {
+  "registry_loaded": "3918/3918 gap 0",
+  "clean": false,
+  "note": "6 engine self-census / disposition-map tripwires fire (config_demand_register_split_bank_respected, vacuum_content_typing_status, vglobal_offdiagonal_blocks_scalar_typed, which_v_no_registered_interior_reader, ie_full_surface_input_inventory 204-vs-pinned-200, ie_wall_shadow_census). All are count-neutral RE-PIN chores triggered by the v24.3.425-427 additions (aeon_turnover.py, aboutness_occupancy_section.py held-to-record, finite-basis IE inputs) landing without updating pinned disposition maps / IE-surface inventory. Engine-side follow-up (audit sec 9), separate from this companion. No logic failure; no companion check affected."
+ },
+ "companion_local_checks": "9 passed, 0 failed, 9 total (fresh venv, numpy only)",
+ "release_gate": "PASS (0 errors, 0 warnings)"
+}

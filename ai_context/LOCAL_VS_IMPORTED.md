@@ -14,7 +14,7 @@
 
 ## Per-claim partition
 
-Fill in one row per load-bearing claim. The first column is the claim's short name (matching `THEOREMS.md` / `derivation_graph.json` where applicable).
+Fill in one row per load-bearing claim. The first column is the claim's short name (matching `theorems.json` / `paper9_typed_dependency_dag.json` where applicable).
 
 | Claim | Category | Source / location |
 |---|---|---|

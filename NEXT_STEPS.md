@@ -1,46 +1,27 @@
-# NEXT_STEPS — Paper 9 initial release push
+# NEXT_STEPS — Paper 9 v3.7.1 repository hotfix
 
-The repo has been built via create-repo. It needs:
+The companion repository has been rebuilt as a **v3.7.1 repository hotfix**
+(manuscript stays v3.7, Technical Supplement stays v1.1). It replaces the broken
+`v3.7` release (empty DAG, missing modules, stale metadata, overclaims).
 
-1. A GitHub repo to be created (the orchestrator only builds locally; remote creation is a manual step).
-2. `git push` from your local machine.
+Before tagging, confirm locally:
 
-## Step 1: Create the GitHub repo
-
-Visit https://github.com/new and create a repo named exactly: **APF-Paper-9-Geometric-Substrate**
-
-Important: do NOT check the "Initialize this repository with a README/.gitignore/license" checkboxes. The local build is the source of truth and any pre-populated files would create a divergent history.
-
-## Step 2: Push from PowerShell
-
-```powershell
-cd "C:\Users\EthanBrooke\My Drive\__APF Library\Codebase\APF-Paper-9-Geometric-Substrate"
-git init -b main
-git remote add origin https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate.git
-git add -A
-git commit -m "Initial release: Paper 9"
-git push -u origin main --force
+```bash
+python -m venv .venv && . .venv/bin/activate
+pip install -e .
+python run_checks.py          # 9 passed, 0 failed, 9 total
+python release_gate.py        # RESULT: PASS
+python generate_paper9_dag.py # regenerates theorems.json + interactive_dag.html (should be a no-op diff)
 ```
 
-## Step 3 (optional): Enable GitHub Pages
+Then, on a machine with GitHub credentials:
 
-After the push lands, visit https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate → Settings → Pages, set Branch: main, Folder: /docs. The interactive DAG appears at `https://ethan-brooke.github.io/APF-Paper-9-Geometric-Substrate/` within ~30 seconds.
+```bash
+git add -A
+git commit -m "Paper 9 v3.7.1 repository hotfix: self-contained 9-check witness layer, typed closure DAG, metadata reconciliation, release gate + CI"
+git tag v3.7.1
+git push origin main --tags        # or force-push if the existing tree is being replaced
+```
 
-## Step 4 (optional): Mint Zenodo DOI
-
-Log into Zenodo, GitHub tab, find the new repo, flip the toggle on. The next git tag will mint a child version DOI. The current zenodo.json has placeholder DOI fields that will need updating once the deposit is created.
-
-## What this repo bundles
-
-- Paper 9 manuscript (.tex + .pdf)
-- `apf/` subset (core spine modules from codebase v7.9)
-- `ai_context/` AI-onboarding pack (AGENTS.md, FRAMEWORK_OVERVIEW.md, GLOSSARY.md, etc.)
-- `README.md`, `START_HERE.md`, `REVIEWERS_GUIDE.md` — human + AI reading paths
-- `docs/index.html` — interactive D3.js derivation DAG (GitHub Pages source)
-- `interactive_dag.html` — same DAG at root for discoverability
-- `APF_Reviewer_Walkthrough.ipynb` — Colab notebook
-- `MANIFEST.custom` — preservation contract for future automated refreshes
-- `pyproject.toml`, `run_checks.py`, `zenodo.json`, `LICENSE`
-
-This repo joins the 11-paper core derivational series alongside Papers 0-7, 9, 10, 13.
-
+PDFs remain at manuscript versions v3.7 and TS v1.1; only code, ledger, DAG,
+metadata, notebook, guides, and CI changed.

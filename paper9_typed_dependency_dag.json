@@ -1,0 +1,537 @@
+{
+ "schema": "apf.paper9.typed_dependency_dag.v1",
+ "paper": "Paper 9 v3.7 / Technical Supplement v1.1",
+ "engine": {
+  "version": "24.3.427",
+  "commit": "7ab898e",
+  "bank_size": 3918
+ },
+ "node_classes": [
+  "APF_NATIVE",
+  "STANDARD_IMPORT",
+  "CONDITIONAL_THEOREM",
+  "MODEL_CERTIFICATE",
+  "NAMED_OPEN_GATE",
+  "EXTERNAL_ENDPOINT",
+  "EXECUTABLE_WITNESS"
+ ],
+ "edge_classes": [
+  "DEPENDS_ON",
+  "IMPORTS",
+  "REQUIRES_GATE",
+  "CERTIFIED_BY_MODEL",
+  "WITNESSED_BY_CHECK",
+  "EXTERNALIZES_TO",
+  "CROSS_REFERENCE"
+ ],
+ "counts": {
+  "nodes": 38,
+  "edges": 45,
+  "witnesses": 9,
+  "open_gates": 5
+ },
+ "nodes": [
+  {
+   "id": "P10_grammar",
+   "label": "Continuation grammar (Paper 10)",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "I",
+   "summary": "The judgment G |-_C D->E and geometry-as-continuation-cost are imported from Paper 10 as primitive grammar."
+  },
+  {
+   "id": "P2_linear",
+   "label": "Linear Paper 2 specialization",
+   "node_class": "APF_NATIVE",
+   "status": "P",
+   "summary": "The flat quotient branch with optimal response gains, proved as a specialization."
+  },
+  {
+   "id": "P14_record",
+   "label": "Record-transition typing (Paper 14 / TS def:ts-record-transition)",
+   "node_class": "APF_NATIVE",
+   "status": "P_structural_reading",
+   "summary": "The held-carrier / invariant-record-quotient / outcome-instrument split on a common record space; a declared structural reading, not a primitive theorem."
+  },
+  {
+   "id": "joint_pkg",
+   "label": "Joint-realizability package",
+   "node_class": "NAMED_OPEN_GATE",
+   "status": "O/G",
+   "summary": "Finite joint extension + minimum attainment + closure invariance + positive marginal extension floor: the named package the general finite-basis theorem is conditional on."
+  },
+  {
+   "id": "atom_model",
+   "label": "Exact atom-cover model certificate",
+   "node_class": "MODEL_CERTIFICATE",
+   "status": "model",
+   "summary": "The Engine-certified finite atom-cover instantiation of the finite-basis mechanism and one compatible minimum joint carrier: an exact model witness, not the general theorem."
+  },
+  {
+   "id": "G9_1",
+   "label": "G9.1 A finite complete operational basis exists",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "R|G/C",
+   "summary": "General basis existence is conditional on the joint-realizability package; the exact atom-cover model is Engine-certified."
+  },
+  {
+   "id": "G9_2",
+   "label": "G9.2 Basis realized as finite separating precision channels",
+   "node_class": "NAMED_OPEN_GATE",
+   "status": "O/G",
+   "summary": "Faithful operational-to-precision-channel realization: a named open gate; operational content is not yet a physical precision-channel family."
+  },
+  {
+   "id": "G9_3",
+   "label": "G9.3 Record topology is Hausdorff and second countable",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "P|G",
+   "summary": "State separation gives Hausdorff; second countability needs a countable specification grammar and a topology-generating subfamily (gate)."
+  },
+  {
+   "id": "G9_4",
+   "label": "G9.4 Finite smooth generation -> subcartesian differential space",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "P|G",
+   "summary": "Proved under the finite smooth-generation gate."
+  },
+  {
+   "id": "G9_5",
+   "label": "G9.5 Complete local continuation flows generate smooth orbits",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "I/P",
+   "summary": "On the finite-differential-presentation locus, the imported subcartesian orbit theorem gives immersed smooth continuation orbits."
+  },
+  {
+   "id": "G9_6",
+   "label": "G9.6 Smooth response-factor completeness gives ker D-beta = N^ctx",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "P|G",
+   "summary": "The boxed kernel identity holds under the two-way smooth factorization gate; equal response fibres are insufficient for equal derivative kernels."
+  },
+  {
+   "id": "G9_7",
+   "label": "G9.7 Intrinsic response-orbit quotient gauge and length",
+   "node_class": "APF_NATIVE",
+   "status": "P",
+   "summary": "Proved intrinsically on the regular quotient (thm:canonical-operational-anchor, thm:response-orbit-length)."
+  },
+  {
+   "id": "G9_8",
+   "label": "G9.8 Physical anchor pulls length back to site geometry",
+   "node_class": "NAMED_OPEN_GATE",
+   "status": "O/C",
+   "summary": "Construct s and A = q . Ds, type the null kernel and provenance, prove direct-germ calibration (gate:physical-substrate-anchor)."
+  },
+  {
+   "id": "G9_9",
+   "label": "G9.9 Calibrated physical path cost bi-Lipschitz to response distance",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "P|H",
+   "summary": "Comparison theorem proved; ledger-rate bounds and response-class completeness remain physical inputs (thm:ledger-calibration)."
+  },
+  {
+   "id": "G9_10",
+   "label": "G9.10 Smooth residual energy is half squared local distance",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "P|SRR",
+   "summary": "Proved locally when the residual Hessian is positive definite (thm:residual-energy-distance)."
+  },
+  {
+   "id": "G9_11",
+   "label": "G9.11 Parallelogram quadraticity gives a positive cost metric",
+   "node_class": "APF_NATIVE",
+   "status": "P|Q",
+   "summary": "Proved from the parallelogram certificate; whether the substrate passes it is open (prop:positive-cost-metric)."
+  },
+  {
+   "id": "G9_12",
+   "label": "G9.12 Positive pullback geometry cannot supply Lorentzian signature",
+   "node_class": "APF_NATIVE",
+   "status": "P",
+   "summary": "Positive cost is explicitly separated from Lorentzian comparison geometry (prop:positive-pullback-no-lorentz)."
+  },
+  {
+   "id": "G9_13",
+   "label": "G9.13 Signed Lorentz-Finsler comparison structure for the causal cone",
+   "node_class": "NAMED_OPEN_GATE",
+   "status": "O/C",
+   "summary": "Derive the causal cone, orientation, signed two-homogeneous function, and Lorentzian Hessian (gate:signed-comparison)."
+  },
+  {
+   "id": "G9_14",
+   "label": "G9.14 Isotropic quadratic exterior recruitment gives chi ~ 1/r",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "C/P",
+   "summary": "Proved from an assumed isotropic quadratic exterior kernel (prop:point-source-profile)."
+  },
+  {
+   "id": "G9_15",
+   "label": "G9.15 Calibrated clock response conditionally recovers redshift",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "R",
+   "summary": "Conditional recovery under load law, calibration, and the proper-time dictionary."
+  },
+  {
+   "id": "G9_16",
+   "label": "G9.16 Generator trace equals comparison-volume variation",
+   "node_class": "APF_NATIVE",
+   "status": "P/C",
+   "summary": "Proved in the represented clock-ruler comparison plane (thm:trace-volume)."
+  },
+  {
+   "id": "G9_17",
+   "label": "G9.17 Linear loaded equilibrium h_chi = chi K^-1 J + O(chi^2)",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "P|H",
+   "summary": "Proved under the gauge-fixed response-Hessian hypothesis (thm:no-trace-operator)."
+  },
+  {
+   "id": "G9_18",
+   "label": "G9.18 The no-trace gate is Ptr K^-1 J = 0",
+   "node_class": "NAMED_OPEN_GATE",
+   "status": "O/C",
+   "summary": "The decisive local theorem; source-selection or a constrained-volume theorem are the principal routes."
+  },
+  {
+   "id": "G9_19",
+   "label": "G9.19 No trace gives gamma_C = 1 and the first-PN exterior",
+   "node_class": "CONDITIONAL_THEOREM",
+   "status": "C/R",
+   "summary": "Follows conditionally from the no-trace gate through the trace-volume theorem (cor:ppn-volume-mode, thm:conditional-weak-field)."
+  },
+  {
+   "id": "G9_20",
+   "label": "G9.20 The represented nonlinear closure is Einstein gravity",
+   "node_class": "EXTERNAL_ENDPOINT",
+   "status": "I/C",
+   "summary": "External Paper 6 H1-H3/A9/Lovelock endpoint; the finite-continuability translation remains open."
+  },
+  {
+   "id": "imp_sikorski",
+   "label": "Sikorski differential-space structure",
+   "node_class": "STANDARD_IMPORT",
+   "status": "import",
+   "summary": "Standard Sikorski differential-space machinery (thm:ts-sikorski)."
+  },
+  {
+   "id": "imp_subcart",
+   "label": "Subcartesian / orbit theorem",
+   "node_class": "STANDARD_IMPORT",
+   "status": "import",
+   "summary": "Standard subcartesian differential-space and immersed-orbit theorems (thm:ts-subcartesian, thm:ts-orbit-import)."
+  },
+  {
+   "id": "imp_constrank",
+   "label": "Constant-rank theorem",
+   "node_class": "STANDARD_IMPORT",
+   "status": "import",
+   "summary": "Standard constant-rank / initial-topology results (thm:ts-constant-rank, thm:ts-initial-topology)."
+  },
+  {
+   "id": "imp_lovelock",
+   "label": "Lovelock endpoint import",
+   "node_class": "STANDARD_IMPORT",
+   "status": "import",
+   "summary": "Standard Lovelock uniqueness feeding the Paper 6 external endpoint."
+  },
+  {
+   "id": "W_scope_contract",
+   "label": "check_T_finite_operational_basis_scope_contract",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural_instrument",
+   "summary": "Names the atom-cover hypotheses; exact boundary C=1999999999/2000000000 gives N=0; a finite no-amalgamation countermodel keeps the general bridge open.",
+   "check": "check_T_finite_operational_basis_scope_contract"
+  },
+  {
+   "id": "W_finite_basis",
+   "label": "check_T_finite_operational_basis",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural",
+   "summary": "Exact-Fraction finite atom-cover model: a complete minimal operational-distinction basis exists with |B_U| <= floor(C_U/eps*); every control arm fires; no float tolerance enlarges the admitted set.",
+   "check": "check_T_finite_operational_basis"
+  },
+  {
+   "id": "W_min_joint",
+   "label": "check_T_finite_minimal_joint_realization_atom_cover",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural",
+   "summary": "One compatible minimum no-excess joint carrier realizes the complete basis; independent minima with distinct joint ids are rejected.",
+   "check": "check_T_finite_minimal_joint_realization_atom_cover"
+  },
+  {
+   "id": "W_held_record",
+   "label": "check_T_held_to_record_typing",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural_reading",
+   "summary": "Held carrier H, invariant record quotient R(H), and outcome instruments {C_i} are three distinct typed objects on one common ==-decided record space; distinctness follows from nonzero radical + SSB degeneracy, each shown load-bearing by a collapse control on the degenerated model.",
+   "check": "check_T_held_to_record_typing"
+  },
+  {
+   "id": "W_gammaC_fork",
+   "label": "check_T_gammaC_carrier_fork",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural",
+   "summary": "The four carrier closures solve to gamma_C in {1, 1/3, 0, -1}; gamma_GR(n)=1/(n-2) matches the plane carrier only at n=3; pooled/per-channel Cassini-dead; the weight-one curve gamma(w)=w/((n-1)-w).",
+   "check": "check_T_gammaC_carrier_fork"
+  },
+  {
+   "id": "W_weight_one",
+   "label": "check_T_weight_one_reduction",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural",
+   "summary": "Exact-rational weight-one walk: w=D(deposit)/D(commitment); exchange annihilation; the scalar mode vanishes iff w=1. Nothing here derives w=1; the citable no-source bound is gamma_C<=1 at n=3 with TCP-min/TCP-strong named [C].",
+   "check": "check_T_weight_one_reduction"
+  },
+  {
+   "id": "W_agt_nogo",
+   "label": "check_L_amount_graded_testedness_encoding_no_go",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural_instrument",
+   "summary": "The GCC floor invariant grades representation, not magnitude: three floor-coherent signatures hold the same N-valued record at eps*{1,log2 N,N} \u2014 no amount-graded-testedness principle is a theorem of the floor invariant (magnitude-to-count transport is signature data).",
+   "check": "check_L_amount_graded_testedness_encoding_no_go"
+  },
+  {
+   "id": "W_fagt2",
+   "label": "check_T_fagt2_encoding_argmin_pressure_and_read_channel",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural",
+   "summary": "The (E) door walked: distributed encoding is cost-maximal on both banked axes; linear contention saves nothing; the strictly-superadditive flip gate f(M)-N f(M/N)>N-1 is pinned. (E) neither adopted nor refuted.",
+   "check": "check_T_fagt2_encoding_argmin_pressure_and_read_channel"
+  },
+  {
+   "id": "W_contention",
+   "label": "check_T_contention_law_granularity_occupancy_fork",
+   "node_class": "EXECUTABLE_WITNESS",
+   "status": "P_structural",
+   "summary": "The contention-law walk: sharing-price consolidation (Delta discount, gate-run adverse), the granularity dichotomy (flip iff g<N under named clauses), and the occupancy fork ((c1-occ) evidence-shaped, not adopted).",
+   "check": "check_T_contention_law_granularity_occupancy_fork"
+  }
+ ],
+ "edges": [
+  {
+   "source": "G9_1",
+   "target": "joint_pkg",
+   "edge_class": "REQUIRES_GATE"
+  },
+  {
+   "source": "G9_1",
+   "target": "atom_model",
+   "edge_class": "CERTIFIED_BY_MODEL"
+  },
+  {
+   "source": "atom_model",
+   "target": "W_finite_basis",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "atom_model",
+   "target": "W_scope_contract",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "atom_model",
+   "target": "W_min_joint",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "W_finite_basis",
+   "target": "W_scope_contract",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "W_min_joint",
+   "target": "W_finite_basis",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_1",
+   "target": "P10_grammar",
+   "edge_class": "CROSS_REFERENCE"
+  },
+  {
+   "source": "G9_2",
+   "target": "G9_1",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_3",
+   "target": "G9_2",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_4",
+   "target": "G9_3",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_5",
+   "target": "G9_4",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_6",
+   "target": "G9_5",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_7",
+   "target": "G9_6",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_8",
+   "target": "G9_7",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_9",
+   "target": "G9_8",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_10",
+   "target": "G9_9",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_11",
+   "target": "G9_10",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_12",
+   "target": "G9_11",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_13",
+   "target": "G9_12",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_16",
+   "target": "G9_7",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_17",
+   "target": "G9_16",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_18",
+   "target": "G9_17",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_19",
+   "target": "G9_18",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_20",
+   "target": "G9_19",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_3",
+   "target": "G9_2",
+   "edge_class": "REQUIRES_GATE"
+  },
+  {
+   "source": "G9_7",
+   "target": "G9_8",
+   "edge_class": "REQUIRES_GATE"
+  },
+  {
+   "source": "G9_14",
+   "target": "G9_13",
+   "edge_class": "REQUIRES_GATE"
+  },
+  {
+   "source": "G9_19",
+   "target": "G9_18",
+   "edge_class": "REQUIRES_GATE"
+  },
+  {
+   "source": "G9_4",
+   "target": "imp_sikorski",
+   "edge_class": "IMPORTS"
+  },
+  {
+   "source": "G9_5",
+   "target": "imp_subcart",
+   "edge_class": "IMPORTS"
+  },
+  {
+   "source": "G9_6",
+   "target": "imp_constrank",
+   "edge_class": "IMPORTS"
+  },
+  {
+   "source": "G9_20",
+   "target": "imp_lovelock",
+   "edge_class": "IMPORTS"
+  },
+  {
+   "source": "G9_3",
+   "target": "P14_record",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "P14_record",
+   "target": "W_held_record",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "W_held_record",
+   "target": "P14_record",
+   "edge_class": "CROSS_REFERENCE"
+  },
+  {
+   "source": "G9_19",
+   "target": "W_gammaC_fork",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "G9_19",
+   "target": "W_weight_one",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "W_weight_one",
+   "target": "W_gammaC_fork",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "W_weight_one",
+   "target": "W_agt_nogo",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "W_fagt2",
+   "target": "W_agt_nogo",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "W_contention",
+   "target": "W_fagt2",
+   "edge_class": "DEPENDS_ON"
+  },
+  {
+   "source": "G9_19",
+   "target": "W_agt_nogo",
+   "edge_class": "WITNESSED_BY_CHECK"
+  },
+  {
+   "source": "G9_7",
+   "target": "P2_linear",
+   "edge_class": "CROSS_REFERENCE"
+  },
+  {
+   "source": "G9_19",
+   "target": "G9_20",
+   "edge_class": "EXTERNALIZES_TO"
+  }
+ ]
+}

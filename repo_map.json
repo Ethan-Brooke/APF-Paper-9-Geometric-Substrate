@@ -117,8 +117,8 @@
       "current_version": "v24.3.427",
       "zenodo_doi": "10.5281/zenodo.18529115",
       "zenodo_url": "https://doi.org/10.5281/zenodo.18529115",
-      "github_slug": "APF-Codebase",
-      "github_url": "https://github.com/Ethan-Brooke/APF-Codebase",
+      "github_slug": "APF-Engine",
+      "github_url": "https://github.com/Ethan-Brooke/APF-Engine",
       "github_status": "pending",
       "is_this_repo": false
     }
@@ -153,7 +153,7 @@
     {
       "order": 3,
       "path": "ai_context/FRAMEWORK_OVERVIEW.md",
-      "purpose": "5-minute APF framework synthesis: A1, PLEC, 61-partition, derivation chain, 19 modules, 48 predictions, scope"
+      "purpose": "5-minute APF framework synthesis: A1, PLEC, 61-partition, derivation chain, 48 predictions, scope"
     },
     {
       "order": 4,
@@ -226,12 +226,12 @@
       ]
     },
     "ai_context/FRAMEWORK_OVERVIEW.md": {
-      "purpose": "5-minute APF framework synthesis: A1, PLEC, 61-partition, derivation chain, 19 modules, 48 predictions, scope",
+      "purpose": "5-minute APF framework synthesis: A1, PLEC, 61-partition, derivation chain, 48 predictions, scope",
       "audience": "AI",
       "read_order": 3,
       "tier": "context",
       "references": [
-        "ai_context/THEOREMS.md",
+        "theorems.json",
         "ai_context/GLOSSARY.md"
       ]
     },
@@ -294,7 +294,7 @@
       "tier": "context",
       "references": []
     },
-    "ai_context/THEOREMS.md": {
+    "theorems.json": {
       "purpose": "Human-readable theorem catalog (full bank); use theorems.json for machine queries",
       "audience": "human",
       "read_order": null,
@@ -310,7 +310,7 @@
       "tier": "data",
       "references": []
     },
-    "ai_context/derivation_graph.json": {
+    "paper9_typed_dependency_dag.json": {
       "purpose": "Theorem derivation DAG as JSON (nodes + edges); traversable for dependency reasoning",
       "audience": "AI",
       "read_order": null,
@@ -389,7 +389,7 @@
       "read_order": null,
       "tier": "manuscript",
       "references": [
-        "ai_context/derivation_graph.json"
+        "paper9_typed_dependency_dag.json"
       ]
     },
     "zenodo.json": {
@@ -627,7 +627,7 @@
       "tier": "context",
       "references": []
     },
-    "derivation_graph.json": {
+    "paper9_typed_dependency_dag.json": {
       "purpose": "(uncategorized; see file directly)",
       "audience": "unknown",
       "read_order": null,
@@ -781,7 +781,7 @@
     },
     {
       "from": "ai_context/FRAMEWORK_OVERVIEW.md",
-      "to": "ai_context/THEOREMS.md",
+      "to": "theorems.json",
       "kind": "references"
     },
     {
@@ -820,12 +820,12 @@
       "kind": "references"
     },
     {
-      "from": "ai_context/THEOREMS.md",
+      "from": "theorems.json",
       "to": "ai_context/theorems.json",
       "kind": "references"
     },
     {
-      "from": "ai_context/derivation_graph.json",
+      "from": "paper9_typed_dependency_dag.json",
       "to": "ai_context/theorems.json",
       "kind": "references"
     },
@@ -851,7 +851,7 @@
     },
     {
       "from": "docs/index.html",
-      "to": "ai_context/derivation_graph.json",
+      "to": "paper9_typed_dependency_dag.json",
       "kind": "references"
     },
     {

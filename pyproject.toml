@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apf-paper9"
-version = "3.7"
+version = "3.7.1"
 description = "Geometric Substrate Cost Structure — executable mathematical appendix"
 readme = "README.md"
 license = {text = "MIT"}
@@ -21,7 +21,7 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Physics",
   "Topic :: Scientific/Engineering :: Mathematics",
 ]
-dependencies = ["numpy>=1.20", "scipy>=1.7"]
+dependencies = ["numpy>=1.20"]
 
 [project.urls]
 Homepage = "https://github.com/Ethan-Brooke/APF-Paper-9-Geometric-Substrate"
